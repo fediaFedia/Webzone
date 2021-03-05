@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Tegnio Map</title>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="./app.js"></script>
+
+
+
+  <script id="code">
+    function init() {
+      if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
+      var $ = go.GraphObject.make;
+
+      myDiagram =
+        $(go.Diagram, "myDiagramDiv",
+          {
+            // when the user drags a node, also move/copy/delete the whole subtree starting with that node
+            "commandHandler.copiesTree": true,
+            "commandHandler.copiesParentKey": true,
+            "commandHandler.deletesTree": true,
+            "draggingTool.dragsTree": true,
+            "undoManager.isEnabled": true
+          });
+
+      // when the document is modified, add a "*" to the title and enable the "Save" button
+      myDiagram.addDiagramListener("Modified", function(e) {
+        var button = document.getElementById("SaveButton");
+        if (button) button.disabled = !myDiagram.isModified;
+        var idx = document.title.indexOf("*");
+        if (myDiagram.isModified) {
+          if (idx < 0) document.title += "*";
+        } else {
+          if (idx >= 0) document.title = document.title.substr(0, idx);
+        }
+      });
+
+      // a node consists of some text with a line shape underneath
+      myDiagram.nodeTemplate =
+        $(go.Node, "Vertical",
+          { selectionObjectName: "TEXT" },
+          $(go.TextBlock,
+            {
+              name: "TEXT",
+              minSize: new go.Size(30, 15),
+              editable: true
+            },
+            // remember not only the text string but the scale and the font in the node data
+            new go.Binding("text", "text").makeTwoWay(),
+            new go.Binding("scale", "scale").makeTwoWay(),
+            new go.Binding("font", "font").makeTwoWay()),
+          $(go.Shape, "LineH",
+            {
+              stretch: go.GraphObject.Horizontal,
+              strokeWidth: 8, height: 2,
+              // this line shape is the port -- what links connect with
+              portId: "", fromSpot: go.Spot.LeftRightSides, toSpot: go.Spot.LeftRightSides
+            },
+            new go.Binding("stroke", "brush"),
+            // make sure links come in from the proper direction and go out appropriately
+            new go.Binding("fromSpot", "dir", function(d) { return spotConverter(d, true); }),
+            new go.Binding("toSpot", "dir", function(d) { return spotConverter(d, false); })),
+          // remember the locations of each node in the node data
+          new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
+          // make sure text "grows" in the desired direction
+          new go.Binding("locationSpot", "dir", function(d) { return spotConverter(d, false); })
+        );
+
+      // selected nodes show a button for adding children
+      myDiagram.nodeTemplate.selectionAdornmentTemplate =
+        $(go.Adornment, "Spot",
+          $(go.Panel, "Auto",
+            // this Adornment has a rectangular blue Shape around the selected node
+            $(go.Shape, { fill: null, stroke: "dodgerblue", strokeWidth: 3 }),
+            $(go.Placeholder, { margin: new go.Margin(14, 14, 20, 24) })
+          ),
+          // and this Adornment has a Button to the right of the selected node
+          $("Button",
+            {
+              alignment: go.Spot.Right,
+              alignmentFocus: go.Spot.Left,
+              click: addNodeAndLink  // define click behavior for this Button in the Adornment
+            },
+            $(go.TextBlock, "+",  // the Button content
+              { font: "bold 18pt sans-serif" })
+          )
+        );
+
+      // the context menu allows users to change the font size and weight,
+      // and to perform a limited tree layout starting at that node
+      myDiagram.nodeTemplate.contextMenu =
+        $("ContextMenu",
+		
+ $("ContextMenuButton",
+            $(go.TextBlock, "RED"),
+            { click: function(e, obj) { changeTextColor(obj); } }),
+			
+			
+          $("ContextMenuButton",
+            $(go.TextBlock, "+", {margin:5}),
+            { click: function(e, obj) { changeTextSize(obj, 1.1); } }),
+          $("ContextMenuButton",
+            $(go.TextBlock, "-", {margin:5}),
+            { click: function(e, obj) { changeTextSize(obj, 1 / 1.1); } }),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Bold", {margin:5}),
+            { click: function(e, obj) { toggleTextWeight(obj); } }),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Copy", {margin:5}),
+            { click: function(e, obj) { e.diagram.commandHandler.copySelection(); } }),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Delete", {margin:5}),
+            { click: function(e, obj) { e.diagram.commandHandler.deleteSelection(); } }),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Undo", {margin:5}),
+            { click: function(e, obj) { e.diagram.commandHandler.undo(); } }),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Redo", {margin:5}),
+            { click: function(e, obj) { e.diagram.commandHandler.redo(); } }),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Layout", {margin:5}),
+            {
+              click: function(e, obj) {
+                var adorn = obj.part;
+                adorn.diagram.startTransaction("Subtree Layout");
+                layoutTree(adorn.adornedPart);
+                adorn.diagram.commitTransaction("Subtree Layout");
+              }
+            }
+          )
+        );
+
+      // a link is just a Bezier-curved line of the same color as the node to which it is connected
+      myDiagram.linkTemplate =
+        $(go.Link,
+          {
+            curve: go.Link.Bezier,
+            fromShortLength: 0,
+            toShortLength: 0,
+            selectable: false
+          },
+          $(go.Shape,
+            { strokeWidth: 1 },
+            new go.Binding("stroke", "toNode", function(n) {
+              if (n.data.brush) return n.data.brush;
+              return "black";
+            }).ofObject())
+        );
+
+      // the Diagram's context menu just displays commands for general functionality
+      myDiagram.contextMenu =
+        $("ContextMenu",
+          $("ContextMenuButton",
+            $(go.TextBlock, "Paste", {margin:5}),
+            { click: function (e, obj) { e.diagram.commandHandler.pasteSelection(e.diagram.toolManager.contextMenuTool.mouseDownPoint); } },
+            new go.Binding("visible", "", function(o) { return o.diagram && o.diagram.commandHandler.canPasteSelection(o.diagram.toolManager.contextMenuTool.mouseDownPoint); }).ofObject()),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Undo", {margin:5}),
+            { click: function(e, obj) { e.diagram.commandHandler.undo(); } },
+            new go.Binding("visible", "", function(o) { return o.diagram && o.diagram.commandHandler.canUndo(); }).ofObject()),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Redo", {margin:5}),
+            { click: function(e, obj) { e.diagram.commandHandler.redo(); } },
+            new go.Binding("visible", "", function(o) { return o.diagram && o.diagram.commandHandler.canRedo(); }).ofObject()),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Save", {margin:5}),
+            { click: function(e, obj) { save(); } }),
+          $("ContextMenuButton",
+            $(go.TextBlock, "Load", {margin:5}),
+            { click: function(e, obj) { load(); } })
+        );
+
+      myDiagram.addDiagramListener("SelectionMoved", function(e) {
+        var rootX = myDiagram.findNodeForKey(0).location.x;
+        myDiagram.selection.each(function(node) {
+          if (node.data.parent !== 0) return; // Only consider nodes connected to the root
+          var nodeX = node.location.x;
+          if (rootX < nodeX && node.data.dir !== "right") {
+            updateNodeDirection(node, "right");
+          } else if (rootX > nodeX && node.data.dir !== "left") {
+            updateNodeDirection(node, "left");
+          }
+          layoutTree(node);
+        });
+      });
+
+      // read in the predefined graph using the JSON format data held in the "mySavedModel" textarea
+      load();
+    }
+
+    function spotConverter(dir, from) {
+      if (dir === "left") {
+        return (from ? go.Spot.Left : go.Spot.Right);
+      } else {
+        return (from ? go.Spot.Right : go.Spot.Left);
+      }
+    }
+
+    function changeTextSize(obj, factor) {
+      var adorn = obj.part;
+      adorn.diagram.startTransaction("Change Text Size");
+      var node = adorn.adornedPart;
+      var tb = node.findObject("TEXT");
+      tb.scale *= factor;
+      adorn.diagram.commitTransaction("Change Text Size");
+    }
+	
+	
+    function changeTextColor(obj) {
+	
+	
+     var adorn = obj.part;
+	
+          adorn.diagram.startTransaction("Change Text Weight");
+      var node = adorn.adornedPart;
+  
+  var newcolor = "red";
+  
+
+  
+    myDiagram.model.setDataProperty(node.data, "brush", newcolor);
+   adorn.diagram.commitTransaction("changed color");
+	  
+    }
+	
+	
+	
+	function changeColor(e, obj) {
+    diagram.startTransaction("changed color");
+    // get the context menu that holds the button that was clicked
+    var adorn = obj.part;
+    // get the node data to which the Node is data bound
+    var nodedata = contextmenu.data;
+    // compute the next color for the node
+    var newcolor = "lightblue";
+    switch (nodedata.color) {
+      case "lightblue": newcolor = "lightgreen"; break;
+      case "lightgreen": newcolor = "lightyellow"; break;
+      case "lightyellow": newcolor = "orange"; break;
+      case "orange": newcolor = "lightblue"; break;
+    }
+    // modify the node data
+    // this evaluates data Bindings and records changes in the UndoManager
+    adorn.diagram.model.setDataProperty(nodedata, "color", newcolor);
+    adorn.diagram.commitTransaction("changed color");
+  }
+
+    function toggleTextWeight(obj) {
+      var adorn = obj.part;
+      adorn.diagram.startTransaction("Change Text Weight");
+      var node = adorn.adornedPart;
+      var tb = node.findObject("TEXT");
+      // assume "bold" is at the start of the font specifier
+      var idx = tb.font.indexOf("bold");
+      if (idx < 0) {
+        tb.font = "bold " + tb.font;
+      } else {
+        tb.font = tb.font.substr(idx + 5);
+      }
+      adorn.diagram.commitTransaction("Change Text Weight");
+    }
+
+    function updateNodeDirection(node, dir) {
+      myDiagram.model.setDataProperty(node.data, "dir", dir);
+      // recursively update the direction of the child nodes
+      var chl = node.findTreeChildrenNodes(); // gives us an iterator of the child nodes related to this particular node
+      while (chl.next()) {
+        updateNodeDirection(chl.value, dir);
+      }
+    }
+
+    function addNodeAndLink(e, obj) {
+      var adorn = obj.part;
+      var diagram = adorn.diagram;
+      diagram.startTransaction("Add Node");
+      var oldnode = adorn.adornedPart;
+      var olddata = oldnode.data;
+      // copy the brush and direction to the new node data
+      var newdata = { text: "New", brush: olddata.brush, dir: olddata.dir, parent: olddata.key };
+      diagram.model.addNodeData(newdata);
+      layoutTree(oldnode);
+      diagram.commitTransaction("Add Node");
+
+      // if the new node is off-screen, scroll the diagram to show the new node
+      var newnode = diagram.findNodeForData(newdata);
+      if (newnode !== null) diagram.scrollToRect(newnode.actualBounds);
+    }
+
+    function layoutTree(node) {
+      if (node.data.key === 0) {  // adding to the root?
+        layoutAll();  // lay out everything
+      } else {  // otherwise lay out only the subtree starting at this parent node
+        var parts = node.findTreeParts();
+        layoutAngle(parts, node.data.dir === "left" ? 180 : 0);
+      }
+    }
+
+    function layoutAngle(parts, angle) {
+      var layout = go.GraphObject.make(go.TreeLayout,
+        {
+          angle: angle,
+          arrangement: go.TreeLayout.ArrangementFixedRoots,
+          nodeSpacing: 5,
+          layerSpacing: 50,
+          setsPortSpot: false, // don't set port spots since we're managing them with our spotConverter function
+          setsChildPortSpot: false
+        });
+      layout.doLayout(parts);
+    }
+
+    function layoutAll() {
+      var root = myDiagram.findNodeForKey(0);
+      if (root === null) return;
+      myDiagram.startTransaction("Layout");
+      // split the nodes and links into two collections
+      var rightward = new go.Set(/*go.Part*/);
+      var leftward = new go.Set(/*go.Part*/);
+      root.findLinksConnected().each(function(link) {
+        var child = link.toNode;
+        if (child.data.dir === "left") {
+          leftward.add(root);  // the root node is in both collections
+          leftward.add(link);
+          leftward.addAll(child.findTreeParts());
+        } else {
+          rightward.add(root);  // the root node is in both collections
+          rightward.add(link);
+          rightward.addAll(child.findTreeParts());
+        }
+      });
+      // do one layout and then the other without moving the shared root node
+      layoutAngle(rightward, 0);
+      layoutAngle(leftward, 180);
+      myDiagram.commitTransaction("Layout");
+    }
+
+    // Show the diagram's model in JSON format
+    function save() {
+      document.getElementById("mySavedModel").value = myDiagram.model.toJson();
+      myDiagram.isModified = false;
+	  
+	  localStorage.setItem('map',  myDiagram.model.toJson());
+	  
+	  
+    }
+    function load() {
+	
+	
+	
+	 myDiagram.model = go.Model.fromJson(
+	 
+	 
+	 
+	 JSON.parse(  localStorage.getItem('map'))
+
+	 
+	 
+	 
+	 );
+
+	
+     // myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
+
+
+
+
+    }
+	
+		function loadSample() {
+		
+		
+	var sample = '{"class":"TreeModel","nodeDataArray":[{"key":0,"text":"Tegnio","loc":"31.52380952380952 20.619047619047535","brush":"red","font":"bold 20px segoe ui","scale":1.4641000000000006},{"key":1,"parent":0,"text":"Technology","brush":"skyblue","dir":"right","loc":"224.95941987537208 -111.44551878720245"},{"key":11,"parent":1,"text":"Nanotech","brush":"skyblue","dir":"right","loc":"375.5551230003721 -149.79219847470245"},{"key":12,"parent":1,"text":"Cybernetics","brush":"skyblue","dir":"right","loc":"375.5551230003721 -111.44551878720245"},{"key":13,"parent":1,"text":"Space","brush":"skyblue","dir":"right","loc":"375.5551230003721 -73.09883909970245"},{"key":2,"parent":0,"text":"Brand Assets","brush":"darkseagreen","dir":"right","loc":"298.9594198753721 66.42118043154754"},{"key":21,"parent":2,"text":"Pictures","brush":"darkseagreen","dir":"right","loc":"461.7230917503721 28.07450074404754"},{"key":211,"parent":21,"text":"Misc","brush":"darkseagreen","dir":"right","loc":"581.0004355003721 8.90116090029754"},{"key":212,"parent":21,"text":"Photoshops","brush":"darkseagreen","dir":"right","loc":"581.0004355003721 47.24784058779754"},{"key":22,"parent":2,"text":"Logos","brush":"darkseagreen","dir":"right","loc":"461.7230917503721 66.42118043154754"},{"key":3,"parent":0,"text":"World history","brush":"palevioletred","dir":"left","loc":"-9.476190476190482 -113.27217894345245"},{"key":31,"parent":3,"text":"Company History","brush":"palevioletred","dir":"left","loc":"-177.92345610119048 -179.79219847470245"},{"key":32,"parent":3,"text":"People","brush":"palevioletred","dir":"left","loc":"-177.92345610119048 -132.44551878720245"},{"key":33,"parent":3,"text":"Events","brush":"palevioletred","dir":"left","loc":"-177.92345610119048 -94.09883909970245"},{"key":331,"parent":31,"text":"Founder","brush":"palevioletred","dir":"left","loc":"-380.3160342261905 -218.13887816220245"},{"key":332,"parent":31,"text":"Events","brush":"palevioletred","dir":"left","loc":"-380.3160342261905 -179.79219847470245"},{"key":4,"parent":0,"text":"Real Products","brush":"coral","dir":"left","loc":"-85.47619047619048 128.94119996279755"},{"key":41,"parent":4,"text":"GeekTyper","brush":"coral","dir":"left","loc":"-255.28087797619048 90.59452027529755"},{"key":42,"parent":4,"text":"TegniOS","brush":"coral","dir":"left","loc":"-365.2808779761905 152.94119996279755"},{"key":43,"parent":4,"text":"Checkpoints","brush":"coral","dir":"left","loc":"-235.28087797619048 212.28787965029755"},{"text":"Inventions","brush":"palevioletred","dir":"left","parent":31,"key":-21,"loc":"-380.3160342261905 -141.44551878720245"},{"text":"New","brush":"red","dir":"right","parent":0,"key":-23,"loc":"201.95941987537208 263.44119996279755"},{"text":"Timeline","brush":"palevioletred","dir":"left","parent":3,"key":-24,"loc":"-177.92345610119048 -55.752159412202445"},{"text":"Videos","brush":"darkseagreen","dir":"right","parent":2,"key":-25,"loc":"471.7230917503721 129.76786011904755"}]}'
+	
+	localStorage.setItem('map',  JSON.stringify(sample));
+	}
+	
+	
+	
+	if (localStorage.getItem("map") === null) {
+  loadSample()
+}
+  </script>
+  
+  
+  <style>
+  
+  body {margin:0;
+  overflow:hidden;
+
+background:url('grid.png') repeat;
+  
+  }
+  
+  
+#myDiagramDiv{ background: url("triple.png") no-repeat center transparent; outline:0;
+border: solid 0px black; width:100%; height:100vh;
+	
+	
+	}
+  
+canvas:focus {  outline:0 !important;    -webkit-tap-highlight-color: rgba(255, 0, 255, 0);}
+
+
+
+
+
+
+  
+  </style>
+
+</head>
+<body onload="init()">
+
+
+
+<div id="sample" >
+  <div id="myDiagramDiv"></div>
+  
+  
+  
+  <div hidden>
+  <button id="SaveButton" onclick="save()">Save</button>
+  <button onclick="load()">Load</button>
+  <button onclick="layoutAll()">Layout</button>
+  Diagram Model saved in JSON format:
+  <br />
+  <textarea id="mySavedModel" style="width:100%;height:400px">
+  
+  
+  
+
+  </textarea>
+  </div>
+
+  
+</div>
+</body>
+</html>

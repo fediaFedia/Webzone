@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<link rel="stylesheet" type="text/css" href="assets/stylesheet.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="jquery.mousewheel.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45751574-1', 'fediafedia.com');
+  ga('send', 'pageview');
+
+</script>
+<script>
+$(function() {
+            $("html, body").mousewheel(function(event, delta) {
+                this.scrollLeft -= (delta * 30);
+                event.preventDefault();
+            });
+        });
+</script>
+<script type="text/javascript">
+
+ $(window).scroll(function() {   
+   if($(window).scrollLeft() + $(window).width() == $(document).width()) {
+   
+      var snd = new Audio("AchievementUnlocked.mp3"); // buffers automatically when created
+snd.play();
+        $('#overlay').fadeIn('fast',function(){
+            $('#box').animate({'bottom':'0px'},200);
+        });
+   }
+});
+</script>
+
+<script type="text/javascript">
+
+$(function() {
+
+
+   $('#activator').click(function(){
+   
+
+
+        $('#overlay').fadeIn('fast',function(){
+            $('#box').animate({'bottom':'-10px'},200);
+        });
+    });
+
+    $('#boxclose').click(function(){
+        $('#box').animate({'bottom':'-194px'},500,function(){
+            $('#overlay').fadeOut('fast');
+        });
+    });
+ 
+});
+
+</script>
+
+
+<style type="text/css">
+
+
+h1 {margin:0;font-family: Segoe UI Light, Segoe UI, Arial;font-weight:normal;margin-bottom:0;color:#fff;font-size:36pt;}
+
+h2 {color:#494949;opacity:1;}
+h4 {margin:0;padding:0;font-weight:normal;font-size:24pt;color:#fff;}
+h6 {font-weight:normal;font-size:16pt;color:#ccc;}
+
+
+body {
+
+color:#fff;
+height:100%;
+background:#000;
+font-family: Segoe UI;
+margin:0;
+padding:0;
+overflow-y:hidden;
+overflow-x:hidden;
+
+}
+
+.wheat {
+	top: 20%;
+width:6800px;height:80%;display:block;position:absolute;
+ margin:0;
+ padding:0;
+
+
+}
+
+.section {
+padding:50px;
+background-color: rgb(35, 183, 200);
+width:400px;
+height:300px;
+margin:30px;
+float:left;
+text-align:center;
+border-radius:30px;
+
+}
+
+
+.box{
+    position:fixed;
+    bottom:-96px;
+    right:30px;
+    z-index:101;
+}
+
+#black {background:#000;}
+#green {background:#12b453;}
+#orange {background:#f19503;}
+#pink {background:#000;}
+
+a:link {color:#fff;}
+</style>
+
+
+</head>
+<body>
+
+
+
+<div class="wheat">
+      <a class="activator" id="activator"></a>
+<div class="overlay" id="overlay" style="display:none;">
+ 
+
+
+ 
+<div class="box" id="box">
+<img src="http://i.imgur.com/onCQBV7.png" />
+</div>
+</div>
+
+   <div class="section" id="black">
+<img src="http://i.imgur.com/nnI5THz.jpg" />
+	</div>
+	
+
+   <div class="section" style="text-align:left;">
+	<h1>Welcome, and thanks for trying Ronda</h1>
+
+<br>Let's get started - we assume you already installed Ronda.
+If you haven't, do check our video that shows the installation process.
+	</div>
+   <div class="section" id="green" style="text-align:left;">
+<h4>Using is Ronda is simple and easy. In fact, everything you need to know fits on this one page, so we fired our web developer - Dave. <br>Dave, if you're reading this, please stop calling. It's over.</h4>
+<br>
+<br>
+</div>		
+   <div class="section" id="orange">Ah! Right, after installing it, you should see something like this Desktop over here:
+<br>
+<br>
+<img style="width:380px;" src="http://i.imgur.com/2efU6zB.jpg" /></div>
+  <div class="section">Click this to open the gallery at any time<br>
+  <img src="http://i.imgur.com/j8IF0wx.png" /><br>
+Misplaced or closed the + icon?<br><br>
+<img src="http://i.imgur.com/jyOd3z1.gif" />
+<br>
+<br>
+</div>
+  <div class="section">To add stuff, click on the items in the gallery:
+<br>
+<br>
+<br>
+Make sure to check the <b>other pages</b>!
+<br>
+<br>
+<center><img src="http://i.imgur.com/JHGypa3.png" style="width:380px;" /></center></div>
+
+
+  <div class="section">
+On the settings page you can change some stuff
+<br>
+<br>
+You can enable or disable Item text (titles), <br>the hover effect, weather code, opacity and <b>change themes</b>.
+<br>
+<br>
+<center><img src="http://i.imgur.com/lyHdAhc.png" /></center>
+<br>
+<br></div>
+   
+     <div class="section">To customize the background, move your mouse to the <br><b>Top Left edge</b> of your screen and click the settings icon.
+<br>
+<br>
+<img src="http://i.imgur.com/RrLOaEM.png" />
+<br>
+<br></div>
+	    <div class="section">Let's look at some Items now:
+<br/>
+<img src="http://i.imgur.com/aOQJ9Wa.png" />
+<br>
+Don't forget that you can <b>move Items</b> around!<br>
+Items can be closed by <b>middle clicking</b> them.
+<br></div>
+		   <div class="section">
+Click the settings icon to access Item's settings,<br>
+you can <b>change the color</b> of nearly every item!
+<br>
+<br>
+<img src="http://i.imgur.com/pYhjFVC.png" />&nbsp;
+<img src="http://i.imgur.com/5lgMIoH.png" />
+<br></div>
+			<div class="section">
+			 
+			 <b>Resize items</b> by clicking the bottom right corner!
+<br>
+<br>
+<img src="http://i.imgur.com/ZoA40hN.png" />
+<br>
+<br>
+You can resize with your mouse, or by typing a <br>precise width/height in pixels and pressing Enter.
+</div>
+
+<!-- SPQR -->
+			<div class="section" id="green">	
+			<h1>You're done!</h1><br><br>
+<h3>Have an achievement!</h3><br><br>
+Not sure of something? Email me at <a href="mailto:omnimosupport@gmail.com">omnimosupport@gmail.com</a></div>
+
+
+
+
+</div>
+</body>
+</html>

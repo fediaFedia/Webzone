@@ -1,0 +1,58 @@
+
+<script type="text/javascript">
+window.onload = function() {
+    if (parent) {
+        var oHead = document.getElementsByTagName("head")[0];
+        var arrStyleSheets = parent.document.getElementsByTagName("style");
+        for (var i = 0; i < arrStyleSheets.length; i++)
+            oHead.appendChild(arrStyleSheets[i].cloneNode(true));
+    }
+}
+</script>
+
+		<div>
+
+<br>
+<img src="assets/img/tegnio.png"><br><br>
+Tegnio OS v1.0<br>
+Copyright © 2015 Tegnio Corporation. All rights protected.
+<hr>
+<table style="width:100%">
+  <tbody><tr>
+    <td>Rating</td>
+    <td>7.8</td>		
+
+  </tr>
+  <tr>
+    <td>Processor</td>
+    <td>(2) Intel Xeon E5-2603 v2</td>		
+
+  </tr>
+  <tr>
+    <td>Installed memory (RAM)</td>
+    <td>96GB</td>		
+  </tr>
+
+  <tr>
+    <td>System Type</td>
+    <td>64-bit</td>		
+  </tr>
+
+  <tr>
+    <td>Linked PDA</td>
+    <td>None</td>		
+  </tr>
+ 
+    <tr>
+    <td>Uptime</td>
+    <td>0</td>		
+  </tr>
+</tbody></table>
+<br>
+Security Status:<br><br>
+
+<div style="color:#fff;font-size:36px;text-align:center;padding:15px;background:orange;">AMBER</div>
+<hr>
+<button style="background:red;border:0;padding:10px;color:white;">Purge Workstation</button>
+
+</div>

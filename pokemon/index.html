@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Pokemon Card Viewer 3D</title>
+
+
+
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#192653">
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<meta name="google" content="notranslate" />
+<meta name="description" content="Nostalgic Pokemon Card Viewer... now in 3D">
+
+<meta name="apple-mobile-web-app-title" content="Card Viewer">
+
+<meta name="keywords" content="Pokemon Cards">
+<meta name="classification" content="Style">
+<meta property="og:title" content="Pokemon Card Viewer 3D">
+<meta property="og:description" content="View classic pokemon cards in 3D">
+<meta property="og:image" content="thumbnail.png">
+<meta property="og:image:width" content="480">
+<meta property="og:image:height" content="270">
+<meta property="og:url" content="http://fediafedia.com/pokemon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@fediafedia">
+<meta name="twitter:title" content="Pokemon Card Viewer 3D">
+<meta name="twitter:description" content="View classic pokemon cards in 3D">
+<meta name="twitter:image" content="thumbnail.png">
+<meta name="twitter:image:alt" content="Pokemon Cards">
+<meta property="og:site_name" content="Pokemon Card Viewer 3D">
+
+
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/main.css" >
+ <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
+  <script id="insert"></script>
+<script>
+
+  //$(function() {
+  //      $('.thumb').Lazy();
+  //  });
+	
+	</script>
+
+</head>
+<body>
+
+
+
+<div class="rarity_section">
+
+<img src="assets/img/icon_holo.png" class="filter-button rarity" data-filter="holo" style="" />
+<img src="assets/img/icon_rare.png" class="filter-button rarity" data-filter="rare" style="" />
+<img src="assets/img/icon_uncommon.png" class="filter-button rarity" data-filter="uncommon" style="" />
+<img src="assets/img/icon_common.png" class="filter-button rarity" data-filter="common" style="" /></div>
+</div>
+		
+<img src="assets/img/icon_search_clear.png" id="clear" class="search reset-button" data-filter="all"  style="display:none;" />
+<img src="assets/img/icon_search.png" id="search" class="search reset-button" data-filter="all"  style="" />
+
+
+</div>
+<div class="flexsearch">
+		<div class="flexsearch--wrapper">
+			<form class="flexsearch--form">
+				<div class="flexsearch--input-wrapper">
+					<input class="flexsearch--input" type="search" id="searchEntry" placeholder="Search...">
+				
+
+			</form>
+		</div>
+
+
+</div>
+
+
+
+<div class="collection">
+<img src="assets/img/categories/base.png" />    
+</div>
+
+
+<div class="container">
+
+              
+<div class="filter card all holo 1 Alakazam #1">
+<a href="card.html?id=1" target="_self" title="Alakazam #1"><img class="thumb" src="assets/img/cards/thumbs/1.jpg"></a>
+<div class="title">#1 - Alakazam</div>
+</div>
+<div class="filter card holo rare all 2 Blastoise Base #2">
+<a href="card.html?id=2" title="Blastoise Base #2"><img class="thumb" src="assets/img/cards/thumbs/2.jpg"></a>
+<div class="title">#2 - Blastoise</div>
+</div>
+<div class="filter card holo rare all 3 Chansey Base #3">
+<a href="card.html?id=3" title="Chansey Base #3"><img class="thumb" src="assets/img/cards/thumbs/3.jpg"></a>
+<div class="title">#3 - Chansey</div>
+</div>
+<div class="filter card holo rare all 4 Charizard Base #4">
+<a href="card.html?id=4" title="Charizard Base #4"><img class="thumb" src="assets/img/cards/thumbs/4.jpg"></a>
+<div class="title">#4 - Charizard</div>
+</div>
+<div class="filter card holo rare all 5 Clefairy Base #5">
+<a href="card.html?id=5" title="Clefairy Base #5"><img class="thumb" src="assets/img/cards/thumbs/5.jpg"></a>
+<div class="title">#5 - Clefairy</div>
+</div>
+<div class="filter card holo rare all 6 Gyarados Base #6">
+<a href="card.html?id=6" title="Gyarados Base #6"><img class="thumb" src="assets/img/cards/thumbs/6.jpg"></a>
+<div class="title">#6 - Gyarados</div>
+</div>
+<div class="filter card holo rare all 7 Hitmonchan Base #7">
+<a href="card.html?id=7" title="Hitmonchan Base #7"><img class="thumb" src="assets/img/cards/thumbs/7.jpg"></a>
+<div class="title">#7 - Hitmonchan</div>
+</div>
+<div class="filter card holo rare all 8 Machamp Base #8">
+<a href="card.html?id=8" title="Machamp Base #8"><img class="thumb" src="assets/img/cards/thumbs/8.jpg"></a>
+<div class="title">#8 - Machamp</div>
+</div>
+<div class="filter card holo rare all 9 Magneton Base #9">
+<a href="card.html?id=9" title="Magneton Base #9"><img class="thumb" src="assets/img/cards/thumbs/9.jpg"></a>
+<div class="title">#9 - Magneton</div>
+</div>
+<div class="filter card holo rare all 10 Mewtwo #10">
+<a href="card.html?id=10" title="Mewtwo #10"><img class="thumb" src="assets/img/cards/thumbs/10.jpg"></a>
+<div class="title">#10 - Mewtwo</div>
+</div>
+<div class="filter card holo rare all 11 Nidoking #11">
+<a href="card.html?id=11" title="Nidoking #11"><img class="thumb" src="assets/img/cards/thumbs/11.jpg"></a>
+<div class="title">#11 - Nidoking</div>
+</div>
+<div class="filter card holo rare all 12 Ninetales #12">
+<a href="card.html?id=12" title="Ninetales #12"><img class="thumb" src="assets/img/cards/thumbs/12.jpg"></a>
+<div class="title">#12 - Ninetales</div>
+</div>
+<div class="filter card holo rare all 13 Poliwrath #13">
+<a href="card.html?id=13" title="Poliwrath #13"><img class="thumb" src="assets/img/cards/thumbs/13.jpg"></a>
+<div class="title">#13 - Poliwrath</div>
+</div>
+<div class="filter card holo rare all 14 Raichu #14">
+<a href="card.html?id=14" title="Raichu #14"><img class="thumb" src="assets/img/cards/thumbs/14.jpg"></a>
+<div class="title">#14 - Raichu</div>
+</div>
+<div class="filter card holo rare all 15 Venusaur #15">
+<a href="card.html?id=15" title="Venusaur #15"><img class="thumb" src="assets/img/cards/thumbs/15.jpg"></a>
+<div class="title">#15 - Venusaur</div>
+</div>
+<div class="filter card holo rare all 16 Zapdos #16">
+<a href="card.html?id=16" title="Zapdos #16"><img class="thumb" src="assets/img/cards/thumbs/16.jpg"></a>
+<div class="title">#16 - Zapdos</div>
+</div>
+<div class="filter card rare all 17 Beedrill #17">
+<a href="card.html?id=17" title="Beedrill #17"><img class="thumb" src="assets/img/cards/thumbs/17.jpg"></a>
+<div class="title">#17 - Beedrill</div>
+</div>
+<div class="filter card rare all 18 Dragonair #18">
+<a href="card.html?id=18" title="Dragonair #18"><img class="thumb" src="assets/img/cards/thumbs/18.jpg"></a>
+<div class="title">#18 - Dragonair</div>
+</div>
+<div class="filter card rare all 19 Dugtrio #19">
+<a href="card.html?id=19" title="Dugtrio #19"><img class="thumb" src="assets/img/cards/thumbs/19.jpg"></a>
+<div class="title">#19 - Dugtrio</div>
+</div>
+<div class="filter card all 20 Electabuzz Base #20">
+<a href="card.html?id=20" title="Electabuzz Base #20"><img class="thumb" src="assets/img/cards/thumbs/20.jpg"></a>
+<div class="title">#20 - Electabuzz</div>
+</div>
+<div class="filter card rare all 21 Electrode Base #21">
+<a href="card.html?id=21" title="Electrode Base #21"><img class="thumb" src="assets/img/cards/thumbs/21.jpg"></a>
+<div class="title">#21 - Electrode</div>
+</div>
+<div class="filter card rare all 22 Pidgeotto Base #22">
+<a href="card.html?id=22" title="Pidgeotto Base #22"><img class="thumb" src="assets/img/cards/thumbs/22.jpg"></a>
+<div class="title">#22 - Pidgeotto</div>
+</div>
+<div class="filter card uncommon all 23 Arcanine Base #23">
+<a href="card.html?id=23" title="Arcanine Base #23"><img class="thumb" src="assets/img/cards/thumbs/23.jpg"></a>
+<div class="title">#23 - Arcanine</div>
+</div>
+<div class="filter card uncommon all 24 Charmeleon Base #24">
+<a href="card.html?id=24" title="Charmeleon Base #24"><img class="thumb" src="assets/img/cards/thumbs/24.jpg"></a>
+<div class="title">#24 - Charmeleon</div>
+</div>
+<div class="filter card uncommon all 25 Dewgong Base #25">
+<a href="card.html?id=25" title="Dewgong Base #25"><img class="thumb" src="assets/img/cards/thumbs/25.jpg"></a>
+<div class="title">#25 - Dewgong</div>
+</div>
+<div class="filter card uncommon all 26 Dratini Base #26">
+<a href="card.html?id=26" title="Dratini Base #26"><img class="thumb" src="assets/img/cards/thumbs/26.jpg"></a>
+<div class="title">#26 - Dratini</div>
+</div>
+<div class="filter card uncommon all 27 Farfetch'd Base #27">
+<a href="card.html?id=27" title="Farfetch'd Base #27"><img class="thumb" src="assets/img/cards/thumbs/27.jpg"></a>
+<div class="title">#27 - Farfetch'd</div>
+</div>
+<div class="filter card uncommon all 28 Growlithe Base #28">
+<a href="card.html?id=28" title="Growlithe Base #28"><img class="thumb" src="assets/img/cards/thumbs/28.jpg"></a>
+<div class="title">#28 - Growlithe</div>
+</div>
+<div class="filter card uncommon all 29 Haunter Base #29">
+<a href="card.html?id=29" title="Haunter Base #29"><img class="thumb" src="assets/img/cards/thumbs/29.jpg"></a>
+<div class="title">#29 - Haunter</div>
+</div>
+<div class="filter card uncommon all 30 Ivysaur Base #30">
+<a href="card.html?id=30" title="Ivysaur Base #30"><img class="thumb" src="assets/img/cards/thumbs/30.jpg"></a>
+<div class="title">#30 - Ivysaur</div>
+</div>
+<div class="filter card uncommon all 31 Jynx Base #31">
+<a href="card.html?id=31" title="Jynx Base #31"><img class="thumb" src="assets/img/cards/thumbs/31.jpg"></a>
+<div class="title">#31 - Jynx</div>
+</div>
+<div class="filter card uncommon all 32 Kadabra Base #32">
+<a href="card.html?id=32" title="Kadabra Base #32"><img class="thumb" src="assets/img/cards/thumbs/32.jpg"></a>
+<div class="title">#32 - Kadabra</div>
+</div>
+<div class="filter card uncommon all 33 Kakuna Base #33">
+<a href="card.html?id=33" title="Kakuna Base #33"><img class="thumb" src="assets/img/cards/thumbs/33.jpg"></a>
+<div class="title">#33 - Kakuna</div>
+</div>
+<div class="filter card uncommon all 34 Machoke Base #34">
+<a href="card.html?id=34" title="Machoke Base #34"><img class="thumb" src="assets/img/cards/thumbs/34.jpg"></a>
+<div class="title">#34 - Machoke</div>
+</div>
+<div class="filter card uncommon all 35 Magikarp Base #35">
+<a href="card.html?id=35" title="Magikarp Base #35"><img class="thumb" src="assets/img/cards/thumbs/35.jpg"></a>
+<div class="title">#35 - Magikarp</div>
+</div>
+<div class="filter card uncommon all 36 Magmar Base #36">
+<a href="card.html?id=36" title="Magmar Base #36"><img class="thumb" src="assets/img/cards/thumbs/36.jpg"></a>
+<div class="title">#36 - Magmar</div>
+</div>
+<div class="filter card uncommon all 37 Nidorino Base #37">
+<a href="card.html?id=37" title="Nidorino Base #37"><img class="thumb" src="assets/img/cards/thumbs/37.jpg"></a>
+<div class="title">#37 - Nidorino</div>
+</div>
+<div class="filter card uncommon all 38 Poliwhirl Base #38">
+<a href="card.html?id=38" title="Poliwhirl Base #38"><img class="thumb" src="assets/img/cards/thumbs/38.jpg"></a>
+<div class="title">#38 - Poliwhirl</div>
+</div>
+<div class="filter card uncommon all 39 Porygon Base #39">
+<a href="card.html?id=39" title="Porygon Base #39"><img class="thumb" src="assets/img/cards/thumbs/39.jpg"></a>
+<div class="title">#39 - Porygon</div>
+</div>
+<div class="filter card uncommon all 40 Raticate Base #40">
+<a href="card.html?id=40" title="Raticate Base #40"><img class="thumb" src="assets/img/cards/thumbs/40.jpg"></a>
+<div class="title">#40 - Raticate</div>
+</div>
+<div class="filter card uncommon all 41 Seel Base #41">
+<a href="card.html?id=41" title="Seel Base #41"><img class="thumb" src="assets/img/cards/thumbs/41.jpg"></a>
+<div class="title">#41 - Seel</div>
+</div>
+<div class="filter card uncommon all 42 Wartortle Base #42">
+<a href="card.html?id=42" title="Wartortle Base #42"><img class="thumb" src="assets/img/cards/thumbs/42.jpg"></a>
+<div class="title">#42 - Wartortle</div>
+</div>
+<div class="filter card common all 43 Abra Base #43">
+<a href="card.html?id=43" title="Abra Base #43"><img class="thumb" src="assets/img/cards/thumbs/43.jpg"></a>
+<div class="title">#43 - Abra</div>
+</div>
+<div class="filter card common all 44 Bulbasaur Base #44">
+<a href="card.html?id=44" title="Bulbasaur Base #44"><img class="thumb" src="assets/img/cards/thumbs/44.jpg"></a>
+<div class="title">#44 - Bulbasaur</div>
+</div>
+<div class="filter card common all 45 Caterpie Base #45">
+<a href="card.html?id=45" title="Caterpie Base #45"><img class="thumb" src="assets/img/cards/thumbs/45.jpg"></a>
+<div class="title">#45 - Caterpie</div>
+</div>
+<div class="filter card common all 46 Charmander Base #46">
+<a href="card.html?id=46" title="Charmander Base #46"><img class="thumb" src="assets/img/cards/thumbs/46.jpg"></a>
+<div class="title">#46 - Charmander</div>
+</div>
+<div class="filter card common all 47 Diglett Base #47">
+<a href="card.html?id=47" title="Diglett Base #47"><img class="thumb" src="assets/img/cards/thumbs/47.jpg"></a>
+<div class="title">#47 - Diglett</div>
+</div>
+<div class="filter card common all 48 Doduo Base #48">
+<a href="card.html?id=48" title="Doduo Base #48"><img class="thumb" src="assets/img/cards/thumbs/48.jpg"></a>
+<div class="title">#48 - Doduo</div>
+</div>
+<div class="filter card common all 49 Drowzee Base #49">
+<a href="card.html?id=49" title="Drowzee Base #49"><img class="thumb" src="assets/img/cards/thumbs/49.jpg"></a>
+<div class="title">#49 - Drowzee</div>
+</div>
+<div class="filter card common all 50 Gastly Base #50">
+<a href="card.html?id=50" title="Gastly Base #50"><img class="thumb" src="assets/img/cards/thumbs/50.jpg"></a>
+<div class="title">#50 - Gastly</div>
+</div>
+<div class="filter card common all 51 Koffing Base #51">
+<a href="card.html?id=51" title="Koffing Base #51"><img class="thumb" src="assets/img/cards/thumbs/51.jpg"></a>
+<div class="title">#51 - Koffing</div>
+</div>
+<div class="filter card common all 52 Machop Base #52">
+<a href="card.html?id=52" title="Machop Base #52"><img class="thumb" src="assets/img/cards/thumbs/52.jpg"></a>
+<div class="title">#52 - Machop</div>
+</div>
+<div class="filter card common all 53 Magnemite Base #53">
+<a href="card.html?id=53" title="Magnemite Base #53"><img class="thumb" src="assets/img/cards/thumbs/53.jpg"></a>
+<div class="title">#53 - Magnemite</div>
+</div>
+<div class="filter card common all 54 Metapod Base #54">
+<a href="card.html?id=54" title="Metapod Base #54"><img class="thumb" src="assets/img/cards/thumbs/54.jpg"></a>
+<div class="title">#54 - Metapod</div>
+</div>
+<div class="filter card common all 55 Nidoran M Base #55">
+<a href="card.html?id=55" title="Nidoran M Base #55"><img class="thumb" src="assets/img/cards/thumbs/55.jpg"></a>
+<div class="title">#55 - Nidoran M</div>
+</div>
+<div class="filter card common all 56 Onix Base #56">
+<a href="card.html?id=56" title="Onix Base #56"><img class="thumb" src="assets/img/cards/thumbs/56.jpg"></a>
+<div class="title">#56 - Onix</div>
+</div>
+<div class="filter card common all 57 Pidgey Base #57">
+<a href="card.html?id=57" title="Pidgey Base #57"><img class="thumb" src="assets/img/cards/thumbs/57.jpg"></a>
+<div class="title">#57 - Pidgey</div>
+</div>
+<div class="filter card common all 58 Pikachu Base #58">
+<a href="card.html?id=58" title="Pikachu Base #58"><img class="thumb" src="assets/img/cards/thumbs/58.jpg"></a>
+<div class="title">#58 - Pikachu</div>
+</div>
+<div class="filter card common all 59 Poliwag Base #59">
+<a href="card.html?id=59" title="Poliwag Base #59"><img class="thumb" src="assets/img/cards/thumbs/59.jpg"></a>
+<div class="title">#59 - Poliwag</div>
+</div>
+<div class="filter card common all 60 Ponyta Base #60">
+<a href="card.html?id=60" title="Ponyta Base #60"><img class="thumb" src="assets/img/cards/thumbs/60.jpg"></a>
+<div class="title">#60 - Ponyta</div>
+</div>
+<div class="filter card common all 61 Rattata Base #61">
+<a href="card.html?id=61" title="Rattata Base #61"><img class="thumb" src="assets/img/cards/thumbs/61.jpg"></a>
+<div class="title">#61 - Rattata</div>
+</div>
+<div class="filter card common all 62 Sandshrew Base #62">
+<a href="card.html?id=62" title="Sandshrew Base #62"><img class="thumb" src="assets/img/cards/thumbs/62.jpg"></a>
+<div class="title">#62 - Sandshrew</div>
+</div>
+<div class="filter card common all 63 Squirtle Base #63">
+<a href="card.html?id=63" title="Squirtle Base #63"><img class="thumb" src="assets/img/cards/thumbs/63.jpg"></a>
+<div class="title">#63 - Squirtle</div>
+</div>
+<div class="filter card common all 64 Starmie Base #64">
+<a href="card.html?id=64" title="Starmie Base #64"><img class="thumb" src="assets/img/cards/thumbs/64.jpg"></a>
+<div class="title">#64 - Starmie</div>
+</div>
+<div class="filter card common all 65 Staryu Base #65">
+<a href="card.html?id=65" title="Staryu Base #65"><img class="thumb" src="assets/img/cards/thumbs/65.jpg"></a>
+<div class="title">#65 - Staryu</div>
+</div>
+<div class="filter card common all 66 Tangela Base #66">
+<a href="card.html?id=66" title="Tangela Base #66"><img class="thumb" src="assets/img/cards/thumbs/66.jpg"></a>
+<div class="title">#66 - Tangela</div>
+</div>
+<div class="filter card common all 67 Voltorb Base #67">
+<a href="card.html?id=67" title="Voltorb Base #67"><img class="thumb" src="assets/img/cards/thumbs/67.jpg"></a>
+<div class="title">#67 - Voltorb</div>
+</div>
+<div class="filter card common all 68 Vulpix Base #68">
+<a href="card.html?id=68" title="Vulpix Base #68"><img class="thumb" src="assets/img/cards/thumbs/68.jpg"></a>
+<div class="title">#68 - Vulpix</div>
+</div>
+<div class="filter card common all 69 Weedle Base #69">
+<a href="card.html?id=69" title="Weedle Base #69"><img class="thumb" src="assets/img/cards/thumbs/69.jpg"></a>
+<div class="title">#69 - Weedle</div>
+</div>
+<div class="filter card rare all 70 Clefairy Doll Base #70">
+<a href="card.html?id=70" title="Clefairy Doll Base #70"><img class="thumb" src="assets/img/cards/thumbs/70.jpg"></a>
+<div class="title">#70 - Clefairy Doll</div>
+</div>
+<div class="filter card rare all 71 Computer Search Base #71">
+<a href="card.html?id=71" title="Computer Search Base #71"><img class="thumb" src="assets/img/cards/thumbs/71.jpg"></a>
+<div class="title">#71 - Computer Search</div>
+</div>
+<div class="filter card rare all 72 Devolution Spray Base #72">
+<a href="card.html?id=72" title="Devolution Spray Base #72"><img class="thumb" src="assets/img/cards/thumbs/72.jpg"></a>
+<div class="title">#72 - Devolution Spray</div>
+</div>
+<div class="filter card rare all 73 Imposter Professor Oak Base #73">
+<a href="card.html?id=73" title="Imposter Professor Oak Base #73"><img class="thumb" src="assets/img/cards/thumbs/73.jpg"></a>
+<div class="title">#73 - Imposter Professor Oak</div>
+</div>
+<div class="filter card rare all 74 Item Finder Base #74">
+<a href="card.html?id=74" title="Item Finder Base #74"><img class="thumb" src="assets/img/cards/thumbs/74.jpg"></a>
+<div class="title">#74 - Item Finder</div>
+</div>
+<div class="filter card rare all 75 Lass Base #75">
+<a href="card.html?id=75" title="Lass Base #75"><img class="thumb" src="assets/img/cards/thumbs/75.jpg"></a>
+<div class="title">#75 - Lass</div>
+</div>
+<div class="filter card rare all 76 Pokemon Breeder Base #76">
+<a href="card.html?id=76" title="Pokemon Breeder Base #76"><img class="thumb" src="assets/img/cards/thumbs/76.jpg"></a>
+<div class="title">#76 - Pokemon Breeder</div>
+</div>
+<div class="filter card rare all 77 Pokemon Trader Base #77">
+<a href="card.html?id=77" title="Pokemon Trader Base #77"><img class="thumb" src="assets/img/cards/thumbs/77.jpg"></a>
+<div class="title">#77 - Pokemon Trader</div>
+</div>
+<div class="filter card rare all 78 Scoop Up Base #78">
+<a href="card.html?id=78" title="Scoop Up Base #78"><img class="thumb" src="assets/img/cards/thumbs/78.jpg"></a>
+<div class="title">#78 - Scoop Up</div>
+</div>
+<div class="filter card rare all 79 Super Energy Removal Base #79">
+<a href="card.html?id=79" title="Super Energy Removal Base #79"><img class="thumb" src="assets/img/cards/thumbs/79.jpg"></a>
+<div class="title">#79 - Super Energy Removal</div>
+</div>
+<div class="filter card uncommon all 80 Defender Base #80">
+<a href="card.html?id=80" title="Defender Base #80"><img class="thumb" src="assets/img/cards/thumbs/80.jpg"></a>
+<div class="title">#80 - Defender</div>
+</div>
+<div class="filter card uncommon all 81 Energy Retrieval Base #81">
+<a href="card.html?id=81" title="Energy Retrieval Base #81"><img class="thumb" src="assets/img/cards/thumbs/81.jpg"></a>
+<div class="title">#81 - Energy Retrieval</div>
+</div>
+<div class="filter card uncommon all 82 Full Heal Base #82">
+<a href="card.html?id=82" title="Full Heal Base #82"><img class="thumb" src="assets/img/cards/thumbs/82.jpg"></a>
+<div class="title">#82 - Full Heal</div>
+</div>
+<div class="filter card uncommon all 83 Maintenance Base #83">
+<a href="card.html?id=83" title="Maintenance Base #83"><img class="thumb" src="assets/img/cards/thumbs/83.jpg"></a>
+<div class="title">#83 - Maintenance</div>
+</div>
+<div class="filter card uncommon all 84 PlusPower Base #84">
+<a href="card.html?id=84" title="PlusPower Base #84"><img class="thumb" src="assets/img/cards/thumbs/84.jpg"></a>
+<div class="title">#84 - PlusPower</div>
+</div>
+<div class="filter card uncommon all 85 Pokemon Center Base #85">
+<a href="card.html?id=85" title="Pokemon Center Base #85"><img class="thumb" src="assets/img/cards/thumbs/85.jpg"></a>
+<div class="title">#85 - Pokemon Center</div>
+</div>
+<div class="filter card uncommon all 86 Pokemon Flute Base #86">
+<a href="card.html?id=86" title="Pokemon Flute Base #86"><img class="thumb" src="assets/img/cards/thumbs/86.jpg"></a>
+<div class="title">#86 - Pokemon Flute</div>
+</div>
+<div class="filter card uncommon all 87 Pokedex Base #87">
+<a href="card.html?id=87" title="Pokedex Base #87"><img class="thumb" src="assets/img/cards/thumbs/87.jpg"></a>
+<div class="title">#87 - Pokedex</div>
+</div>
+<div class="filter card uncommon all 88 Professor Oak Base #88">
+<a href="card.html?id=88" title="Professor Oak Base #88"><img class="thumb" src="assets/img/cards/thumbs/88.jpg"></a>
+<div class="title">#88 - Professor Oak</div>
+</div>
+<div class="filter card uncommon all 89 Revive Base #89">
+<a href="card.html?id=89" title="Revive Base #89"><img class="thumb" src="assets/img/cards/thumbs/89.jpg"></a>
+<div class="title">#89 - Revive</div>
+</div>
+<div class="filter card uncommon all 90 Super Potion Base #90">
+<a href="card.html?id=90" title="Super Potion Base #90"><img class="thumb" src="assets/img/cards/thumbs/90.jpg"></a>
+<div class="title">#90 - Super Potion</div>
+</div>
+<div class="filter card common all 91 Bill Base #91">
+<a href="card.html?id=91" title="Bill Base #91"><img class="thumb" src="assets/img/cards/thumbs/91.jpg"></a>
+<div class="title">#91 - Bill</div>
+</div>
+<div class="filter card common all 92 Energy Removal Base #92">
+<a href="card.html?id=92" title="Energy Removal Base #92"><img class="thumb" src="assets/img/cards/thumbs/92.jpg"></a>
+<div class="title">#92 - Energy Removal</div>
+</div>
+<div class="filter card common all 93 Gust of Wind Base #93">
+<a href="card.html?id=93" title="Gust of Wind Base #93"><img class="thumb" src="assets/img/cards/thumbs/93.jpg"></a>
+<div class="title">#93 - Gust of Wind</div>
+</div>
+<div class="filter card common all 94 Potion Base #94">
+<a href="card.html?id=94" title="Potion Base #94"><img class="thumb" src="assets/img/cards/thumbs/94.jpg"></a>
+<div class="title">#94 - Potion</div>
+</div>
+<div class="filter card common all 95 Switch Base #95">
+<a href="card.html?id=95" title="Switch Base #95"><img class="thumb" src="assets/img/cards/thumbs/95.jpg"></a>
+<div class="title">#95 - Switch</div>
+</div>
+<div class="filter card uncommon all 96 Double Colorless Energy Base #96">
+<a href="card.html?id=96" title="Double Colorless Energy Base #96"><img class="thumb" src="assets/img/cards/thumbs/96.jpg"></a>
+<div class="title">#96 - Double Colorless Energy</div>
+</div>
+<div class="filter card common all 97 Fighting Energy Base #97">
+<a href="card.html?id=97" title="Fighting Energy Base #97"><img class="thumb" src="assets/img/cards/thumbs/97.jpg"></a>
+<div class="title">#97 - Fighting Energy</div>
+</div>
+<div class="filter card common all 98 Fire Energy Base #98">
+<a href="card.html?id=98" title="Fire Energy Base #98"><img class="thumb" src="assets/img/cards/thumbs/98.jpg"></a>
+<div class="title">#98 - Fire Energy</div>
+</div>
+<div class="filter card common all 99 Grass Energy Base #99">
+<a href="card.html?id=99" title="Grass Energy Base #99"><img class="thumb" src="assets/img/cards/thumbs/99.jpg"></a>
+<div class="title">#99 - Grass Energy</div>
+</div>
+<div class="filter card common all 100 Lightning Energy #100">
+<a href="card.html?id=100" title="Lightning Energy #100"><img class="thumb" src="assets/img/cards/thumbs/100.jpg"></a>
+<div class="title">#100 - Lightning Energy</div>
+</div>
+<div class="filter card common all 101 Psychic Energy #101">
+<a href="card.html?id=101" title="Psychic Energy #101"><img class="thumb" src="assets/img/cards/thumbs/101.jpg"></a>
+<div class="title">#101 - Psychic Energy</div>
+</div>
+<div class="filter card common all 102 Water Energy #102">
+<a href="card.html?id=102" title="Water Energy #102"><img class="thumb" src="assets/img/cards/thumbs/102.jpg"></a>
+<div class="title">#102 - Water Energy</div>
+</div>
+
+</div>
+
+	
+			
+
+
+      <script type="text/javascript" src="js/filter.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+body { overflow:hidden; color:black;margin:0; font-family:Arial;
+
+	-webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -ms-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  transition: all 3s ease;
+
+
+   }
+.tran { transition: all 0.1s ease-in-out; }
+
+h1 {cursor:default;font-size:50px;font-weight:normal;font-family:Segoe UI Light;}
+
+h1:active {color:white;}
+
+h1:active:after {width:32px;height:32px;content: ' copied';style="float:left;width:32px;height:32px;"}
+
+
+h1:active:after {width:32px;height:32px;content: ' copied' ;style="float:left;width:32px;height:32px;"}
+
+
+#close {
+
+
+		-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+
+
+}
+}
+#flament {top: 50%;
+left: 50%;
+position:fixed;
+margin-top: -270px; margin-left: -225px;z-index:999; 
+
+background-image:url("flament.png");
+
+
+pointer-events: none;
+position:absolute;width:450px;min-height:570px;display:block;}
+
+
+#inner {top: 50%;
+left: 50%;
+position:fixed;
+margin-top: -300px; margin-left: -225px; background:black;padding:30px 1px 1px 1px;position:absolute;width:450px;max-height:570px;display:block;}
+
+
+.line
+
+{top: 50%;
+left: 50%;
+position:fixed;
+background:black;
+display:block;
+width:270px;
+height:1px;
+
+}
+
+
+.place {  width:100%; height:10px;animation-timing-function: ease-out; }
+.c1 { animation-name: anic1; animation-duration: 0.2s; height:50px; }
+.c2 { animation-name: anic2; animation-duration: 0.3s; height:140px;}
+.c3 { animation-name: anic3; animation-duration: 0.5s; height:180px; }
+.c4 { animation-name: anic4; animation-duration: 0.1s; height:200px;}
+
+
+.place span { position:absolute; bottom:0; color:black; opacity:1.0; text-transform: uppercase; background-color:rgba(0,0,0,0.1);  }
+
+
+.place:hover span { opacity:1; letter-spacing:1px }
+
+
+#topicons {
+
+top: 50%;
+left: 50%;
+position:fixed;
+margin-top: -370px; margin-left: -30px;
+width:100px;
+height:50px;
+
+}
+
+
+
+#bottomicons {
+
+bottom: 5%;
+left: 50%;
+position:fixed;
+margin-top: -70px; margin-left: -30px;
+width:50px;
+    text-align: center;
+
+}
+
+
+
+@media (min-width:320px)  { 
+
+#colors{display:none;}
+
+
+
+
+
+
+
+}
+
+
+
+.block-mini {margin-bottom:32px;width:32px;height:22px;background:blue;float:left;}

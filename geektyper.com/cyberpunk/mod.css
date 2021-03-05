@@ -1,0 +1,78 @@
+
+@font-face {
+    font-family: 'Good Times Rg';
+    src: url('GoodTimesRg-Regular.woff2') format('woff2'),
+        url('GoodTimesRg-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body {background-image:url('bg.jpg');font-family:Good Times Rg, Sans-Serif;background-size:cover;background-color:#1d1d1d;color:rgb(255,255,255);}
+#console {font-family:Good Times Rg, Sans-Serif;}
+#center {background-image:url('6753.png');background-size: auto 300px;}
+.folder {background-color:#dbf962;}
+
+.dragme {border-right:none; border-left:none;border-color:#dbf962;color:rgb(255,255,255);}
+#button {background-color:#1ad776;color:rgb(255,255,255);}
+#button:hover {color:rgb(50,140,178);background-color:rgb(255,255,255);}
+
+
+#console {
+	display:flex;
+	overflow:hidden;
+	flex-direction:column-reverse;
+max-height:500px;}
+
+#BigFolder {width:780px;}
+
+#BreachE {width:700px;
+
+top:20%;
+left: 70%;
+
+}
+
+.hex:hover {background-color:#dbf962;color:black;}
+
+
+.dragme {
+    text-shadow: none;
+
+}
+
+.dragme:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 25px 0;
+  border-color: transparent #608A32 transparent transparent;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.dragme:before {
+    content: '';
+    width: 100;
+    height: 100;
+    border-style: solid;
+    border-width: 0px 0px 10px 500px;
+    border-color: #dbf962;
+    left: 0;
+    bottom: 8px;
+    position: absolute;
+}
+
+
+#LevelRequired {  text-shadow: none;color:white;border: 5px solid #dd433e;border-left:0;border-right:0;}
+
+#AccessDenied {  text-shadow: none;color:white;border: 5px solid #dd433e;border-left:0;border-right:0;}
+
+#AccessGranted {  text-shadow: none;color:white;border: 5px solid #1ad776;border-left:0;border-right:0;}
+
+
+

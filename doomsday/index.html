@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>23:58:00</title>
+
+<style>
+body {background-color:#f1f1f1;overflow:hidden;
+
+
+background-image:url(map.png);
+background-size:cover;
+background-position:center center;}
+
+.demo-container.clocks {
+    background: none;
+  
+}
+
+
+.demo-container.clocks.single {
+    padding: 2em;
+    display: inline-block
+}
+
+.demo-container.clocks.single .clock {
+    height: 70vh;
+    width: 70vh;
+    padding: 0;
+    margin-top:10vh;
+}
+
+
+
+.clock {
+    border-radius: 50%;
+    background: radial-gradient(#000, #000 0.1em, #fff 0.1em, #fff), #fff;
+    display: inline-block;
+    padding-bottom: 31.333%;
+    position: relative;
+    width: 31.333%;
+    opacity: 0
+}
+
+.multiple .clock {
+    left: auto
+}
+
+.clock.show {
+    opacity: 1;
+}
+
+.multiple .clock.show {
+    -webkit-transform: none;
+    transform: none
+}
+
+.clock::after {
+    background: red;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 4%;
+    height: 4%;
+    z-index: 10
+}
+
+.minutes-container,
+.hours-container,
+.seconds-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+
+
+.hours {
+    background: #000;
+    width: 3.5%;
+    height: 40%;
+    position: absolute;
+    left: 48.25%;
+    top: 22%;
+    -webkit-transform-origin: 50% 71%;
+    transform-origin: 50% 71%
+}
+
+.minutes {
+    background: #000;
+    width: 3.5%;
+    height: 55%;
+    position: absolute;
+    left: 48.25%;
+    top: 7%;
+    -webkit-transform-origin: 50% 78.5%;
+    transform-origin: 50% 78.5%
+}
+
+.seconds {
+    background: red;
+    width: 1.5%;
+    height: 42%;
+    position: absolute;
+    left: 49.25%;
+    top: 20%;
+    -webkit-transform-origin: 50% 71%;
+    transform-origin: 50% 71%;
+    z-index: 8
+}
+
+
+
+.clock.simple {
+    background: #fff url(bg.png) no-repeat center;
+    background-size: 88%
+}
+
+.clock.simple:after {
+    background-color: #000;
+
+}
+
+
+.clock.simple .minutes {
+    width: 1%;
+    height: 40%;
+    left: 49%;
+    top: 10%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+	border-radius:5px;
+}
+
+.clock.simple .hours {
+    width: 2.5%;
+    height: 20%;
+    left: 48.75%;
+    top: 30%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+	border-radius:5px;
+}
+
+
+
+</style>
+<!-- Hy dyma -->
+
+</head>
+<body>
+<center>
+<div class="demo-container clocks single local bounce">
+<article class="clock simple show">
+<div class="hours-container">
+<div class="hours angled" style="transform: rotateZ(-3deg);"></div>
+</div>
+<div class="minutes-container" data-second-angle="180" style="transform: rotateZ(35deg);">
+<div class="minutes angled" style="transform: rotateZ(-45deg);"></div>
+</div>
+
+</div>
+</article>
+</div>
+</center>
+
+
+<a href="http://thebulletin.org/timeline?whowatchesthewatchmen" target="_blank"><img src="logo.png" style="left:40px;bottom:40px;position:fixed;" /></a>
+
+</body>
+
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<!-- V for Vista baby -->
+
+<head>
+
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <style type="text/css">
+        body {
+	
+            background: #000;
+            background-size: cover;
+            user-select: none;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            
+            -webkit-user-select: none;
+            /* Safari */
+            
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            
+            -moz-user-select: none;
+            /* Firefox */
+            
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            
+            user-select: none;
+            /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+            
+            font-family: Segoe UI Light, Segoe UI, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            color: #727272;
+        }
+        .plex {
+            cursor: default;
+            font-family: Segoe UI Semibold;
+            font-weight: 450;
+            font-size: 2vh;
+            width: 22vh;
+            height: 11vh;
+            background: red;
+            padding: 15px;
+            text-align: right;
+            background: url(http://i.imgur.com/kTKjZq4.png);
+        }
+        .plex img {
+            width: 100%;
+        }
+        .moretv {
+            display: table-cell;
+            vertical-align: bottom;
+            font-size: 1.5vh;
+            text-align: right;
+            cursor: default;
+            float: left;
+            bottom: 14vh;
+            font-size: 1.5vh;
+            width: 15vh;
+            height: 11vh;
+            margin-right: 1vh;
+        }
+        .moretv img {
+            margin-top: 1.5vh;
+        }
+        #main {
+            text-align: left;
+        }
+        .main {
+            position: fixed;
+            bottom: 4vh;
+            left: 20vh;
+        }
+        #bottom {
+            margin-top: 12vh;
+        }
+        #main h1 {
+            font-size: 2.5vh;
+            cursor: default;
+        }
+        #main h2 {
+            font-size: 2vh;
+            color: #9adaff;
+            cursor: default;
+            margin-left: 1.5vh;
+        }
+        .mainbg {
+            background: url(soup.png) 100%;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            position: fixed;
+            z-index: -1;
+        }
+        .videoContainer {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+            transition: 1s opacity;
+        }
+        .segments {
+            bottom: 8vh;
+            position: fixed;
+            left: 7vh;
+        }
+        html {
+            -webkit-transition: background-color 1s;
+            transition: background-color 1s;
+        }
+        html,
+        body {
+		
+            /* For the loading indicator to be vertically centered ensure */
+            /* the html and body elements take up the full viewport */
+         
+            min-height: 100%;
+        }
+        html.loading {
+            /* Replace #333 with the background-color of your choice */
+            /* Replace loading.gif with the loading image of your choice */
+            
+            background: #333 url('loading.gif') no-repeat 50% 50%;
+            /* Ensures that the transition only runs in one direction */
+            
+            -webkit-transition: background-color 0;
+            transition: background-color 0;
+        }
+		
+		.container {   zoom:1.2;}
+        body {
+	
+            -webkit-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        html.loading body {
+            /* Make the contents of the body opaque during loading */
+            
+            opacity: 0;
+            /* Ensures that the transition only runs in one direction */
+            
+            -webkit-transition: opacity 0;
+            transition: opacity 0;
+        }
+        @media (max-width: 1260px) {
+            .hidebig {
+                display: none;
+            }
+        } //nothing with screen size bigger than 960px
+        .menu {
+            margin-left: 1.5vh;
+        }
+        li.selected {
+            width: 1650px;
+            height: 17vh;
+        }
+        li.selected .test {
+            display: block;
+        }
+        li.selected .sel {
+            display: block;
+        }
+        li.selected .moretv {
+            display: block;
+        }
+        .test {
+            display: none;
+        }
+        .sel {
+            -webkit-animation: slide-down .3s ease-out;
+            -moz-animation: slide-down .3s ease-out;
+            border-radius: 0.5vh;
+            text-align: right;
+            font-size: 2.5vh;
+            font-family: Segoe UI;
+            float: left;
+            display: none;
+            width: 24vh;
+            height: 13vh;
+            padding: 0.5vh;
+            background-color: rgba(6, 48, 106, 0.3);
+            background-image: url(sel.png);
+			background-size:cover;
+        }
+        .sel img {
+            width: 100%;
+            margin-top: -1.5vh;
+        }
+        .first {
+            margin-left: -15vh;
+        }
+        .moretv {
+            -webkit-animation: slide-down .3s ease-out;
+            -moz-animation: slide-down .3s ease-out;
+            color: #bbdaf7;
+            margin-top: 2.5vh;
+            font-size: 2.5vh;
+            display: none;
+            float: left;
+            width: 15vh;
+            height: 3vh;
+            margin-right: 5vh;
+        }
+        .moretv img {
+            margin-top: -1vh;
+            width: 100%;
+        }
+        .center {
+            text-align: center;
+        }
+        a:hover {
+            color: blue
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .menu h2 {
+            padding: 0;
+            margin: 0.7vh 1.5vw 0px 7vh;
+            clear: both;
+			font-size:2.5vh;
+            color: #9cd8fa;
+			 cursor: default;
+        }
+        li.selected h2 {
+            margin-left: 5.5vh;
+			
+            font-size: 3vh;
+            color: white;
+			margin-bottom:0.5vh;
+			 cursor: default;
+        }
+        @-webkit-keyframes slide-down {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+            }
+        }
+        @-moz-keyframes slide-down {
+            0% {
+                opacity: 0;
+                -moz-transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                -moz-transform: translateY(0);
+            }
+        }
+    </style>
+    <title>Windows Media Center</title>
+
+    <script type='text/javascript'>
+        //<![CDATA[
+        $(window).load(function() {
+            var li = $('li');
+            var liSelected;
+            $(window).keydown(function(e) {
+                if (e.which === 40) {
+                    if (liSelected) {
+                        liSelected.removeClass('selected');
+                        next = liSelected.next();
+                        if (next.length > 0) {
+                            liSelected = next.addClass('selected');
+                        } else {
+                            liSelected = li.eq(0).addClass('selected');
+                        }
+                    } else {
+                        liSelected = li.eq(0).addClass('selected');
+                    }
+                } else if (e.which === 38) {
+                    if (liSelected) {
+                        liSelected.removeClass('selected');
+                        next = liSelected.prev();
+                        if (next.length > 0) {
+                            liSelected = next.addClass('selected');
+                        } else {
+                            liSelected = li.last().addClass('selected');
+                        }
+                    } else {
+                        liSelected = li.last().addClass('selected');
+
+                    }
+                }
+            });
+        }); //]]>
+    </script>
+
+    <script type='text/javascript'>
+        //<![CDATA[
+
+
+
+        var doScroll = function(e) {
+            // cross-browser wheel delta
+
+            var li = $('li');
+            var liSelected;
+
+
+            e = window.event || e;
+            var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+
+            // Do something with `delta`
+
+
+            if (delta === -1) {
+                console.log("delta 1");
+
+                if (liSelected) {
+
+                    console.log("selected");
+                    liSelected.removeClass('selected');
+                    next = liSelected.next();
+                    if (next.length > 0) {
+                        liSelected = next.addClass('selected');
+                    } else {
+                        liSelected = li.eq(0).addClass('selected');
+                    }
+
+
+                } else {
+
+                    $(function() {
+                        var e = $.Event('keydown');
+                        e.which = 40; // Character 'A'
+                        $(window).trigger(e);
+                    });
+                }
+
+
+
+
+            } else if (delta === 1) {
+
+                console.log("delta -1");
+                if (liSelected) {
+
+                    liSelected.removeClass('selected');
+                    next = liSelected.prev();
+                    if (next.length > 0) {
+
+                        liSelected = next.addClass('selected');
+                    } else {
+                        liSelected = li.last().addClass('selected');
+                        console.log("first");
+                    }
+                } else {
+
+                    console.log("aaa");
+                    $(function() {
+                        var e = $.Event('keydown');
+                        e.which = 38; // Character 'A'
+                        $(window).trigger(e);
+                    });
+
+
+                }
+
+
+
+
+            }
+
+            e.preventDefault();
+        };
+
+        if (window.addEventListener) {
+            window.addEventListener("mousewheel", doScroll, false);
+            window.addEventListener("DOMMouseScroll", doScroll, false);
+        } else {
+            window.attachEvent("onmousewheel", doScroll);
+        }
+    </script>
+
+    <script>
+        $(window).load(function() {
+            var e = $.Event('keydown');
+            e.which = 38; // Character 'A'
+            $(window).trigger(e);
+        });
+    </script>
+
+
+
+
+</head>
+
+
+
+
+<body>
+    <html class="loading">
+    <!-- All the things -->
+
+    </html>
+
+    <div style="font-size:3vh;font-family:Segoe UI;font-weight:400;position:fixed;top:4.5vh;right:5vh;opacity:1.0;z-index:99;color:white;">
+        <div id="date-time" style="float:left;margin-right:10px;margin-top:5px;">12:00</div> 
+		<img id="greenOff" onclick="document.getElementById('movie1').play();document.getElementById('videoContainer').style.display = 'block';document.getElementById('greenOff').style.display = 'none';document.getElementById('greenOn').style.display = 'block';" src="icon/android-icon-192x192.png" style="width:6vh;float:right;">
+		<img id="greenOn" onclick="document.getElementById('movie1').pause();document.getElementById('videoContainer').style.display = 'block';document.getElementById('greenOn').style.display = 'none';document.getElementById('greenOff').style.display = 'block';" src="icon/android-icon-192x192.png" style="width:6vh;float:right;display:none;">
+    </div>
+
+    <div id="videoContainer" style="display:none;opacity:0.5)">
+        <video loop muted id="movie1">
+            <source src="aq.mp4" type="video/mp4">
+                <source src="aq.mp4" type="video/webm">
+        </video>
+    </div>
+
+    <div class="mainbg">
+
+
+    </div>
+<div class="container">
+    <img src="vista.jpg" style="display:none;position:fixed;z-index:-99;bottom:-35px;left:-30px;" />
+
+    <div class="bottomsection">
+
+
+
+
+        <div class="segments">
+
+            <ul class="menu">
+                <li>
+                    <h2>Tasks</h2>
+
+
+                
+
+                    <div class="moretv first center">
+                        settings
+                        <img src="settings.png" />
+                    </div>
+
+                    <div class="sel">
+                        shutdown
+                        <br>
+                        <br>
+                        <img src="shutdown.png" />
+                    </div>
+
+                    <div class="moretv center">
+                        burn cd/dvd
+                        <img src="dvd.png" />
+                    </div>
+
+                    <div class="moretv center">
+                        sync
+                        <img src="sync.png" />
+                    </div>
+
+                    <div class="moretv center">
+                        add extender
+                        <img src="extender.png" />
+                    </div>
+
+
+                </li>
+                <li>
+                    <h2>Online Media</h2>
+
+
+                 
+
+                    <div class="moretv first">
+                        library
+                        <br>
+                        <img src="library.png" />
+                    </div>
+
+                    <div class="sel">
+                        explore
+                        <br>
+                        <br>
+                        <img src="programs.png" />
+                    </div>
+
+
+
+
+
+                </li>
+                <li>
+                    <h2>Music</h2>
+                 
+
+                    <div class="moretv first">
+                        more music
+                        <img src="radio.png" />
+                    </div>
+
+                    <div class="sel">
+                        music library
+                        <br>
+                        <br>
+                        <img src="music.png" />
+                    </div>
+
+                    <div class="moretv center">
+                        play all
+                        <img src="playall2.png" />
+                    </div>
+
+                    <div class="moretv">
+                        radio
+                        <img src="radio.png" />
+                    </div>
+
+                    <div class="moretv">
+                        search
+                        <br>
+                        <br>
+                        <img src="searchmusic.png" />
+                    </div>
+                </li>
+
+
+                <li class="">
+                    <h2>TV + Movies</h2>
+                  
+                    <div class="moretv first">
+                        more tv
+                        <img src="moretv.png" />
+                    </div>
+
+                    <div class="sel">
+                        recorded tv&nbsp;
+                        <img src="recorded.png" />
+                    </div>
+
+                    <div class="moretv center">
+                        live tv
+                        <img src="playall2.png" />
+                    </div>
+
+                    <div class="moretv">
+                        guide
+                        <img src="guide.png" />
+                    </div>
+
+                    <div class="moretv">
+                        movies guide
+                        <img src="moviesguide.png" />
+                    </div>
+
+                    <div class="moretv center">
+                        play dvd
+                        <img src="dvd.png" />
+                    </div>
+
+                </li>
+
+
+                <li>
+                    <h2>Photos + Video</h2>
+
+
+
+                    <div class="moretv first">
+                        <br>
+                        <br>
+
+                    </div>
+
+
+
+                    <div class="sel">
+                        picture library
+                        <br>
+                        <br>
+                        <img src="picturelibrary.png" />
+                    </div>
+
+
+                    <div class="moretv center">
+                        play all
+                        <img src="playall2.png" />
+                    </div>
+
+                    <div class="moretv">
+                        video library
+                        <img src="library.png" />
+                    </div>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+
+    </div>   </div>
+
+    <script type='text/javascript'>
+        //<![CDATA[
+        $(window).load(function() {
+            function updatingClock(selector, type) {
+                    function currentDate() {
+                            var currentDate = new Date;
+                            var Day = currentDate.getDate();
+                            if (Day < 10) {
+                                Day = '0' + Day;
+                            } //end if
+                            var Month = currentDate.getMonth() + 1;
+                            if (Month < 10) {
+                                Month = '0' + Month;
+                            } //end if
+                            var Year = currentDate.getFullYear();
+                            var fullDate = Month + '/' + Day + '/' + Year;
+                            return fullDate;
+                        } //end current date function
+
+                    function currentTime() {
+                            var currentTime = new Date;
+                            var Minutes = currentTime.getMinutes();
+                            if (Minutes < 10) {
+                                Minutes = '0' + Minutes;
+                            }
+                            var Hour = currentTime.getHours();
+                            if (Hour > 12) {
+                                Hour -= 12;
+                            } //end if
+                            var Time = Hour + ':' + Minutes;
+                            if (currentTime.getHours() <= 12) {
+                                Time += ' AM';
+                            } //end if
+                            if (currentTime.getHours() > 12) {
+                                Time += ' PM';
+                            } //end if
+                            return Time;
+                        } // end current time function
+
+
+                    function updateOutput() {
+                            var output;
+                            if (type == 'time') {
+                                output = currentTime();
+                                if ($(selector).text() != output) {
+                                    $(selector).text(output);
+                                } //end if
+                            } //end if
+                            if (type == 'date') {
+                                output = currentDate();
+                                if ($(selector).text() != output) {
+                                    $(selector).text(output);
+                                } //end if
+                            } //end if
+                            if (type == 'both') {
+                                output = currentDate() + ' at ' + currentTime();
+                                if ($(selector).text() != output) {
+                                    $(selector).text(output);
+                                } //end if
+                            } //end if
+                        } //end update output function
+                    updateOutput();
+                    window.setInterval(function() {
+                        updateOutput();
+                    }, 1000); //run update every 1 second
+                } // end updating clock function
+            updatingClock('#date-time', 'time');
+        }); //]]>
+    </script>
+
+
+
+
+
+    <script>
+        // IE10+
+        document.getElementsByTagName("html")[0].classList.remove("loading");
+
+        // All browsers
+        document.getElementsByTagName("html")[0].className.replace(/loading/, "");
+
+        // Or with jQuery
+        $("html").removeClass("loading");
+    </script>
+
+</html>

@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--
+
+
+                         `. ___
+                        __,' __`.                _..----....____
+            __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'
+      _..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'
+    ,'________________                          \`-._`-','
+     `._              ```````````------...___   '-.._'-:
+        ```--.._      ,.                     ````--...__\-.
+                `.--. `-`                       ____    |  |`
+                  `. `.                       ,'`````.  ;  ;`
+                    `._`.        __________   `.      \'__/`
+                       `-:._____/______/___/____`.     \  `
+                                   |       `._    `.    \
+                                   `._________`-.   `.   `.___ PLANET EXPRESS DELIVERS
+
+
+			-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="jquery.mousewheel.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45751574-1', 'fediafedia.com');
+  ga('send', 'pageview');
+
+</script>
+<script>
+$(function() {
+            $("html, body").mousewheel(function(event, delta) {
+                this.scrollLeft -= (delta * 30);
+                event.preventDefault();
+            });
+        });
+</script>
+	
+<script type="text/javascript">
+
+var colors = [
+  [42, 191, 228], // Gold
+  [82, 160, 30],    // Red
+  [236, 181, 15], // Lime
+  [236, 181, 15] // Lime
+  [236, 181, 15], // Gold
+];
+
+var height = 6000;
+
+$(document).scroll(function() {
+   var body = $(".wheat");
+   var steps = Math.floor(height / colors.length);
+   var position = $(this).scrollLeft();
+   var currentStep = Math.floor(position / steps);
+   if ( currentStep === colors.length ) currentStep = colors.length - 1;
+   var rgb = $(".wheat").css('background-color').replace('rgb(','').replace(')','').replace(/\s/g, '').split(',');     
+   var previousColor = colors[currentStep] || colors[0];
+   var nextColor = colors[currentStep+1] || colors[colors.length-1];
+   var percentFromThisStep = ( position - ( currentStep * steps ) ) / steps;
+   if ( percentFromThisStep > 1 ) percentFromThisStep = 1;
+  
+ 
+   var newRgb = [
+     Math.floor(previousColor[0] + ( ( nextColor[0] - previousColor[0] ) * percentFromThisStep )),
+     Math.floor(previousColor[1] + ( ( nextColor[1] - previousColor[1] ) * percentFromThisStep )),
+     Math.floor(previousColor[2] + ( ( nextColor[2] - previousColor[2] ) * percentFromThisStep ))
+   ];
+   
+   $(".wheat").css('background-color', 'rgb('+ newRgb.join(',') +')');
+   
+   
+   
+});
+
+</script>
+	
+
+
+<link rel="stylesheet" type="text/css" href="assets/stylesheet.css" />
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".fade").delay(2500).fadeOut(1000);
+});
+</script>
+
+
+
+<script type="text/javascript" src="jquery.contra.min.js"></script>
+
+<script type="text/javascript">
+function get_30_lives() {
+    window.location.href = "gateway.html"
+}
+
+$(function() {
+    $.contra(get_30_lives);
+});
+
+</script>
+
+
+<style type="text/css">
+
+
+h2 {margin:0;font-family: Segoe UI Light, Segoe UI, Arial;font-weight:normal;margin-bottom:0;color:#fff;font-size:50pt;}
+
+h3 {color:#494949;opacity:1;}
+h4 {font-weight:normal;font-size:24pt;color:#fff;}
+h6 {font-weight:normal;font-size:16pt;color:#ccc;}
+
+
+body {
+color:#fff;
+overflow-y:hidden;
+overflow-x:hidden;
+width:100%;
+height:100%;
+background-color: rgb(236, 181, 15);
+font-family: Segoe UI;
+margin:0;
+padding:0;
+
+}
+
+
+.block {
+ width:50%;
+ margin:0;
+ padding:0;
+ 
+    height:50%;
+    position:absolute;
+    top:50%;
+    right:10%;
+
+
+
+
+}
+
+#button {
+border:none;
+font-size:18px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:normal; color: #FFFFFF;
+
+
+ background-color: #606C88; 
+ }
+ 
+.wheat {
+top:0px;
+width:21600px;height:100%;display:block;position:absolute;
+ margin:0;
+ padding:0;
+background-color: rgb(35, 183, 200);
+}
+ 
+ 
+ 
+ 
+
+ 
+.section {
+
+display:block;height:0px;text-align:right;width:500px;background:none; float:left;vertical-align:middle;
+
+}
+
+
+#main {padding-top:150px;width:500px;}
+#circles {margin-top:30px;width:1000px;}
+#features {text-align:left;padding-top:50px;width:600px;}
+#screenshots {text-align:left;padding-top:175px;width:900px;}
+#video {text-align:left;padding-top:50px;width:700px;}
+#credits {text-align:left;padding-top:50px;width:700px;}
+#secret {padding-left:3500px;padding-top:150px;width:5000px;font-family:Times New Roman;font-size:250px;z-index:999;}
+#analogClock{top:175px;left:870px;position:relative;z-index:999;}
+#demo{top:200px;left:930px;z-index:998;position:relative;text-align:center;width:100px;height:30px;font-size:36px;color:#000;}
+#demo2{top:120px;left:930px;color:red;z-index:998;position:relative;width:100px;height:30px;text-align:center;}
+
+
+
+
+ @media (min-width: 1680px) {
+ 
+.section {
+
+display:block;height:0px;text-align:right;width:500px;background:none; float:left;vertical-align:middle;
+
+}
+
+
+#main {padding-top:260px;width:800px;}
+#circles {margin-top:140px;width:1000px;}
+#features {text-align:left;padding-top:150px;width:500px;}
+#screenshots {text-align:left;padding-top:300px;width:900px;}
+#video {text-align:left;padding-top:170px;width:650px;}
+#credits {text-align:left;padding-top:200px;width:700px;}
+#secret {padding-left:3500px;padding-top:250px;width:5000px;font-family:Times New Roman;font-size:250px;z-index:999;}
+#analogClock{top:285px;left:1170px;position:relative;z-index:999;}
+#demo{top:310px;left:1230px;z-index:998;position:relative;text-align:center;width:100px;height:30px;font-size:36px;color:#000;}
+#demo2{top:230px;left:1230px;color:red;z-index:998;position:relative;width:100px;height:30px;text-align:center;}
+}
+
+.fade {color:#fff;display:block;position:fixed;bottom:30px;right:30px;font-size:36px;}
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+
+	<canvas id="analogClock" width="200" height="200">Clock</canvas>
+
+	
+<script type="text/javascript" src="analogCanvasClock.js"></script>
+
+<script type="text/javascript">
+	setupAnalogClock(document.getElementById("analogClock"), 100);
+</script>
+
+
+<p id="demo"></p>
+
+
+<script>
+    var d = new Date();
+    var n = d.getDate();
+document.getElementById("demo").innerHTML = n;
+</script>
+
+
+<p id="demo2"></p>
+
+
+<script>
+var d = new Date();
+var month = new Array();
+month[0] = "January";
+month[1] = "February";
+month[2] = "March";
+month[3] = "April";
+month[4] = "May";
+month[5] = "June";
+month[6] = "July";
+month[7] = "August";
+month[8] = "September";
+month[9] = "October";
+month[10] = "November";
+month[11] = "December";
+var n = month[d.getMonth()];
+document.getElementById("demo2").innerHTML = n;
+</script>
+
+<div class="wheat">
+
+<div class="section" id="main">
+<p class="fade">Scroll right &#x2192;</p>
+<h2><br>RONDA UI</h2>
+For Rainmeter
+<br>
+<br>
+Experience the Apple Watch UI <br>and more on your desktop
+<br><br>
+<a href="https://mega.co.nz/#!CQgBBDbA!xhyhk0pqgNSUURtA2nW6CWSZiRGWah4sGhtLkGrS4uc" target="_blank" id="button">DOWNLOAD</a>
+<a href="help.html" id="button">HELP</a><br><br>
+<!--		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+
+				<a href="http://twitter.com/share" class="twitter-share-button" data-text="Check out this neat UI for Windows" data-url="http://rondaui.com" data-count="horizontal" data-hashtags="rondaui" data-via="fediafedia">Tweet</a>
+				<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.rondaui.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;float:right;" allowTransparency="true"></iframe> 
+
+				-->
+				</div>
+
+
+
+<div class="section" id="circles">
+
+<img src="http://i.imgur.com/rhUxZZS.png">
+
+
+
+
+</div>
+
+<div class="section" id="features">
+
+<img src="http://i.imgur.com/LpskzS2.png">
+</div>
+<div class="section" id="screenshots">
+
+
+<img src="http://i.imgur.com/cibjObl.png">
+<img src="http://i.imgur.com/NS5PWw8.png">
+<img src="http://i.imgur.com/4U2djcR.png">
+<br>
+<img src="http://i.imgur.com/Kpp9ZQn.png">
+<img src="http://i.imgur.com/ckAJmWF.png">
+<img src="http://i.imgur.com/379AaCN.png">
+</div>
+<div class="section" id="video">
+<h4>What is it, though?</h4>
+<iframe width="560" height="315" src="//www.youtube.com/embed/5AkwIrysT98" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="section" id="credits">
+
+<img src="http://i.imgur.com/oEpF1Hs.png">
+<div style="width:500px;text-align:left;">Containts parts of Omnimo UI which may be subject to copyright.
+
+Disclaimer: This software is provided on an "as is" basis, and the authors and distributors have no obligation to provide maintenance, support, updates, enhancements or modifications.
+<br><br><br>
+Creative Commons Attribution-Non-Commercial-NoDerivs 3.0 License<br><br>
+<img src="http://omnimo.info/assets/img/88x31.png" />
+</div>
+</div>
+
+
+<!-- dessert -->
+
+<div class="section" id="secret">
+&#960;&#8776;3.141592653589793238462643383279502884197169399375&#9650;1058209749445&#9650;92307&#9660;81640628620899862803482534211706798214808651328230664709384460955058223172535940812&#9660;8481117450284&#9668;10270193852110555964462294895&#9658;4930381964428810975665933&#9668;OHGODWHYAREYOUSTILLSCROLLING&#9658;44612847564823387867831652712019BA091456485669234603486104&#9166;54326648213393607260249141273724587006
+
+
+</div>
+
+</div>
+</div>
+
+
+<div style="position:fixed;bottom:50px;left:50px;opacity:0.8;z-index:99;color:white;"><a href="http://fediafedia.com" target="_blank"><img src="http://fediafedia.com/powered.png" /></a></div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+    body {overflow:hidden;margin:0;padding:0; background:#dfdfdf; font-family: arial; font-size: 14px; }
+
+	a {color:black;}
+	
+	.container {background:transparent !important;padding-top:10vh;width:75vw;margin:0 auto;display:block;}
+	
+
+	
+	.medium {cursor:default;background:white;overflow:hidden;text-align:center;vertical-align:middle;line-height:16vh;float:left;display:block;width:10vw;height:16vh;}
+	
+	.medium2x {cursor:default;background:white;overflow:hidden;text-align:center;vertical-align:middle;line-height:16vh;float:left;display:block;width:20vw;height:16vh;}
+	
+	.medium:hover {background:#fcf8e0;}
+	.medium2 {cursor:default;float:left;display:block;width:14vw;height:16vh;background:white;}
+	
+	.double {cursor:default;float:left;display:block;width:10vw;height:16vh;background:blue;}
+	.double2 {cursor:default;float:left;display:block;width:14vw;height:32vh;background:blue;}
+	
+	.doubleboth {cursor:default;float:left;display:block;width:20vw;height:32vh;background:blue;}
+	
+	
+	
+	.socialicons {width:1.8vw;}
+	
+	
+	#geektyper {background:#1C1B1B;}
+	#geektyper img {vertical-align:middle;padding:30px;width:75%;margin:auto;}
+	
+	
+	#intro {background:white;}
+	#omnimo {background:#17141f;}
+	#omnimo img {width:100%;margin:auto;}
+	
+	#pokemon {background:#9f0f0c;}
+		#pokemon img {width:100%;margin:auto;bottom:0px;vertical-align: bottom;}
+	#horse {background:#e5e5e5;}
+	#horse img {width:100%;margin:auto;bottom:0px;vertical-align: bottom;}
+	
+	
+	#holo {background:#0e172d;}
+	#holo img {width:100%;margin:auto;bottom:0px;vertical-align: bottom;}
+	
+	#steamcustomizer {background:#000000;}
+	
+		#steamcustomizer img {width:100%;margin:auto;}
+	#ronda {background:#50A125;}
+	#ronda img {position:relative;bottom:0;width:100%;margin:auto;}
+	#fakeupdate {background: #5abef7;}
+		#fakeupdate img {width:100%;margin:auto;}
+	#windows10 {background:#492994;}
+	#windows10 img {padding:30px;width:70%;margin:auto;}
+	
+	
+	#white {}
+	#blank {background:transparent;}
+
+	
+	         #canvas{
+                width:100%;
+                height:100vh;
+                overflow: hidden;
+                position:absolute;
+                top:0;
+                left:0;
+                background-color: #1a1724;               
+            }
+            .canvas-wrap{
+                position:relative;
+                
+            }
+            div.canvas-content{
+                position:relative;
+                z-index:2000;
+                color:black;
+
+            }
+			
+			h1 {   font-family: "Segoe UI";
+   font-weight: lighter;}

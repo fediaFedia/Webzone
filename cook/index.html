@@ -1,0 +1,346 @@
+<!-- MVP.css quickstart template: https://github.com/andybrewer/mvp/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://via.placeholder.com/70x70">
+    <link rel="stylesheet" href="./mvp.css">
+  <script type="text/javascript" src="jquery.js"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="My description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My title</title>
+	
+	
+	<script>
+$(document).ready(function(){
+    var offset2 = 300
+   var lineHF = offset2 + 250;
+    $(window).scroll(function(){
+        var offset1 = 1600;
+        var lineH = $(window).scrollTop();
+        var lineHpart = lineHF/16;
+		
+		
+		
+        $("span").html(lineH);
+		
+				 if ((lineH < lineHpart*98) && (lineH > lineHpart*76)) {
+
+ $("#animation").css("opacity", "0");
+            }	
+			
+			
+			
+		 if ((lineH < lineHpart*76) && (lineH > lineHpart*56)) {
+                $("#animation").attr("src", "img/19.jpg");
+ $("#animation").css("opacity", "1");
+            }	
+		
+            if ((lineH < lineHpart*56) && (lineH > lineHpart*44)) {
+                $("#animation").attr("src", "img/19.jpg");
+
+            }
+		
+	          if ((lineH < lineHpart*44) && (lineH > lineHpart*32)) {
+                $("#animation").attr("src", "img/17.jpg");
+
+            }
+		
+		
+            if ((lineH < lineHpart*32) && (lineH > lineHpart*15)) {
+                $("#animation").attr("src", "img/16.jpg");
+				 $("#animation").css("opacity", "1");
+		
+            }
+            if ((lineH < lineHpart*15) && (lineH > lineHpart*14)) {
+                $("#animation").attr("src", "img/15.jpg");
+				
+            }
+            if ((lineH < lineHpart*14) && (lineH > lineHpart*13)) {
+                $("#animation").attr("src", "img/14.jpg");
+            }
+            if ((lineH < lineHpart*13) && (lineH > lineHpart*12)) {
+                $("#animation").attr("src", "img/13.jpg");
+            }
+            if ((lineH < lineHpart*12) && (lineH > lineHpart*11)) {
+                $("#animation").attr("src", "img/12.jpg");
+            }
+            if ((lineH < lineHpart*11) && (lineH > lineHpart*10)) {
+                $("#animation").attr("src", "img/11.jpg");
+            }
+            if ((lineH < lineHpart*10) && (lineH > lineHpart*9)) {
+                $("#animation").attr("src", "img/10.jpg");
+            }
+            if ((lineH < lineHpart*9) && (lineH > lineHpart*8)) {
+                $("#animation").attr("src", "img/9.jpg");
+            }
+            if ((lineH < lineHpart*8) && (lineH > lineHpart*7)) {
+                $("#animation").attr("src", "img/8.jpg");
+            }
+            if ((lineH < lineHpart*7) && (lineH > lineHpart*6)) {
+                $("#animation").attr("src", "img/7.jpg");
+            }
+            if ((lineH < lineHpart*6) && (lineH > lineHpart*5)) {
+                $("#animation").attr("src", "img/6.jpg");
+            }
+            if ((lineH < lineHpart*5) && (lineH > lineHpart*4)) {
+                $("#animation").attr("src", "img/5.jpg");
+            }
+            if ((lineH < lineHpart*4) && (lineH > lineHpart*3)) {
+                $("#animation").attr("src", "img/4.jpg");
+            }
+            if ((lineH < lineHpart*3) && (lineH > lineHpart*2)) {
+                $("#animation").attr("src", "img/3.jpg");
+				$("#animation").css("opacity", "1.0");
+            }
+            if (lineH < lineHpart*2 && lineH > lineHpart*1) {
+                $("#animation").attr("src", "img/2.jpg");
+				$("#animation").css("opacity", "0.9");
+            }
+            if (lineH < lineHpart) {
+                $("#animation").attr("src", "img/1.jpg");
+				$("#animation").css("opacity", "0.8");
+            }
+        });
+    });
+
+</script>
+<link href='https://fonts.googleapis.com/css?family=Playfair%20Display' rel='stylesheet'>
+
+<style>
+body {background:#f4f4f4;
+
+
+
+
+}
+
+.hidden {
+    position: absolute;
+    top: -9999999px;
+}
+
+#bottommark {
+    position: absolute;
+    bottom: 0;
+}
+
+#animation { 
+background-repeat: no-repeat;
+position : fixed; 
+top: 0px;
+opacity:0.8;
+width:100%;
+transition: all 0.5s ease;
+
+margin: 0 auto;
+
+z-index:-1;
+}
+
+
+.blank {height:800px;}
+
+.headerblank {height:10px;}
+
+nav {position:fixed;width:96%;margin:2%;}
+
+header {margin-top:230px;}
+
+.cardz {    width: 600px;
+    float: right;
+	
+	}
+	
+	
+	
+	
+	
+	
+aside {background:#222;color:black;}
+	
+	
+	.bigbreak {margin-top:400px;}
+	
+	
+	
+	h1 {  text-shadow: 2px 2px 50px #fff; font-size:50px;font-family: 'Playfair Display';}
+	
+	
+		h3 {font-size:30px;color:#e9400d;margin-top:0px;font-family: 'Playfair Display';}
+		header p {text-shadow: 2px 2px 50px #fff; }
+		
+	
+</style>
+
+</head>
+
+
+
+
+<body>
+        <nav>
+            <a href="/"><img alt="Logo" src="logo.png" height="70"></a>
+            <ul>
+                <li>Home</li>
+                <li><a href="#">Discover</a></li>
+			 <li><a href="#">Why</a></li>
+			 		 <li><a href="#">How</a></li>
+					 		 <li><a href="#">Store</a></li>
+				 <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+		
+<header>
+
+	<section class="headerblank">
+	</section>
+
+
+        <h1><u style="color:#e9400d;">Focused</u> Content in your Kitchen <br>...without any devices or distractions!</h1>
+<p><a href="#"><b>Get started →</b></a></p>
+	   <p>Scroll down to learn more</p>
+<center>
+<img src="arrow.png" style="width:60px;" />
+    </header>
+	
+	
+	<main>
+	
+	
+	<section class="blank">
+	</section>
+	
+     
+	 
+	 
+	   <section class="cardz">
+
+            <aside>
+                <h3>What is this?</h3>
+                <p></p>
+                <p>My Smart Cabinet lets you teleport all your long forgotten recipes, ideas, cooking-related infographics where you need them the most – in your kitchen. Specifically - behind the cabinet doors, so that it's always in front of you!</p>
+            </aside>
+			
+
+            <aside>
+                <h3>How does it work?</h3>
+                <p>This offline-first approach involves printing out bespoke content tailored just for you, and put it inside of your kitchen cabinets! No need to fiddle with your PC, smartphone, tablet or recipe book during the cooking process (butter fingers!), freeing up your hands to actually focus on cooking.</p>
+            </aside>
+
+            <aside>
+                <h3>How to install it?</h3>
+                <p>You can either order our easy install kit to match your cabinets, or do it yourself for free! We’ll do the rest. Simply select the size of your cabinets and we'll prepare beautiful printable content just for you!</p>
+            </aside>
+
+		
+            <aside>
+                <h3>So I need a Printer?</h3>
+                <p>If you have one, that's great! But don't buy one just to use this service. For a small fee of $2 we'll mail you content printed on our recycled paper! Or you could ask your friends to print it! (They might like this idea as well)</p>
+            </aside>
+
+		
+           <aside>
+                <h3>What can I put in it?</h3>
+                <p>Using our super easy editor, you can create a meal plan for an entire week with new recipies that you print out and place inside of your kitchen cabinet door. Whether you're learning to cook, or are on a diet, or otherwise want to be more efficient in the kitchen, you'll be impresse with the content we'll find for you.</p>
+            </aside>
+			
+
+            <aside>
+                <h3>Is this free?</h3>
+                <p>Yes! This service is designed by some nerds who are into healthy eating, who got tired of the overwhelming wealth of bookmarks and pins collected over the years (that, let's face it, most people never look twice at). Instead we focus on finding amazing content and making it tangible in the kitchen!</p>
+            </aside>
+			
+
+        </section>
+	 
+	 
+	 
+	 
+	 
+
+	 		  <section style="clear:both;">
+	 
+	 
+
+	 
+	 
+	 
+	 
+	 <article>
+	 
+
+            <h1>Utilize your Kitchen fully!</h1>
+            <h3>Think of the cabinet door spaces as a canvas to add ideas and try new things!</h3>
+			<p>It's nothing new! Just reimagined for today's content! Ask your parents or grandparents how they used to do it, they'll tell you!</p>
+			
+
+		
+		
+			
+			
+
+        </article>
+	 
+	 
+	 
+	 
+	 	 <article>
+	
+            <h1>Forget messy devices</h1>
+            <h3>Ever try cooking with an iPad? We have!</h3>
+			<p>Not only it's inconvenient to look up recipes, you have to scroll through them when your fingers are covered in dough (Or worse, when the device goes into sleep mode). The kitchen is no place for gadgets!</p>
+			
+
+        </article>
+	 
+	 
+	 
+	 
+	 	 <article>
+	
+            <h1>Be consistent with your goals</h1>
+            <h3>Do you have hundreds of recipes and images you saved, "to look at later"?</h3>
+			<p>We know how that feels. The internet is a bottomless bucket of tips, tricks, recipes for the hungry consumer. What you really need is a way to focus that content, and there's no better way than to have it inside your cabinet!</p>
+			
+
+        </article>
+		
+		
+	 	 <article>
+	
+            <h1>Best of all, it's all free!</h1>
+            <h3>We want to promote cooking and healthy living</h3>
+			<p>This project is open source and built on our own experiences to healthy living. Check out what the authors have to say about it</p>
+			
+
+        </article>
+	 
+	   </section>
+	 
+	 
+	 
+	 
+	 
+    </main>
+
+<img class="hidden" src="img/1.jpg"/>
+<img class="hidden" src="img/2.jpg"/>
+<img class="hidden" src="img/3.jpg"/>
+<img class="hidden" src="img/4.jpg"/>
+<img class="hidden" src="img/5.jpg"/>
+
+<img src="img/1.jpg" id="animation" />
+
+
+
+	
+	
+	
+	
+</body>
+
+</html>

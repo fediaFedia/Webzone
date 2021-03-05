@@ -1,0 +1,8 @@
+body {background-image:url('../ASSETS/textures/umbrella.jpg');background-color:#2b0102;color:rgb(240,0,2);}
+#console {font-family:Arial, Sans-Serif;}
+#center {background-image:url('../ASSETS/logos/umbrella.png');background-size: auto 200px;}
+.folder {background-color:rgb(240,0,2);}
+.dragme {border-color:rgb(239,0,2);color:rgb(239,0,2);}
+
+#button {background-color:rgb(240,0,2);color:rgb(255,255,255);}
+#button:hover {color:rgb(240,0,2);background-color:rgb(255,255,255);}

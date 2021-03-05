@@ -1,0 +1,464 @@
+[
+	{ 
+	  "title": "1408",
+	  "trailer": "WIASqPZqnhs-",
+	  "description": "A man who specializes in debunking paranormal occurrences checks into the fabled room 1408 in the Dolphin Hotel. Soon after settling in, he confronts genuine terror.",
+	  "rating": "6.8",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0450385/"
+	},
+		{ 
+	  "title": "Avatar",
+	  "trailer": "5PSNL1qE6VY",
+	  "description": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+	  "rating": "8.0",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0499549/?ref_=nv_sr_1"
+	},
+		{ 
+	  "title": "Back to the Future",
+	  "trailer": "qvsgGtivCgs",
+	  "description": "A young man is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his friend, Dr. Emmett Brown, and must make sure his high-school-age parents unite in order to save his own existence.",
+	  "rating": "8.5",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0088763/?ref_=nv_sr_1"
+	},
+		{ 
+	  "title": "Casino",
+	  "trailer": "EJXDMwGWhoA",
+	  "description": "Greed, deception, money, power, and murder occur between two mobster best friends and a trophy wife over a gambling empire.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0112641/?ref_=nv_sr_2"
+	},
+		{ 
+	  "title": "Cloud Atlas",
+	  "trailer": "hWnAqFyaQ5s",
+	  "description": "An exploration of how the actions of individual lives impact one another in the past, present and future, as one soul is shaped from a killer into a hero, and an act of kindness ripples across centuries to inspire a revolution.",
+	  "rating": "9.5",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1371111/"
+	},
+		{ 
+	  "title": "Contact",
+	  "trailer": "SRoj3jK37Vc",
+	  "description": "Dr. Ellie Arroway, after years of searching, finds conclusive radio proof of intelligent aliens, who send plans for a mysterious machine.",
+	  "rating": "7.4",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0118884/?ref_=nv_sr_1"
+	},
+		{ 
+	  "title": "Fargo",
+	  "trailer": "h2tY82z3xXU",
+	  "description": "Jerry Lundegaard's inept crime falls apart due to his and his henchmen's bungling and the persistent police work of the quite pregnant Marge Gunderson.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0116282/?ref_=nv_sr_2"
+	},
+		{ 
+	  "title": "Gone Girl",
+	  "trailer": "esGn-xKFZdU",
+	  "description": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt2267998/?ref_=fn_al_tt_1"
+	},
+		{ 
+	  "title": "Grand Budapest Hotel",
+	  "trailer": "1Fg5iWmQjwk",
+	  "description": "The adventures of Gustave H, a legendary concierge at a famous hotel from the fictional Republic of Zubrowka between the first and second World Wars, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
+	  "rating": "8.1",
+	  "comment": "I have not seen a movie with better cinematography",
+	  "imdb": "http://www.imdb.com/title/tt2278388/?ref_=nv_sr_1"
+	},
+		{ 
+	  "title": "Inception",
+	  "trailer": "66TuSJo4dZM",
+	  "description": "A thief who steals corporate secrets through use of the dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
+	  "rating": "8.8",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1375666/?ref_=nv_sr_1"
+	},
+		{ 
+	  "title": "Interstellar",
+	  "trailer": "zSWdZVtXT7E",
+	  "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival",
+	  "rating": "8.6",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0816692/?ref_=nv_sr_1"
+	},
+		{ 
+	  "title": "Into the Wild",
+	  "trailer": "2LAuzT_x8Ek",
+	  "description": "After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the wilderness.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0758758/?ref_=fn_al_tt_1"
+	},
+		{ 
+	  "title": "Kingdom of Heaven",
+	  "trailer": "oO6pCRe3pM",
+	  "description": "Balian of Ibelin travels to Jerusalem during the crusades of the 12th century, and there he finds himself as the defender of the city and its people.",
+	  "rating": "7.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0320661/?ref_=nv_sr_1"
+	},
+		{ 
+	  "title": "Matrix",
+	  "trailer": "m8e-FF8MsqU",
+	  "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+	  "rating": "8.7",
+	  "comment": "Jeez, do you even need a reason to watch this?",
+	  "imdb": "http://www.imdb.com/title/tt0133093/?ref_=nv_sr_1"
+	},
+		{ 
+	  "title": "Office Space",
+	  "trailer": "dMIrlP61Z9s",
+	  "description": "Three company workers who hate their jobs decide to rebel against their greedy boss.",
+	  "rating": "7.8",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0151804/?ref_=nv_sr_1"
+	},
+	
+	{ 
+	  "title": "Fight Club",
+	  "trailer": "SUXWAEX2jlg",
+	  "description": "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soap maker, forming an underground fight club that evolves into something much, much more...",
+	  "rating": "8.9",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0137523/"
+	},
+	{ 
+	  "title": "Pandorum",
+	  "trailer": "jMhgI83ny54",
+	  "description": "A pair of crew members aboard a spaceship wake up with no knowledge of their mission or their identities.",
+	  "rating": "6.8",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1188729/"
+	},
+	{ 
+	  "title": "Resident Evil",
+	  "trailer": "jiS6gtClrqk",
+	  "description": "A special military unit fights a powerful, out-of-control supercomputer and hundreds of scientists who have mutated into flesh-eating creatures after a laboratory accident.",
+	  "rating": "6.7",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0120804/?ref_=fn_al_tt_1"
+	},
+	{ 
+	  "title": "Shawnshank Redemption",
+	  "trailer": "6hB3S9bIaco",
+	  "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+	  "rating": "9.3",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0111161/"
+	},
+	{ 
+	  "title": "The Shining",
+	  "trailer": "-e6d_gzaDgk",
+	  "description": "A family heads to an isolated hotel for the winter where an evil and spiritual presence influences the father into violence, while his psychic son sees horrific forebodings from the past and of the future.",
+	  "rating": "8.4",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0081505/"
+	},
+	{ 
+	  "title": "Shutter Island",
+	  "trailer": "5iaYLCiq5RM",
+	  "description": "A U.S Marshal investigates the disappearance of a murderess who escaped from a hospital for the criminally insane.",
+	  "rating": "8.1",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1130884/"
+	},
+	{ 
+	  "title": "Sin City",
+	  "trailer": "https://www.youtube.com/watch?v=r0PDOQglpDQ",
+	  "description": "A film that explores the dark and miserable town, Basin City, and tells the story of three different people, all caught up in violent corruption.",
+	  "rating": "8.1",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0401792/"
+	},
+	{ 
+	  "title": "Snatch",
+	  "trailer": "Q8jbt0wBkMI",
+	  "description": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
+	  "rating": "8.3",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0208092/"
+	},
+	{ 
+	  "title": "Source Code",
+	  "trailer": "NkTrG-gpIzE",
+	  "description": "A soldier wakes up in someone else's body and discovers he's part of an experimental government program to find the bomber of a commuter train. A mission he has only 8 minutes to complete.",
+	  "rating": "7.5",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0945513/"
+	},
+	{ 
+	  "title": "The Dark Knight",
+	  "trailer": "yQ5U8suTUw0",
+	  "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+	  "rating": "9.0",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0468569/"
+	},
+	{ 
+	  "title": "The Da Vinci Code",
+	  "trailer": "zMba3fckhuQ",
+	  "description": "A murder inside the Louvre and clues in Da Vinci paintings lead to the discovery of a religious mystery protected by a secret society for two thousand years -- which could shake the foundations of Christianity.",
+	  "rating": "6.5",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0382625/"
+	},
+	{ 
+	  "title": "The Great Gatsby",
+	  "trailer": "8ud6haTTfFY",
+	  "description": "A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.",
+	  "rating": "7.3",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1343092/?ref_=nv_sr_1"
+	},
+	{ 
+	  "title": "The Prestige",
+	  "trailer": "o4gHCmTQDVI",
+	  "description": "Two stage magicians engage in competitive one-upmanship in an attempt to create the ultimate stage illusion.",
+	  "rating": "8.5",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0482571/"
+	},
+	{ 
+	  "title": "The Thing",
+	  "trailer": "ouZkkIsLiNg",
+	  "description": "Its the first week of winter in 1982. An American Research Base is greeted by an alien force, that can assimilate anything it touches. Its up to the members to stay alive, and be sure of who is human, and who has become one of the Things.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0084787/"
+	},
+	{ 
+	  "title": "The Wolf of Wall Street",
+	  "trailer": "iszwuX1AK6A",
+	  "description": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0993846/"
+	},
+	{ 
+	  "title": "Titanic",
+	  "trailer": "5d9ILag7mRA",
+	  "description": "A seventeen-year-old aristocrat falls in love with a kind, but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+	  "rating": "7.7",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0120338/"
+	},
+	{ 
+	  "title": "Up",
+	  "trailer": "pkqzFUhGPJg",
+	  "description": "Seventy-eight year old Carl Fredricksen travels to Paradise Falls in his home equipped with balloons, inadvertently taking a young stowaway.",
+	  "rating": "8.3",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1049413/"
+	},
+	{ 
+	  "title": "V for Vendetta",
+	  "trailer": "k_13fFIrhPk",
+	  "description": "In a future British tyranny, a shadowy freedom fighter, known only by the alias of V, plots to overthrow it with the help of a young woman.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0434409/"
+	},
+	{ 
+	  "title": "Watchmen",
+	  "trailer": "R3orQKBxiEg",
+	  "description": "In an alternate 1985 where former superheroes exist, the murder of a colleague sends active vigilante Rorschach into his own sprawling investigation, uncovering something that could completely change the course of history as we know it.",
+	  "rating": "7.6",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0409459/"
+	},
+	{ 
+	  "title": "EuroTrip",
+	  "trailer": "SeoX8MZd81E",
+	  "description": "Dumped by his girlfriend, a high school grad decides to embark on an overseas adventure in Europe with his friends.",
+	  "rating": "6.6",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0356150/"
+	},
+	{ 
+	  "title": "Sherlock Holmes",
+	  "trailer": "Egcx63-FfTE",
+	  "description": "Detective Sherlock Holmes and his stalwart partner Watson engage in a battle of wits and brawn with a nemesis whose plot is a threat to all of England.",
+	  "rating": "7.6",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0988045/"
+	},
+	{ 
+	  "title": "The Onion Movie",
+	  "trailer": "oOUORYAPds0",
+	  "description": "Satirical interpretations of world events and curious human behavior.",
+	  "rating": "6.3",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0392878/"
+	},
+	{ 
+	  "title": "Django Unchained",
+	  "trailer": "eUdM9vrCbow",
+	  "description": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+	  "rating": "8.5",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1853728/"
+	},
+	{ 
+	  "title": "How to train your Dragon",
+	  "trailer": "oKiYuIsPxYk",
+	  "description": "A hapless young Viking who aspires to hunt dragons, becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0892769/"
+	},
+	{ 
+	  "title": "Kingsman: The Secret Service",
+	  "trailer": "xkX8jKeKUEA",
+	  "description": "A spy organization recruits an unrefined, but promising street kid into the agency's ultra-competitive training program, just as a global threat emerges from a twisted tech genius.",
+	  "rating": "7.8",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt2802144/"
+	},
+	{ 
+	  "title": "The Simpsons Movie",
+	  "trailer": "PulHR2LfPVk",
+	  "description": "After Homer accidentally pollutes the town's water supply, Springfield is encased in a gigantic dome by the EPA and the Simpson family are declared fugitives.",
+	  "rating": "7.4",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0462538/"
+	},
+	{ 
+	  "title": "The Dictator",
+	  "trailer": "cYplvwBvGA4",
+	  "description": "The heroic story of a dictator who risked his life to ensure that democracy would never come to the country he so lovingly oppressed.",
+	  "rating": "6.4",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1645170/"
+	},
+	{ 
+	  "title": "Wanted",
+	  "trailer": "q9Mr-iYZRZk",
+	  "description": "A frustrated office worker learns that he is the son of a professional assassin, and that he shares his father's superhuman killing abilities.",
+	  "rating": "6.7",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0493464/"
+	},
+	{ 
+	  "title": "Zombieland",
+	  "trailer": "8m9EVP8X7N8",
+	  "description": "A shy student trying to reach his family in Ohio, a gun-toting tough guy trying to find the last Twinkie, and a pair of sisters trying to get to an amusement park join forces to travel across a zombie-filled America.",
+	  "rating": "7.7",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1156398/"
+	},
+	{ 
+	  "title": "Johnny English",
+	  "trailer": "JSg2tgnvtgY",
+	  "description": "After a sudden attack on the MI5, Johnny English, Britain's most confident yet unintelligent spy, becomes Britain's only spy.",
+	  "rating": "6.1",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0274166/"
+	},
+	{ 
+	  "title": "The Martian",
+	  "trailer": "ej3ioOneTy8",
+	  "description": "During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet. ",
+	  "rating": "8.1",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt3659388/"
+	},
+	{ 
+	  "title": "Mad Max: Fury Road",
+	  "trailer": "SIpVReh6tvE",
+	  "description": "A woman rebels against a tyrannical ruler in post apocalyptic Australia in search for her homeland with the help of a group of female prisoners, a psychotic worshiper, and a drifter named Max.",
+	  "rating": "8.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1392190/"
+	},
+	{ 
+	  "title": "Waterworld",
+	  "trailer": "oEp382HIisE",
+	  "description": "In a future where the polar ice-caps have melted and Earth is almost entirely submerged, a mutated mariner fights starvation and outlaw smokers, and reluctantly helps a woman and a young girl try to find dry land.",
+	  "rating": "6.1",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0114898/"
+	},
+	{ 
+	  "title": "Equilibrium",
+	  "trailer": "raleKODYeg0",
+	  "description": "In a Fascist future where all forms of feeling are illegal, a man in charge of enforcing the law rises to overthrow the system.",
+	  "rating": "7.5",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0238380/"
+	},
+	{ 
+	  "title": "Robots",
+	  "trailer": "N8u2L-CqHX8",
+	  "description": "In a robot world, a young idealistic inventor travels to the big city to join his inspiration's company, only to find himself opposing its sinister new management.",
+	  "rating": "6.3",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0358082/"
+	},
+	{ 
+	  "title": "John Wick",
+	  "trailer": "RllJtOw0USI",
+	  "description": "An ex-hitman comes out of retirement to track down the gangsters that took everything from him.",
+	  "rating": "7.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt2911666/"
+	},
+	{ 
+	  "title": "The Lincoln Lawyer",
+	  "trailer": "xU4ReVEemN0",
+	  "description": "A defense attorney has a crisis of conscience when he represents a wealthy client who has a foolproof plan to beat the system.",
+	  "rating": "7.3",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1189340/"
+	},
+	{ 
+	  "title": "Cube",
+	  "trailer": "YAWSkYqqkMA",
+	  "description": "7 complete strangers of widely varying personality characteristics are involuntarily placed in an endless kafkaesque maze containing deadly traps.",
+	  "rating": "7.3",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0123755/"
+	},
+	{ 
+	  "title": "I am Legend",
+	  "trailer": "ewpYq9rgg3w",
+	  "description": "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+	  "rating": "7.2",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0480249/"
+	},
+	{ 
+	  "title": "Snowpiercer",
+	  "trailer": "r6UmqNuMdY4",
+	  "description": "Set in a future where a failed climate-change experiment kills all life on the planet except for a lucky few who boarded the Snowpiercer, a train that travels around the globe, where a class system emerges.",
+	  "rating": "7.0",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt1706620/"
+	},
+	{ 
+	  "title": "The Postman",
+	  "trailer": "bPxBW1Ox13Q",
+	  "description": "A nameless drifter dons a postman's uniform and bag of mail as he begins a quest to inspire hope to the survivors living in post-apocalyptic America.",
+	  "rating": "6.0",
+	  "comment": "",
+	  "imdb": "http://www.imdb.com/title/tt0119925/"
+	},
+	{ 
+	  "title": "",
+	  "trailer": "",
+	  "description": "",
+	  "rating": "",
+	  "comment": "",
+	  "imdb": ""
+	}
+
+
+	
+	
+	
+]

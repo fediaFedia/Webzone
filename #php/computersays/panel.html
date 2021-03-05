@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Computer Says - Panel</title>
+    </head>
+    <body>
+        <div id="app">
+            Message
+            <input type="text" v-model="data.message">
+            <button @click="set">Update</button>
+        </div>
+        
+        <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            let isPanel = true; // Enable panel mode
+        </script>
+        <script src="./app.js"></script>
+    </body>
+</html>

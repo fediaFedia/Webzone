@@ -1,0 +1,7 @@
+body {background-image:url('http://i.imgur.com/bEhBuKq.jpg');background-color:rgb(50,140,178);color:#38cbf5;}
+#console {font-family:Segoe UI, Consolas, Sans-Serif;}
+#center {background-image:url('http://i.imgur.com/S4zu98v.png');background-size: auto 500px;}
+.folder {background-color:#38cbf5;}
+.dragme {border-color:rgb(255,255,255);color:rgb(255,255,255);}
+#button {background-color:rgb(50,140,178);color:rgb(255,255,255);}
+#button:hover {color:rgb(50,140,178);background-color:rgb(255,255,255);}

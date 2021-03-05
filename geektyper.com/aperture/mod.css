@@ -1,0 +1,9 @@
+body {background-image:url('../ASSETS/textures/3.png');background-color:rgb(47,24,4);color:rgb(239,170,2);}
+#console {font-family:Tahoma, Sans-Serif;}
+#center {background-image:url('../ASSETS/logos/aperture.png');}
+.folder {background-color:rgb(239,170,2);}
+.dragme {border-color:rgb(239,170,2);color:rgb(239,170,2);}
+
+
+#button {background-color:rgb(50,140,178);color:rgb(255,255,255);}
+#button:hover {color:rgb(50,140,178);background-color:rgb(255,255,255);}

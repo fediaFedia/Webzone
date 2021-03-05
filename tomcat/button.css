@@ -1,0 +1,54 @@
+::-moz-selection{background:#FE57A1;color:#FFF;}::
+
+
+
+selection{background:#FE57A1;color:#FFF;}
+
+
+
+body{margin:0;color:#000;background:#4f9f1f;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:16px;}img{border:0;}iframe{border:0;background-color:transparent;overflow:hidden;}
+
+
+
+.container{margin:20px auto 10px;width:450px;text-align:center;}
+
+
+
+.footer-attribution{margin-top:14px;font-size:.8em;}
+
+
+.title{color:#e1e1e1;margin:20px;font-size:1.6em;font-weight:300;}p{margin:0 0 40px 0;}a{color:#4183c4;text-decoration:none;}a:hover{text-decoration:underline;}
+
+
+.services,.info,#psa,noscript{text-align:left;position:relative;background-color:#e4e4e4;border:1px solid #d1d1d1;border-radius:6px;font-size:1em;line-height:1.5;}
+
+
+.info hr{border:1px solid #d1d1d1;}#psa,noscript{display:block;color:#FFF;background-color:#DA4453;}#psa{display:none;}#psa a{color:#CCD1D9;text-decoration:underline;}#psa a:hover{color:#F5F7FA;text-decoration:none;}
+
+.info,#psa,noscript{padding:1em;margin-bottom:1em;}
+
+.service{overflow:hidden;padding:8px 12px;}.service:after{content:"";display:table;clear:both;}.service .name{float:left;}.service .status{float:right;}
+
+.service .time{cursor:help;color:#888;font-size:90%;}.services .service+.service,.services .services+.service{border-top:1px solid #191921;}.good{color:#339966;}.minor{color:#FFA500;}
+.major{color:#e63900;}#loader{height:100%;width:100%;position:absolute;top:0;left:0;bottom:0;right:0;background-color:rgba(0,0,0,.6);border-radius:5px;z-index:999;}.spinner,
+
+.error{margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;}.error{text-align:center;display:none;height:70px;font-size:1.6em;line-height:1.6em;color:#F6BB42;}.share{margin-top:20px;}
+
+
+.tweet-button,.flattr-button{margin-left:6px;}
+
+
+.twitter-label{padding:0 7px 0 29px;}
+
+.spinner{width:50px;height:40px;text-align:center;font-size:10px;}
+
+.spinner>div{background-color:#FFF;height:100%;width:6px;display:inline-block;-webkit-animation:stretch 1.2s infinite ease-in-out;animation:stretch 1.2s infinite ease-in-out;}
+
+.spinner .rect2{-webkit-animation-delay:-1.1s;animation-delay:-1.1s;}.spinner .rect3{-webkit-animation-delay:-1.0s;animation-delay:-1.0s;}
+
+
+.spinner .rect4{-webkit-animation-delay:-0.9s;animation-delay:-0.9s;}.spinner .rect5{-webkit-animation-delay:-0.8s;animation-delay:-0.8s;}@media screen and (max-width: 520px) {
+
+
+.title{font-size:2em;}.container{margin-top:10px;width:100%;}.services{margin:0 16px;}.mmstats{margin:0;}.info,#psa,noscript{margin:0 16px 1em;}
+

@@ -1,0 +1,9 @@
+body {background-color:pink;color:blue;}
+#console {font-family:Arial;font-size:14px;}
+#center {background-image:url()}
+.folder {background-color:blue;}
+.dragme {border-color:blue;color:blue;}
+
+
+#button {background-color:rgb(50,140,178);color:rgb(255,255,255);}
+#button:hover {color:rgb(50,140,178);background-color:rgb(255,255,255);}

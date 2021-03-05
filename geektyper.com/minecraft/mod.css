@@ -1,0 +1,12 @@
+
+
+
+
+body {background-image:url('http://i.imgur.com/AMcoFMY.png');background-color:#0d2c1a;color:#fff;font-family:Fixedsys, Sans-Serif;}
+#console {padding:20px;font-size:26px;}
+#center {background-image:url('http://i.imgur.com/I0QrkVV.png');}
+.folder {background-color:#42f69d;display:none;}
+.dragme {border-color:#42f69d;color:#42f69d;}
+
+#button {background-color:#42f69d;color:#0d2c1a;}
+#button:hover {color:#42f69d;background-color:#0d2c1a;}

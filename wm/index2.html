@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<!-- Did he just forget to include any usernames? -->
+
+    <head>
+
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="googlebot" content="noindex, nofollow">
+        
+<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+<link rel="manifest" href="icon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+        
+        <style type="text/css">
+		
+		
+
+
+		
+		
+            body {
+background:#000;
+background-size:cover;
+user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+                font-family:Segoe UI Light, Segoe UI, sans-serif;
+                color:white;
+             margin:0;padding:0;
+
+            }
+            p {
+                color:#727272;
+            }
+            
+            .plex {
+                
+               cursor: default; font-family:Segoe UI Semibold; font-weight:450; font-size:20px;width:228px;height:115px;background:red;padding:15px;text-align:right;
+            background:url(http://i.imgur.com/kTKjZq4.png);
+            }
+            
+            .plex img {width:100%;}
+            
+            .moretv { display: table-cell;vertical-align:bottom;font-size:15px;text-align:right; cursor: default;
+        
+          float:left;
+            bottom:140px;font-size:20px;width:208px;height:115px;margin-right:10px;}
+            
+            .moretv img {margin-top:15px;}
+            
+            #main {text-align:left;}
+            .main {position:fixed;bottom:40px;left:200px;}
+            #bottom {margin-top:120px;}
+            
+            
+            #main h1 {font-size:25px; cursor: default;}
+             #main h2 {font-size:20px;color:#9adaff; cursor: default;margin-left:15px;}
+             
+             .mainbg {background:url(back.png) 100%;width:100%;height:100%;background-size:cover;position:fixed;z-index:-1;}
+             
+             .videoContainer {
+    position:fixed;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+video {
+position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.segments {bottom:150px;position:fixed;left:-100px;}
+            
+            html {
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+}
+html, body {
+    /* For the loading indicator to be vertically centered ensure */
+    /* the html and body elements take up the full viewport */
+    min-height: 100%;
+}
+html.loading {
+    /* Replace #333 with the background-color of your choice */
+    /* Replace loading.gif with the loading image of your choice */
+    background: #333 url('loading.gif') no-repeat 50% 50%;
+
+    /* Ensures that the transition only runs in one direction */
+    -webkit-transition: background-color 0;
+    transition: background-color 0;
+}
+body {
+    -webkit-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+}
+html.loading body {
+    /* Make the contents of the body opaque during loading */
+    opacity: 0;
+
+    /* Ensures that the transition only runs in one direction */
+    -webkit-transition: opacity 0;
+    transition: opacity 0;
+}
+            
+            
+		
+		@media (max-width:1260px) { .hidebig{display:none;} } //nothing with screen size bigger than 960px
+            
+        </style>
+        <title>Windows Media Center</title>
+
+    </head>
+    
+
+    
+    
+    <body> 
+    <html class="loading">
+    <!-- All the things -->
+</html>
+    
+		<div style="font-size:20px;font-family:Segoe UI;font-weight:400;position:fixed;top:45px;right:50px;opacity:1.0;z-index:99;color:white;">
+		<div id="date-time" style="float:left;margin-right:10px;margin-top:5px;">12:00</div> <img src="icon/android-icon-36x36.png" style="float:right;"></div>
+
+<div id="videoContainer" style="display:none;">
+    <video loop muted id="movie1">
+        <source src="aq.mp4" type="video/mp4">
+            <source src="http://fediafedia.com/aq.mp4" type="video/webm">
+    </video>
+</div>
+
+<div class="mainbg">
+    
+    
+</div>
+
+
+<div class="bottomsection">
+    
+    
+
+
+<div class="segments">
+    
+    <div onclick="document.getElementById('movie1').pause();document.getElementById('videoContainer').style.display = 'none';" class="moretv" id="bottom" style="margin-right:40px;">more tv<br>
+    <img src="http://i.imgur.com/RYJu5MA.png">
+    </div>
+        <div class="moretv" id="main"> 
+        
+        <h2>Now Playing</h2>
+   <h1>TV + Movies</h1>
+   <div class="plex">movie library
+   <br>
+   <img src="http://i.imgur.com/6Cilb9G.png">
+   </div>
+   <h2>Sports</h2>
+    </div>
+        <div onclick="document.getElementById('movie1').play();document.getElementById('videoContainer').style.display = 'block';" class="moretv" id="bottom">live tv<br>
+    <img src="http://i.imgur.com/7xUD9tj.png">
+    </div>
+    
+            <div class="moretv" id="bottom">guide<br>
+    <img src="http://i.imgur.com/RNuVcyF.png">
+    </div>
+        <div class="moretv hidebig" id="bottom">movies guide<br>
+    <img src="http://i.imgur.com/McsATlF.png">
+    </div>
+    
+          <div class="moretv hidebig" id="bottom">play dvd<br>
+    <img src="http://i.imgur.com/Gv2wwJO.png">
+    </div>
+</div>
+    
+</div>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+function updatingClock(selector, type) {
+    function currentDate() {
+        var currentDate = new Date;
+        var Day = currentDate.getDate();
+        if (Day < 10) {
+            Day = '0' + Day;
+        } //end if
+        var Month = currentDate.getMonth() + 1;
+        if (Month < 10) {
+            Month = '0' + Month;
+        } //end if
+        var Year = currentDate.getFullYear();
+        var fullDate = Month + '/' + Day + '/' + Year;
+        return fullDate;
+    } //end current date function
+
+    function currentTime() {
+        var currentTime = new Date;
+        var Minutes = currentTime.getMinutes();
+        if (Minutes < 10) {
+            Minutes = '0' + Minutes;
+        }
+        var Hour = currentTime.getHours();
+        if (Hour > 12) {
+            Hour -= 12;
+        } //end if
+        var Time = Hour + ':' + Minutes;
+        if (currentTime.getHours() <= 12) {
+            Time += ' AM';
+        } //end if
+        if (currentTime.getHours() > 12) {
+            Time += ' PM';
+        } //end if
+        return Time;
+    } // end current time function
+
+
+    function updateOutput() {
+        var output;
+        if (type == 'time') {
+            output = currentTime();
+            if ($(selector).text() != output) {
+                $(selector).text(output);
+            } //end if
+        } //end if
+        if (type == 'date') {
+            output = currentDate();
+            if ($(selector).text() != output) {
+                $(selector).text(output);
+            } //end if
+        } //end if
+        if (type == 'both') {
+            output = currentDate() + ' at ' + currentTime();
+            if ($(selector).text() != output) {
+                $(selector).text(output);
+            } //end if
+        } //end if
+    }//end update output function
+    updateOutput();
+    window.setInterval(function() {
+        updateOutput();
+    }, 1000); //run update every 1 second
+} // end updating clock function
+updatingClock('#date-time', 'time');
+});//]]> 
+
+</script>
+
+    <script>
+        
+        
+        // IE10+
+document.getElementsByTagName( "html" )[0].classList.remove( "loading" );
+
+// All browsers
+document.getElementsByTagName( "html" )[0].className.replace( /loading/, "" );
+
+// Or with jQuery
+$( "html" ).removeClass( "loading" );
+    </script>
+
+</html>

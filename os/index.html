@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GeekTyper OS</title>
+	
+	
+	<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="apple-mobile-web-app-title" content="GeekTyper OS">
+<meta name="theme-color" content="#192653">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	
+	
+	
+	<meta charset="UTF-8">
+	<script src="js/common/libs.js"></script>
+		<script src="js/common/im-coder.js"></script>
+				<script src="js/common/highlight.min.js"></script>
+						<script src="js/common/localstorage.js"></script>
+				<link href="js/common/styles/a11y-dark.css" rel="stylesheet">
+				
+<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css" />
+
+
+
+		<style>
+body {overflow:hidden;
+background-color:#499eba;
+background-size:cover;
+  background-position: center; 
+    background-attachment: fixed;
+	
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+
+  /* No support for these yet, use at own risk */
+  -o-user-select: none;
+  user-select: none;     
+font-family:Inconsolata, Sans-serif;
+color:white;  
+  
+}
+
+
+.start1 {
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+.block-left{width:50%;height:50%;padding:20px;float:left;}
+
+.block-right{pointer-events: none;border-left:1px solid rgba(255,255,255,0.1); color:White;position:fixed;top:0px;right:0px;width:calc(50%);height:100%;padding:0px;float:left;}
+
+#tcm {
+position:fixed;
+height:100%;
+width:100%;
+z-index: -1;
+background-image:url('assets/logos/triple.png');
+background-repeat:no-repeat;
+background-position:center;
+top:0;
+}
+
+#iframe {
+    width: 100%;
+    min-height: 350px;
+	overflow:hidden;
+    border: none;
+
+
+}
+.squareBig{border:1px solid #888; width:32px;height:32px;margin:2px;float:left;}
+
+.inputColor {border:1px solid #888; width:32px;height:32px;margin:2px;float:left;}
+hr {clear:both;}
+
+
+.logosection{float:left;border:4px solid grey;margin:3px;padding:5px;width:40px;height:40px;background-color:brown;}
+.logosection:hover{border:4px solid white;}
+
+
+  #folders {
+    text-align:right;
+
+    position:fixed;
+
+    right:30px;
+    top:30px;
+    width: 29%;
+    margin-top: 5px;
+    min-height: 260px;
+height:900px;
+width:120px;
+   
+}
+
+
+  .folder {
+    width: 80px;
+    height: 90px;
+    position: relative;
+
+	background:none;
+
+    float:left;
+		cursor:normal;
+
+	text-align:center;
+	font-size:9px;
+border: 1px solid rgba(250,250,250,0.0);
+}
+
+.folder img{width:32px;}
+
+
+  .folderDesk {
+    width: 80px;
+    height: 90px;
+    position: relative;
+	margin:5px;
+	padding:10px 10px 10px 10px;;
+	background:none;
+    cursor:normal;
+    float:right;
+	cursor:normal;
+    color:#fff; 
+	text-align:center;
+	font-size:9px;text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.54);
+border: 1px solid rgba(250,250,250,0.0);
+}
+
+  .folderDesk:hover {
+
+
+	background:rgba(10,10,10,0.3);
+border: 1px solid rgba(250,250,250,0.3);
+border-radius:3px;
+	cursor:normal;
+}
+
+
+.ghost-select {
+  display: none;
+  z-index: 9000;
+  position: absolute !important;
+  cursor: default !important;
+}
+
+
+#big-ghost{
+  background-color:rgba(66, 116, 192, 0.4);
+  border:1px solid #3399ff;
+  position:absolute;
+}
+
+.ghost-select > div {
+  position: absolute;
+  left: 0px !important;
+  top: 2px !important;
+}
+
+.ghost-active {
+  display: block !important;
+}
+
+.ghost-select > span {
+  background-color: rgba(66, 116, 192, 0.4);
+  border: 1px solid #3399ff;
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+
+
+.segment {display:flex;background:rgba(255,255,255,0.1);margin:0px 0 10px 0;padding:20px;}
+.halfsegment {width:45%;margin:0 auto;height:200px;}
+.seg {  position:relative; display:inline;float:none;}
+
+
+sub {clear: both;
+width: 100%;
+margin-bottom: 10px;}
+
+
+.folderE {
+    width: 48px;
+    height: 32px;
+    position: relative;
+    background-color: red;
+    border-radius: 3px 3px 3px 3x;
+    margin: 30px;
+    cursor: pointer;
+    float: left;
+}
+
+.folderE p {
+    padding-top: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 9px;
+}
+
+.folderE::before {
+    content: '';
+    width: 50%;
+    height: 6px;
+    border-radius: 0 3px 0 0;
+    background-color: #ccc;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    cursor: pointer;
+}
+
+#desktopicons-win {display:none;}
+
+.floatright {float:right;right: 30px; top:30px;}
+.floatleft {right: 30px; top:0px;}
+
+
+
+#desktopicons-mac {width:80px;margin:30px 50px 0px 0px;display:none;position:fixed;}
+
+ .iconlist ul li {
+   float: left;
+   font-size: 11px;
+
+
+   width: 80px;
+   text-align: center;
+   height: 70px;
+   padding: 10px;
+   overflow: hidden;
+ }
+ 
+ .iconlist ul li .ms-Icon {
+   font-size: 48px;
+   display: block;
+   margin: 5px auto;
+ }
+
+.resultsSpotlight {display:block;
+overflow:hidden;
+height: 144px;
+margin-top: 10px;
+}
+
+#searchBlock {display:none;}
+
+.spotlight
+{  
+border-radius: 2px;
+background: white;
+width: 300px;
+height: 200px;
+position: fixed;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 999;
+padding: 20px;
+top: 40%;
+
+
+}
+
+
+#searchEntry {
+
+font-family: Inconsolata;
+width: 100%;
+padding: 10px;
+font-size: 18px;
+border: 1px solid #ddd;
+border-radius: 2px;}
+.resultsSpotlight span {clear:both;display: block;}
+
+
+.filter {color:#222;margin:5px 0px 5px 0px;}
+
+
+.filter:before {
+    content: "";
+    display: block;
+    background: url("icon.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+
+		#calc { margin: auto;
+  position: absolute;
+  top: 20%; left: 0; bottom: 0; right: 0;}
+  
+  #calculator4 {height:280px;text-align:center;margin:auto; }
+		#calculator4 .button {padding:5px;margin:2px 0px 2px 0px; width:45px;height:35px;border:0; background:#272f3a;color:#fff;}
+		
+		#calculator4 input {padding:5px;background:#fff;margin:15px;width:188px;height:40px;border:0;}
+		
+		::-webkit-input-placeholder {
+ color:#555;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+color:#555;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+color:#555;
+}
+
+:-ms-input-placeholder {  
+color:#233c42;
+}
+
+
+#red {background:#922426;}
+#blue {background:#1d2f63;}
+
+.rankbig {
+  background: url(sprites.png);
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+vertical-align:middle;
+}
+
+.b1 {
+  background-position: 432px 0px;
+}
+
+.b2 {
+  background-position: 384px 0px;
+}
+
+.b3 {
+  background-position: 336px 0px;
+}
+
+
+.b4 {
+  background-position: 288px 0px;
+}
+
+.b5 {
+  background-position: 240px 0px;
+}
+
+.b6 {
+  background-position: 192px 0px;
+}
+
+.b7 {
+  background-position: 144px 0px;
+}
+
+.b8 {
+  background-position: 96px 0px;
+}
+
+.b9 {
+  background-position: 48px 0px;
+}
+
+#startmenurank {display:block;height:55px;width:55px;float:right;border:0;}
+.startmenuuser {display:block;height:55px;width: 180px;}
+.startmenuuser p {margin:0;padding:0;color:#ccc;}
+.startmenuuser h1 {margin:0;padding:0;}
+.rank {
+  background: url(sprites20.png);
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+vertical-align:middle;
+}
+
+.r1 {
+  background-position: 0px 0px;
+}
+
+.r2 {
+  background-position: 160px 0px;
+}
+
+.r3 {
+  background-position: 140px 0px;
+}
+
+.r4 {
+  background-position: 120px 0px;
+}
+
+.r5 {
+  background-position: 100px 0px;
+}
+
+.r6 {
+  background-position: 80px 0px;
+}
+
+.r7 {
+  background-position: 60px 0px;
+}
+
+.r8 {
+  background-position: 40px 0px;
+}
+
+.r9 {
+  background-position: 20px 0px;
+}
+
+
+.box {
+
+background:#262425;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#363533), color-stop(100%,#1a1819)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #363533 0%,#1a1819 100%); /* Chrome10+,Safari5.1+ */
+width:240px;
+height:94px;
+    position:fixed;
+    bottom:-100px;
+    right:30px;
+    z-index:101;
+	border-top-left-radius:2px;
+border-top-right-radius: 2px;
+border:1px solid black;
+}
+
+.box img {background:#ccc;width:64px;height:64px;margin:16px;float:left;}
+.box h1 {font-weight:normal;padding-top:20px;margin-bottom:5px;color:#eaeaea;font-size:11px;float:left;}
+.box p {    color: #adadad;
+    font-size: 11px;
+    float: left;
+    width: 128px;
+    margin-top: 3px;
+}
+
+
+
+
+
+#bootscreen {position:fixed;left:0px;top:0px;background:black;width:100vw;height:100vh;z-index:10001;display:block;}
+#lockscreen {position:fixed;left:0px;top:0px;display:none;
+
+background:rgba(30,30,30,0.9);display:block;width:100%;height:100%;z-index:99999;
+
+margin:0;padding:0;}
+
+
+  #testugh {
+ width: 100%;
+ height: 100%;
+ background: #000;
+ padding: 10px;
+z-index: 1020;
+ position:relative;
+
+    color:#fff;
+    min-height: 100%; 
+  display:none;
+  cursor: url(http://i.imgur.com/xwmcWdG.png), auto;
+  
+   
+}
+  
+  
+  
+  #test0 {
+ width: 100%;
+ height: 100%;
+ background: #000;
+ padding: 10px;
+z-index: 1020;
+ position:relative;
+
+    color:#fff;
+    min-height: 100%; 
+  display:none;
+  cursor: url(http://i.imgur.com/xwmcWdG.png), auto;
+  
+   
+}
+
+#test1 {
+ width: 100%;
+ height: 100%;
+ background: #000;
+ padding: 10px;
+position:relative;
+z-index: 1021;
+
+    color:#fff;
+    min-height: 100%; 
+  cursor: url(http://i.imgur.com/xwmcWdG.png), auto;
+  
+   
+}
+
+#test2 {
+ width: 100%;
+    display:none;
+ height: 100%;
+  position:relative;
+ background: #000;
+ padding: 10px;
+
+    color:#fff;
+    min-height: 100%; 
+z-index: 1022;
+cursor: url(http://i.imgur.com/xwmcWdG.png), auto;
+   
+}
+
+#test3 {
+ width: 100%;
+    display:none;
+    position:relative;
+ height: 100%;
+ background: #232323;
+ padding: 10px;
+
+    color:#fff;
+    min-height: 100%; 
+z-index: 1023;
+   
+}
+
+#test4 {
+ width: 100%;
+    display:none;
+    position:relative;
+ height: 100%;
+ background-color: #000;
+background-image: url(assets/textures/2.png);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+background-size: cover;
+width: 100vw;
+background-position: center center;
+
+ padding: 10px;
+
+    color:#fff;
+    min-height: 100%; 
+z-index: 1025;
+   
+}
+
+#s1 {display:none;}
+#s2 {display:none;}
+#s3 {display:none;}
+#s4 {display:none;}
+#s5 {display:none;}
+#s6 {display:none;}
+
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#loading {text-align:center;
+width:300px;
+position:fixed;width:120px;height:120px;top: 50%;
+left: 50%;
+margin-top: -60px;
+margin-left: -60px;}
+
+
+.fields {border:1px solid grey;background:#e9e9e9;color:#555 !important;padding:5px;width:215px;margin:5px;}
+
+ .centerblocklogin {
+position:absolute;
+left:50%;
+top:50%;
+height:340px;
+margin-top:-240px;
+margin-left: -150px; 
+width:300px; 
+
+background-color:#000;
+padding:40px;
+border-top:20px solid red;
+    color:#888;
+text-align:center;
+
+}
+
+input {
+
+  color:#fff;
+
+
+
+}
+
+
+#tables table {
+    z-index: 0;
+    opacity: 0.5;
+    font-size: 16px;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+	display:none;
+}
+
+#ac {
+  background-image: url(ac.png);
+  display: inline-block;
+
+vertical-align:middle;
+
+
+width:64px;height:64px;margin:16px;float:left;
+}
+
+.r1 {
+  background-position: 0px 0px;
+}
+.pairs {
+  background-position: -128px -128px;
+}
+
+.sheeple {
+  background-position: -512px -64px;
+}
+.cccp {
+  background-position: -448px -64px;
+}
+
+.access {
+  background-position: -128px -64px;
+}
+.decoder {
+  background-position: 0 -64px;
+}
+
+.ar8 {
+  background-position: -448px 0;
+}
+.ar7 {
+  background-position: -384px 0;
+}
+
+.ar6 {
+  background-position: -320px 0;
+}
+
+.ar5 {
+  background-position: -256px 0;
+}
+.ar4 {
+  background-position: -192px 0;
+}
+.ar3 {
+  background-position: -128px 0;
+}
+.ar2 {
+  background-position: -64px 0;
+}
+.ar1 {
+  background-position: -0px 0;
+}
+.ar0 {
+  background-position: -448px 0;
+}
+
+
+.fullwidth {width:100%;}
+.ipad {display:none;}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  {.ipad {display:block;}}
+
+</style>		
+<link rel="stylesheet" href="css/flexboxgrid.css" type="text/css">
+<link rel="stylesheet" href="css/dock.css" type="text/css">
+<link rel="stylesheet" href="css/entypo.css" type="text/css">
+</head>
+<body>
+
+<input type='text' class="ipad" style="width:5px;height:5px;" id='foo'><br><br>
+<div class="ipad" style="position:fixed;top:50%;left:48px;width:32px;height:32px; z-index:99999; border-radius:10px;background:#ccc;opacity:0.5" onclick='$("#foo").focus();'></div>
+
+  <!-- LOCKSCREEN -->
+<div id="lockscreen" style="display:none;">
+<div class="centerblocklogin" id="logintopbar">
+	<form action="javascript:hideAllThat()" onsubmit="saveStatusLocally(this);"> 
+	
+	<img src="assets/img/tegnio.png">
+	<div><h3>Tegnio OS 3.0.14</h3></div>
+	<h2 style="font-weight:normal;">You can change your nickname:</h2>
+	
+	<form autocomplete="off" style="border: 1px solid black;"><input style="padding:5px;color:black;" placeholder="Your Nickname" id="usernameInput" maxlength="9" type="text" maxlength="10"></form>
+	
+<br>
+	<form autocomplete="off" style="border: 1px solid black;">
+	<input style="padding: 5px; border: 1px solid black;color:black;" placeholder="Leave Blank" id="passwordInput" type="password1">
+	</form>
+	
+	<p></p>
+	<img src="assets/img/bioid.png" />
+	<div>
+	<input style="background:#555;padding:20px; margin:0px;font-size:18px;  border:0px;" type="submit" value="START" onclick="javascript:hideAllThat()">
+	</div>
+
+	
+
+	</div>
+
+
+</div>
+
+  <!-- BOOTSCREEN -->
+
+
+<div id="bootscreen">
+<div id="testugh"></div>
+	<div id="test0"><img src="assets/img/blink.gif" /></div>
+	<div id="test1">
+		
+	<pre id="s1">
+	<img style="float:right;margin-right:25px;" src="assets/img/energy.png" />
+	
+	TEGNIO Modular BIOS
+		Copyright (C) 1977-2021, Tegnio Software </pre>
+
+	<pre id="s2">BIOS Date: 07/01/15 17:22 Ver v2.7.3
+		Press F2 to run Setup</pre>
+	<pre id="s3">
+	IPS USER space POST : HMAC Test success!
+	IPS USER space POST : RSA Test success!
+	IPS USER space POST : ECDSA Test success!
+	IPS USER space POST : DRBG Test success!
+		</pre>
+		<pre id="s4">
+	OSMOS has arrived
+	USBMSC Identifier (non-unique) : 07042F5DD4564A66 0x13fe 0x3ee00 0x100
+	Autodetect Enabled
+	No PDAs linked to this Terminal
+			Peripherals detected</pre>
+			<pre id="s5">
+
+	IDE Channel 5 Master  :  None
+	IDE Channel 5 Slave   :  None
+
+	IDE Channel 7 Master  :  None
+	IDE Channel 7 Slave   :  None
+
+	IDE Channel 8 Master  :  None
+	IDE Channel 8 Slave   :  None</pre>
+	<pre id="s6">
+	ACPI_SMC_PlatformPlugin - Failed to locate SMC Driver
+	6595126 : hw queue 0 for WME_AC_BE traffic
+	5434334 : hw queue 1 for WME_AC_BK traffic
+	4153888 : hw queue 2 for WME_AC_BI traffic
+
+	Sound assertion in HDACodecGeneric at line 360
+	NTFS volume name, version 3.1
+	NTFS driver 3.10 (Flags: R/W)
+	En2::1080211Interface::int() <p2p > role 1
+	En2::1080211Interface::int() <p2p > role 1 this 0xffffff801fb74000
+
+		5. 000710: ATHR : unknown locale </pre>
+	</div>
+	<div id="test2"><div class="Absolute-Center"><div id="loading">
+	<div id="spin">
+	<img style="background:url(assets/img/mini.gif);" src="assets/img/bootoverlay.png" />
+	</div>
+	<br><br><div style="position:fixed;bottom:25px;color:#888;font-size:9px;">© TEGNIO CORPORATION</div></div></div></div>
+	<div id="test3"></div>
+	
+	<div id="test4"><div class="centerblocklogin">
+	<form action="javascript:hideAllThat()" onsubmit="saveStatusLocally(this);"> 
+	
+	<img src="assets/img/tegnio.png">
+	<div><h3>Tegnio OS 3.0.14</h3></div>
+	<h2 style="font-weight:normal;">Type your nickname to Start</h2>
+	
+	<form autocomplete="off" style="border: 1px solid black;"><input style="padding:5px;color:black;" placeholder="Your Nickname" value="Admin" id="usernameInputFirst" maxlength="9" type="text" maxlength="10"></form>
+	
+<br>
+	<form autocomplete="off" style="border: 1px solid black;">
+	<input style="padding: 5px; border: 1px solid black;color:black;" placeholder="Leave Blank" id="passwordInput" type="password">
+	</form>
+	
+	<p></p>
+	<img src="assets/img/bioid.png" />
+	<div>
+	<input style="background:#555;padding:20px; margin:0px;font-size:18px;  border:0px;" type="submit" value="START" onclick="javascript:hideAllThat();setUser()">
+	</div>
+	</form>
+	
+
+	</div>
+
+
+	<div id="tables"><table><tbody><tr><td><script language="javascript1.2"><!-- hide itdocument.write("<b>New York</b><br>");document.write(ny_hour + ":" + min + ny_ampm + "<br>");//--></script><b>New York</b><br>10:35 AM<br></td><td><script language="javascript1.2"><!-- hide itdocument.write("<b>London</b><br>");document.write(lon_hour + ":" + min + lon_ampm + "<br>");//--></script><b>London</b><br>3:35 PM<br></td><td><script language="javascript1.2"><!-- hide itdocument.write("<b>Moscow</b><br>");document.write(mos_hour + ":" + min + mos_ampm + "<br>");//--></script><b>Moscow</b><br>6:35 PM<br></td><td><script language="javascript1.2"><!-- hide itdocument.write("<b>Tokyo</b><br>");document.write(tok_hour + ":" + min + tok_ampm + "<br>");//--></script><b>Tokyo</b><br>12:35 PM<br></td><td><script language="javascript1.2"><!-- hide itdocument.write("<b>Sydney</b><br>");document.write(syd_hour + ":" + min + syd_ampm + "<br>");//--></script><b>Sydney</b><br>2:35 AM<br></td></tr></tbody></table></div>
+	
+	<script>
+	
+	function setUser() {
+	
+	var userNam = $("#usernameInputFirst").val();
+		localStorage.setItem("username", userNam);
+		console.log("new username: " + userNam);
+		$(".username").html(userNam);
+	}
+	
+	function hideAllThat() {
+
+		$('#lockscreen').delay(400).hide(0);
+		$('#test0').delay(400).show(0);
+		$('#test0').delay(1400).hide(0);
+		$('#test1').delay(200).hide(0);
+		$('#test2').delay(2000).hide(0);
+		$('#test3').delay(400).hide(0);
+		$('#test4').delay(400).hide(0);
+		$('#im-coder-editor').delay(1200).show(0);
+		$(".taskbar").css("opacity", "1.0");
+		if(tegnioCoder) tegnioCoder.enable();
+		allowPopups = true;
+		$('#bootscreen').hide();
+		localStorage.setItem("bootscreen", "none");
+
+		var userNam = $("#usernameInput").val();
+		localStorage.setItem("username", userNam);
+		console.log("new username: " + userNam);
+		$(".username").html(userNam);
+	}
+	</script>
+	</div>
+
+
+
+	<script>
+	$(function() {
+
+	$('#s1').delay(1000).show(0);
+	$('#s2').delay(1500).show(0);
+	$('#s3').delay(1000).show(0);
+	$('#s4').delay(2600).show(0);
+	$('#s5').delay(2800).show(0);
+	$('#s6').delay(3200).show(0);
+	$('#test0').delay(4000).show(0);
+	
+	$('#test0').delay(4500).hide(0);
+	$('#testugh').delay(6000).show(0);
+	
+	$('#test2').delay(6000).show(0);
+	$('#test2').delay(9000).hide(0);
+	$('#testugh').delay(12000).hide(0);
+	$('#test1').delay(12000).hide(0);
+	$('#test3').delay(16500).show(0);
+	$('#test3').delay(1000).hide(0);
+	$('#test4').delay(1000).show(0);
+	$('#tables table').delay(16500).show(0);
+
+	  var eventsFired = localStorage.getItem('firstRun');
+  
+   if (eventsFired != '1'){
+
+		
+      localStorage.setItem('firstRun', '1');
+	  console.log("First Run");
+	  tegnioCoder.disable();
+
+  }
+	
+	else { 
+		 console.log("Second Run");
+tegnioCoder.enable();
+
+}
+
+
+	});
+
+
+	</script>
+</div>
+
+
+<div class="box" id="box">
+<div title="Rank" id="ac" class=""></div>
+<h1>Achievement unlocked!</h1>
+<p id="achievementname">Senior Sergant Sergant</p>
+</div>
+
+
+
+<div class="spotlight" id="searchBlock">
+<form  autocomplete="off">
+<input class="flexsearch--input" type="search" id="searchEntry" placeholder="Search all files...">
+</form>
+<div class="resultsSpotlight">
+
+<!-- Apps -->
+
+<span class="filter app" id="admin">Admin</span>
+
+<span class="filter app" id="explorer">File Explorer</span>
+<span class="filter app" id="calculator">Calculator</span>
+<span class="filter app" id="paint">Paint</span>
+<span class="filter app" id="console">Console</span>
+<span class="filter app" id="keyboard">Keyboard</span>
+<span class="filter app" id="clock">Clock</span>
+<span class="filter app" id="system">System Settings</span>
+<span class="filter app" id="password">Password Cracker</span>
+<span class="filter app" id="about">About</span>
+<span class="filter app" id="welcome">Welcome</span>
+<span class="filter iframe" id="map">World Map</span>
+
+<!-- Games -->
+
+<span class="filter iframe" id="freecell">Freecell</span>
+<span class="filter iframe" id="2048">2048 Conspiracy</span>
+<span class="filter iframe" id="pairs" width=800 height=570>Pairs</span>
+
+
+
+<!-- Fake -->
+<span class="filter fake" id="webcam">Webcam</span>
+<span class="filter fake" id="crypto">Crypto Miner</span>
+<span class="filter fake" id="terminal">Terminal</span>
+<span class="filter fake" id="webcam">Webcam</span>
+<span class="filter fake" id="enhance">Enhance</span>
+<span class="filter fake" id="trace">Trace IP</span>
+<span class="filter fake" id="satellite">Satellite Uplink</span>
+<span class="filter fake" id="rat">Rat Network</span>
+<span class="filter fake" id="nuclear">Nuclear</span>
+<span class="filter fake" id="neurotoxin">Neurotoxin</span>
+<span class="filter fake" id="stability">Stability</span>
+<span class="filter fake" id="pipe">Pipe</span>
+<span class="filter fake" id="purge">Purge Facility</span>
+
+
+
+<!-- Documents -->
+
+<span class="filter doc" id="cia">cia_bulletin_recent.docx</span>
+<span class="filter doc" id="memorandum">Memorandum.docx</span>
+<span class="filter doc" id="atlas">ATLAS-D Blueprints.docx</span>
+<span class="filter doc" id="safe">safe_house_blueprints.docx</span>
+<span class="filter doc" id="access">Access_Codes.tyz</span>
+<span class="filter doc" id="mace">mace_record.wim</span>
+
+</div>
+</div>
+
+<script type="text/javascript" src="js/filter.js"></script>
+
+
+<div id="desktopicons-win">
+win
+</div>
+
+<div id="desktopicons-mac" class="deskicons">
+<div class="iconlist clearfix">
+<ul>
+<li><i class="ms-Icon icon-monitor app" width="360" height="480" id="computer"></i><span class="ms-font-s">Workstation</span></li>
+<li><i class="ms-Icon icon-folder app" id="explorer"></i><span class="ms-font-s">Files</span></li>
+<li><i class="ms-Icon icon-lock-open doc" id="mace"></i><span class="ms-font-s">Secrets</span></li>
+<li><i class="ms-Icon icon-mail app" width="640" height="450" id="mail"></i><span class="ms-font-s">Assignments</span></li>
+<li><i class="ms-Icon icon-video app" width="740" height="450" id="video"></i><span class="ms-font-s">Video</span></li>
+
+<li><i class="ms-Icon icon-cog" onclick="loadDemosCommon()"></i><span class="ms-font-s">Style</span></li>
+<li><i class="ms-Icon icon-help-circled app"></i><span class="ms-font-s">Help</span></li>
+
+
+</ul>
+
+</div>
+</div>
+
+<div id="dockContainer">
+<div id="dockWrapper">
+<ul class="osx-dock">
+<li class="">
+<img alt="trash" src="assets/img/icons/folder.png">
+</li>
+<li class="iframe" id="notepad">
+<img alt="trash" src="assets/img/icons/notepad.png">
+</li>
+<li class="">
+<img alt="trash" src="assets/img/icons/satellite.png">
+</li>
+<li class="">
+<img alt="trash" src="assets/img/icons/console.png">
+</li>
+<li class="">
+<img alt="trash" src="assets/img/icons/server.png">
+</li>
+<li class="">
+<img alt="trash" src="assets/img/icons/web.png">
+</li>
+<li class="" style="width: 14px; ">
+<div class="vl"></div>
+</li>
+<li class="">
+<span>last.fm</span>
+<img alt="trash" src="assets/img/icons/monitor.png">
+</li>
+
+<li class="">
+<img alt="trash" src="assets/img/icons/trash.png">
+
+</li>
+</ul>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div style="margin:20px;">
+<div class="row">
+<div class="col-xs-6">
+<pre id='im-coder-editor' class="im-coder-editor"></pre>
+</div>
+
+<div class="col-xs-6" id="linuxstuff" style="position: fixed;
+right: 30px;top:30px;">
+
+<div class="row segment">
+
+	<sub>TERMINAL</sub>
+	<pre>
+	
+              +                OS: Arch Linux x86_64
+              #                Hostname: Archie
+             ###               Kernel Release: 4.9.11-1-ARCH
+            #####              Uptime: 0:32
+            ######             WM: None
+           ; #####;            DE: GNOME
+          +##.#####            Packages: 1034
+         +##########           RAM: 1687 MB / 16045 MB
+        #############;         Processor Type: Intel Core i7-9900 CPU
+       ###############+        $EDITOR: nano
+      #######   #######        Root: 16G / 20G (80%) (ext4)
+    .######;     ;###;`".      
+   .#######;     ;#####.       
+   #########.   .########`     
+  ######'           '######    
+ ;####                 ####;   
+ ##'                     '##   
+#'                         `# 
+	
+	</pre>
+	
+	</div>
+<div class="row segment">
+
+<div id="result">A</div>
+
+	<sub>FILESYSTEM</sub>
+	
+	
+	<div class="folderE control"  style=""><p>Control</p></div>
+	<div class="folderE admintest"  style=""><p>Admin</p></div>
+	<div class="folderE app" id="wheat" style=""><p>Map</p></div>
+	<div class="folderE app" id="calculator" width=250 height=350  style=""><p>Calculator</p></div>
+	<div class="folderE iframe"  id="freecell" style=""><p>Freecell</p></div>
+	<div class="folderE iframe" width=400  height=550 id="conspiracy"  style=""><p>Conspiracy</p></div>
+	<div class="folderE iframe" id="pairs" width=800 height=570   style=""><p>Map</p></div>
+	<div class="folderE iframe" id="notepad"  style=""><p>Map</p></div>
+	<div class="folderE iframe" id="paint"  style=""><p>Map</p></div>
+	<div class="folderE iframe" onclick='tegnioCoder.enable();' height=270  id="keyboard"  style=""><p>Map</p></div>
+	<div class="folderE iframe" id="welcome" style=""><p>Map</p></div>
+	<div class="folderE iframe" width=800 height=670  id="map" style=""><p>Map</p></div>
+	
+		<div class="folderE iframe" id="decoder" style=""><p>Decoder</p></div>
+		<div class="folderE app" idth=400  height=350 id="explorer" style=""><p>File Manager</p></div>
+		
+</div>
+
+
+
+<div class="row segment">
+
+<div class="col-xs-6">
+
+<div class="row">
+
+<div class="col-xs-6"><img style="width:200px;" src="globe.gif" /></div>
+<div class="col-xs-6" style="text-align:right;">
+
+
+<h1 id="txt" style="font-size:37px;margin:30px 0 0 0;padding:0;">21:32</h1>
+<h2 style="font-size:16px;margin:0;padding:0;">Secure</h2></div>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-6">
+
+
+	<sub>INFO</sub>
+<span id="useragent"> </span>
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+	<div style="display:none;" id="tcm" >
+<div class="ghost-select"><span></span></div>
+</div>
+
+
+
+
+	
+
+<script>
+$( document ).ready( function () {
+	beforeDemosCommon();
+});
+</script>
+
+<!--Here goes example script-->
+
+
+
+
+<script>
+$( document ).ready( function () {
+	"use strict";
+	var taskbarPosition = {}
+	if(localStorage.hasOwnProperty('taskbar.position')) {
+		var p = localStorage.getItem('taskbar.position');
+		//console.log(p);
+		if(p.length && p[0] == '{') taskbarPosition = JSON.parse(p) || [];
+	}
+	
+	
+	
+	
+	// Staskbar has to be created first
+	var $taskbar = $( ".taskbar" ).taskbar({
+		// let's have all the native buttons ("maximizeAll" is on by default)
+		clock: true,
+		languageSelect: true,
+		networkMonitor: true,
+		toggleFullscreen: true,
+
+		horizontalStick: !taskbarPosition.horizontalStick ? "bottom left" : taskbarPosition.horizontalStick,
+		verticalStick: !taskbarPosition.verticalStick ? "bottom right" : taskbarPosition.verticalStick,
+		orientation: !taskbarPosition.orientation ? "horizontal" : taskbarPosition.orientation,
+		autoHide: !taskbarPosition.autoHide ? false : taskbarPosition.autoHide,
+		draggable: true,
+		//draggable: "orientation",
+		resizable: true,
+		horizontalRows: 1,
+		horizontalRowsMin: 1,
+		horizontalRowsMax: 6,
+		buttonsOrder: [ "toggleAutomate",  "openWindow"  ],
+		buttons: {
+			toggleAutomate: {
+				label: 'AUTOPILOT'
+
+			},
+	
+			
+								rank: {
+				label: "Rank"
+			},
+			
+							highScore: {
+				label: "Score"
+			},
+			
+			
+									search: {
+				label: "⌕"
+			}
+		},
+		systemButtonsOrder: [
+			// all system buttons should be present  when setting
+			// "systemButtonsOrder", unless you really don't need some
+			"rank", "highScore", "languageSelect", "toggleFullscreen",
+			"clock", "minimizeAll", "search"
+		],
+		
+		drop: function() {
+			var o = $taskbar.taskbar('option');
+			localStorage.setItem('taskbar.position', JSON.stringify({
+				horizontalStick: o.horizontalStick,
+				verticalStick: o.verticalStick,
+				orientation: o.orientation,
+				autoHide: o.autoHide
+			}));
+		},
+		
+		// here goes icons for taskbar and window group
+		icons: {
+			"group:test": "ui-icon-folder-collapsed",
+			clock: "ui-icon-blank",
+			languageSelect: "ui-icon-blank",
+			menuWindowClose: "ui-icon-closethick",
+			minimizeAll: "ui-icon-grip-dotted-vertical",
+			startButton: "ui-icon-star",
+			// "startButton" is in usage already
+			startButtonSet: null
+		}
+		
+		
+	});
+
+	$taskbar.taskbar('option', 'buttons.search').$element.on('click', function(event) {
+		
+		console.log("Se");
+		$("#searchBlock").toggle();
+	
+		$("#searchEntry").focus();
+	});
+	
+	
+	$taskbar.taskbar('option', 'buttons.toggleAutomate').$element.on('click', function(event) {
+		if(tegnioCoder.toggleAutoMode()) $(this).button('option', {label: 'Stop'});
+		else $(this).button('option', {label: 'AUTOPILOT'});
+	});
+
+
+	// window is binded to taskbar widget,
+	// so it has to be created second
+	$( ".window" ).window();
+	
+	
+
+
+
+
+
+
+	updateScore();
+	
+function updateScore() {
+
+var highScore = parseInt(localStorage.getItem('highScore'));
+var rank = parseInt(localStorage.getItem('rank'));
+$('.simone-taskbar-button-user-defined[data-button-name=highScore]').children().html(highScore)
+	
+$('.simone-taskbar-button-user-defined[data-button-name=rank]').children().html("<div title='Rank' class='rank r" + rank + "'></div>")
+
+	$('#startmenurank').html("<div title='Rank' class='rankbig b" + rank + "'></div>")
+
+	
+		}
+	
+
+	
+	
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+<script>
+$( document ).ready( function () {
+	<!-- loadDemosCommon(); -->
+});
+</script>
+
+<div class="demo-html">
+
+<!-- TASKBAR & STARTMENU -->
+
+
+<div class="taskbar">
+	<!-- Startmenu -->
+
+
+
+
+
+
+
+	<ul data-menu-lang="*" data-menu-type="start" style="padding:20px;">
+	
+	
+<div id="startmenurank"></div>
+<div class="app startmenuuser" id="achievement"><h1 class="username">User</h1><p id="rankname">Rank</p></div>
+
+	<hr style="color:#fff;border:1px solid #333;">
+
+		
+				<li class="start1">Accessories
+		
+				<ul>
+				 <li class="app"  id="explorer">File Manager</li>
+				  <li class="iframe" height=500 id="map">Country Info</li>
+ <li class="iframe"  id="decoder">Decoder</li>
+       <li class="iframe"  id="notepad">Notepad</li>
+        <li class="iframe"  id="console">Command Prompt</li>
+        <li class="iframe"  id="paint">Paint</li>
+        <li class="iframe" height=280 id="keyboard">Keyboard</li>
+        <li class="app" width=250 height=350  id="calculator">Calculator</li>
+				<li class="iframe"  id="matrix">Matrix</li>
+		</ul>
+		
+		</li>
+
+		
+		
+				<li class="start1">Games
+		
+				<ul>
+    <li class="iframe" id="freecell">Freecell</li>
+        <li class="iframe" id="2048">2048 Conspiracy</li>
+        <li class="iframe" id="pairs" width=800 height=570>Pairs</li>
+		<li class="iframe" id="snake" width=350 height=230>Snake</li>
+		</ul>
+		
+		</li>
+		
+		
+		
+		<li class="start1" onclick='#'>Programs
+		<ul>
+		
+
+		
+		<li class="fake"  height=490  id="console">Terminal</li>
+		<li class="fake" height=450   id="enhance">Enhance</li>
+		<li class="fake" height=570 id="webcam">Webcam</li>
+
+		<li class="fake" height=380 id="sdr">RTL-SDR</li>
+		<li class="fake" height=470 id="tracing">Trace IP</li>
+		<li class="fake"  id="uplink">Satellite Uplink</li>
+		<li class="fake" width=450  id="rat">Network Tools - RAT</li>
+		<li class="fake"  height=330 width=500  id="irc">IRC</li>
+		<li class="fake" height=280  id="decryptor">Hash Data</li>
+		<li class="fake"  id="nuclear">Nuclear Manager</li>
+		<li class="fake" width=400 height=250 id="neurotoxin">Biological Manager</li>
+		<li class="fake"  id="stability">Stability</li>
+		<li class="fake"  id="pipe">Pipe</li>
+		<li class="fake"  id="purge">Purge Facility</li>
+		</ul>
+		</li>
+		<li class="start1 explorer">Recent Documents
+		<ul>
+		<li id="cia" class="doc">cia_bulletin_recent.docx</li>
+		<li id="memorandum" class="doc">Memorandum.docx</li>
+		<li id="atlas" class="doc">ATLAS-D Blueprints.docx</li>
+		<li id="safe"  height=450  class="doc">safe_house_blueprints.docx</li>
+		
+		<li id="access" width=700  class="doc">Access Codes_doc.docx</li>
+
+		<li id="mace" class="doc">mace_record.docx</li>
+		</ul></li>
+		<li class="start1">
+		Settings
+		<ul>
+		<li class="wallpaper" onclick="loadDemosCommon();">Appearance</li>
+		<li class="app" id="taskbardock">Taskbar & Dock</li>
+		<li class="app" id="misc">Misc Options</li>
+		<li onclick='if (window.confirm("Are you sure? This will also clear achievements.")) {localStorage.clear();location.reload();}'>Reset Settings</li>
+		</ul>
+		
+		</li>
+		<li class="start1 about">About</li>
+		<li class="start1 help">Help</li>
+		<hr style="color:#fff;border:1px solid #333;">
+		<li class="start1" onclick='$("#lockscreen").fadeIn();tegnioCoder.disable();'>Lock Workstation</li>
+		<li class="start1" onclick='localStorage.setItem("tegnioWindowsState", "{}");window.location.reload();'>Restart</li>
+
+
+	</ul>
+	
+	
+	
+
+	
+	
+
+</div>
+
+
+</div>
+    <script type="text/javascript">//<![CDATA[
+
+(function() {
+
+    window.currentUseragent = '';
+    
+
+        var userAgent = navigator.userAgent;
+       
+        if (!(window.currentUseragent === userAgent)) {
+            window.currentUseragent = userAgent;
+            var markup = "<h3>User agent</h3>";
+            markup += "<p class='animated bounceIn'>" + currentUseragent + "</p>";
+            document.getElementById("useragent").innerHTML = markup;
+        }
+
+    
+}());
+
+
+
+
+function createTyper(node, tokenizer) {
+  if (!tokenizer.global) {
+    throw new Error('Tokenizer must specify the global flag');
+  }
+  const text = node.innerText;
+  node.innerText = '';
+  return function() {
+    const match = tokenizer.exec(text);
+    if (match) {
+      node.innerText = text.substr(0, match.index + match[0].length);
+    }
+  };
+}
+const wordOrSymbols = /[a-z0-9]+|[^a-z0-9\s]+/ig;
+let type = createTyper(document.getElementById('preze'), wordOrSymbols);
+document.addEventListener('keydown', type);
+  
+  
+  
+  function testA() {
+  
+    
+  localStorage.setItem('rank', "6")
+  localStorage.setItem('highScore', "3988")
+
+  localStorage.removeItem('fired5');
+  localStorage.removeItem('fireddecoder');
+  localStorage.removeItem('firedpairs');
+			
+  }
+  
+  
+  
+  function achievGet(level) {
+  
+
+
+console.log("AchievGet" + level);
+        var snd = new Audio("AchievementUnlocked.mp3");
+		snd.play();
+		
+		$("#ac").removeClass().addClass("ar" + level);
+		
+		$('.box').animate({'bottom':'30px'},200);
+		$(".box").delay(3200).animate({'bottom':'-100px'},200);
+		
+		
+		
+      localStorage.setItem('fired' + level, '1');
+	  
+
+  
+
+		
+
+}
+
+
+  
+  function achievGetGeneric(name, text, plusPoints) {
+  
+
+  var eventsFired = localStorage.getItem('fired' + name);
+  
+   if (eventsFired != '1'){
+console.log("AchievGet Generic = " + name + plusPoints);
+
+var highScore = parseInt(localStorage.getItem('highScore'));
+var addTo = parseInt(plusPoints);
+
+var newScore = highScore + 200;
+localStorage.setItem('highScore', newScore);
+console.log(" Custom Higher score " + newScore)
+
+
+
+	$("#achievementname").html(text);
+
+		$("#ac").removeClass().addClass(name);
+
+		$('.box').animate({'bottom':'30px'},200);
+		$(".box").delay(3200).animate({'bottom':'-100px'},200);
+		
+      localStorage.setItem('fired' + name, '1');
+	          var snd = new Audio("AchievementUnlocked.mp3");
+		snd.play();
+updateScore();
+  }
+  
+
+		
+
+}
+
+
+function updateScore() {
+
+
+
+console.log('update score')
+var highScore = parseInt(localStorage.getItem('highScore'));
+$('.simone-taskbar-button-user-defined[data-button-name=highScore]').children().html(highScore)
+	
+	
+if (highScore > 500 && highScore < 1000) {var thisLevel = 8;levelUp(thisLevel);}
+else if (highScore > 1000 && highScore < 2000) {var thisLevel = 7;levelUp(thisLevel);}
+else if (highScore > 2000 && highScore < 4000) {var thisLevel = 6;levelUp(thisLevel);}
+else if (highScore > 4000 && highScore < 8000) {var thisLevel = 5;levelUp(thisLevel);}
+else if (highScore > 8000 && highScore < 16000) {var thisLevel = 4;levelUp(thisLevel);}
+else if (highScore > 16000 && highScore < 32000) {var thisLevel = 3;levelUp(thisLevel);}
+else if (highScore > 32000 && highScore < 64000) {var thisLevel = 2;levelUp(thisLevel);}
+else if (highScore > 64000 && highScore < 128000) {var thisLevel = 1;levelUp(thisLevel);}
+
+
+// add cheating check
+
+else {var thisLevel = 9;}
+}
+  
+  
+function levelUp(thisLevel) {
+
+  var eventsFired = localStorage.getItem('fired' + thisLevel);
+   if (eventsFired != '1'){
+	  
+	  
+rankName(thisLevel);
+achievGet(thisLevel);
+console.log("level " + thisLevel);
+localStorage.setItem('rank', thisLevel);
+$('.simone-taskbar-button-user-defined[data-button-name=rank]').children().html("<div title='Rank' class='rank r" + thisLevel + "'></div>")
+$('#startmenurank').html("<div title='Rank' class='rank b" + thisLevel + "'></div>")
+
+	  
+	  
+  }
+  
+  
+
+
+
+
+}
+  
+  
+  
+ function addToScore(points){
+
+
+			console.log("typed " + points)
+			
+var highScore = parseInt(localStorage.getItem('highScore'));
+
+var newScore = highScore + points;
+			$('.simone-taskbar-button-user-defined[data-button-name=highScore]').children().html(newScore)
+localStorage.setItem('highScore', newScore);
+
+} 
+
+
+function rankName(thisLevel) {
+
+var names = ["Dr. Zero", "Dark Legend", "Chief Deadlock", "Destroyer X", "Root Freak", "Rogue Mode", "Cypher", "Crash", "Glitch", "Rookie"];
+
+console.log(names[thisLevel]);
+
+$('#rankname').html(names[thisLevel])
+$('#achievementname').html(names[thisLevel])
+
+}
+  
+  
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>

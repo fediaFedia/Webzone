@@ -1,0 +1,8 @@
+body {background-image:url('../ASSETS/textures/fallout.jpg');background-color:#0d2c1a;color:#42f69d;}
+#console {padding:20px;font-family:Fixedsys, Sans-Serif;font-size:18px;}
+#center {background-image:url('../ASSETS/logos/0.png');}
+.folder {background-color:#42f69d;}
+.dragme {border-color:#42f69d;color:#42f69d;}
+
+#button {background-color:#42f69d;color:#0d2c1a;}
+#button:hover {color:#42f69d;background-color:#0d2c1a;}

@@ -1,0 +1,145 @@
+<!DOCTYPE>
+<html>
+	<head>
+	<title>lexuzieel.exe</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<style>
+		body {
+			overflow:hidden;
+			background:black;
+		}
+		#demo {
+			background-repeat:no-repeat;
+			background-position:center;
+
+			width:40%;
+	
+			position:absolute;
+			left:0;
+			right:0;
+			margin:auto;
+			top:0;
+			bottom:0;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-name: demo;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-direction: alternate;
+			-webkit-animation-timing-function: ease-in-out;
+		}
+
+
+.Center2 {width:100%;margin-top:30%;}
+
+
+		@-webkit-keyframes demo {
+			0% {
+				-webkit-transform: rotate(60deg);
+				opacity:.8;
+			}
+			10% {
+				-webkit-transform: rotate(-5deg);
+				opacity:.7;
+			}
+			30% {
+				-webkit-transform: rotate(25deg);
+				opacity:.9;
+			}
+			40% {
+				-webkit-transform: rotate(-20deg);
+				opacity:.5;
+			}
+			50% {
+				-webkit-transform: rotate(0deg);
+				opacity:1;
+			}
+			75% {
+				-webkit-transform: rotate(-10deg);
+				opacity:.8;
+			}
+			80% {
+				-webkit-transform: rotate(15deg);
+				opacity:.5;
+			}
+			90% {
+				-webkit-transform: rotate(-9deg);
+				opacity:1;
+			}
+			100% {
+				-webkit-transform: rotate(60deg);
+				opacity:.8;
+			}
+		}
+		
+		
+		
+		</style>
+	</head>
+	<body>
+	
+	
+	
+	
+		<div id="demo">
+	
+		
+
+<img id="random-image" style="" src="index.jpg" class="Center2" />
+
+
+		</div>
+		<audio id="dank_s" autoplay>
+			<source src="./dank.mp3" type="audio/mpeg">
+		</audio>
+		<script>
+			document.getElementById("dank_s").volume = 1;
+		</script>
+		
+		
+		
+<script>
+window.onload = function() {
+
+var str1 = "http"
+var myString = location.search.split('?')[1].replace(/%20/g, ' ');
+var str2 = myString.substring(0, 4); 
+
+if (str1 == str2)
+
+{
+
+document.getElementById("demo").innerHTML = "<img src='" + myString + "' class='Center2' />"
+
+
+
+}
+
+else if (myString){
+
+string = location.search.split('?')[1].replace(/%20/g, ' ');
+
+document.getElementById("demo").innerHTML = "<div class='what1' style='font-family:Sans-serif;color:white;font-size:50px;margin-top:55%;text-align:center;'><span class='what2'>" + string + "<span></div>"
+
+
+}
+
+
+else {
+
+
+
+
+
+document.getElementById("demo").innerHTML = "<img src='index.jpg' class='Center2' />"
+
+}
+
+
+}
+
+
+
+</script>	
+	
+		
+	</body>
+</html>

@@ -1,0 +1,103 @@
+ 
+
+<!DOCTYPE html> 
+<html> 
+<head>
+<title>Watching Stuff with Horse</title>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META NAME="ROBOTS" CONTENT="NONE">
+<link href="style.css" rel="stylesheet">
+
+
+<!-- 
+                 ,%%%` %==--
+                ,%%`( '|
+               ,%%@ /\_/
+     ,%.-"""--%%% "@@__  
+    %%/             |__`\       
+   .%'\     |   \   /  //
+   ,%' >   .'----\ |  [/
+      < <<`       ||      
+       `\\\       ||        
+         )\\      )\
+ ^^^jgs^^"""^^^^^^""^^^^^GIDDY^UP^^^^  -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45751574-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+window.onload = function() {
+if (window.location.search.indexOf('?') > -1) {
+
+
+var url = location.search.split('?')[1];
+
+if (url === "novideo"){
+
+$("#video_main").hide();
+$("body").css("color", "white");
+}
+else {
+
+
+
+$("#trailer").attr("src", "https://www.youtube.com/embed/" + url + "?autoplay=1&showinfo=0&controls=0");
+}
+
+
+
+} 
+
+
+else {}
+
+}
+</script>
+
+
+
+</head>
+<body> 
+
+
+
+<video id="video_main" autoplay loop poster="horse.jpg">
+<source src="mainhorse.mp4" type="video/mp4">
+
+</video>
+
+<iframe style="" id="trailer" src="https://www.youtube.com/embed/5sGsBoX6vUo?autoplay=0&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+<div id="comment-block"><span>- </span><span id="comment"></span></div>
+
+<div id="textstuff">
+	<h1 id="regTitle">Watching TV <b>with Horse</b></h1>
+	<h2>Recommend me a...</h2>
+
+		<button class="movies">Movie</button>
+		<button class="tvshows">TV Show</button>
+		<button style="opacity:0.5;" class="youtube">YouTube</button>
+	
+		<img onclick="$('#title').html('So what is this?');$('#description').html('This is my personal collection of favorite TV Shows and Movies. I take my media very seriously, and though I watched hundreds of movies in my life, only a select few are recommendable.<br><br><b><a href=mailto:tvhorse@outlook.com>Suggest a Movie</a><br>');
+" id="help" src="help.png" />
+	<br>
+	<br>
+	<b style="font-size:18px;"><span id="title"></span></b><br>
+	<span id="description"></span><br>
+	<a id="imdb" target="_blank" href="#" /><img src="imdb.png" /></a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="pick.js"></script>
+
+
+<div style="position:fixed;bottom:25px;left:30px;opacity:0.5;z-index:99;color:white;"><a href="http://fediafedia.com" target="_blank"><img src="http://fediafedia.com/powered2.png" /></a></div>
+</body> 
+</html>

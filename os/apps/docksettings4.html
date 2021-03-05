@@ -1,0 +1,79 @@
+
+<script src="../assets/libs/jquery/jquery.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    if (parent) {
+        var oHead = document.getElementsByTagName("head")[0];
+        var arrStyleSheets = parent.document.getElementsByTagName("style");
+        for (var i = 0; i < arrStyleSheets.length; i++)
+            oHead.appendChild(arrStyleSheets[i].cloneNode(true));
+    }
+}
+</script>
+
+<script>
+
+$( "#colorTaskbar" ).change(function() {
+
+
+	var bodyColor = this.value;
+	console.log("this" + bodyColor);
+localStorage.setItem("taskbarcolor", bodyColor);
+$(".taskbar").css({"background-color" : bodyColor});
+	
+
+	
+	
+});
+
+</script>
+<style>
+
+.miniSquare {border:1px solid white;background:grey;padding:10px;display:block;float:left;margin:3px;}
+
+</style>
+	<div class="persistentWindowContent docksettings">
+	Desktop Icons:<br><br>
+		<button id="buttan" onclick='localStorage.setItem("folders", "block");$(".deskicons").css("display", "block");'>Show</button>
+		<button id="buttan" onclick='localStorage.setItem("folders", "none");$(".deskicons").css("display", "none");'>Hide</button>
+		
+		<hr>
+	<h2>Taskbar</h2>
+
+	You can drag the taskbar to the top, bottom, left or right sides of the screen.<br>
+			<div style="width:280px;height:50px;float:left;">
+<br>		<div class="miniSquare" style="background:#000000;" onclick='localStorage.setItem("taskbarcolor", "10,10,10");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+		<div class="miniSquare" style="background:#364559;" onclick='localStorage.setItem("taskbarcolor", "54,69,89");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+		<div class="miniSquare" style="background:#6a696b;" onclick='localStorage.setItem("taskbarcolor", "106,105,107");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+		<div class="miniSquare" style="background:#2e2e2e;" onclick='localStorage.setItem("taskbarcolor", "46,46,46");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+		<div class="miniSquare" style="background:#7b8da6;" onclick='localStorage.setItem("taskbarcolor", "123,141,166");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+<input class="miniSquare" id='colorTaskbar' class='inputColor' type='color'></input>
+	    </div>
+
+		
+<div style="clear:both;">
+		<br>
+
+		<button id="buttan" onclick='localStorage.setItem("taskbaralpha", "0.8");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'>Transparent Taskbar</button>
+		<button id="buttan" onclick='localStorage.setItem("taskbaralpha", "1.0");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'>Solid Taskbar</button>
+	</div><br>
+		<hr>
+	<h2>Dock</h2>
+	
+	<div style="clear:both;">
+
+
+		<button id="buttan" onclick='localStorage.setItem("dock", "block");$("#dockContainer").show();'>Enable Dock</button>
+		<button id="buttan" onclick='localStorage.setItem("dock", "none");$("#dockContainer").hide();'>Disable Dock</button>
+		
+		<select id="dockPosition">
+		  <option value="bottom">Bottom</option>
+  <option value="top">Top</option>
+
+</select>
+		
+	</div>
+	
+
+	
+		</div>

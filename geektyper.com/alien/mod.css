@@ -1,0 +1,9 @@
+body {background-image:url('../ASSETS/textures/0.png');background-color:#335c58;color:#aad3cf;}
+#console {padding:20px;font-family:Alien, Sans-Serif;font-size:30px;}
+#center {background-image:url('../ASSETS/logos/0.png');}
+.folder {display:none;background-color:#aad3cf;}
+.dragme {border-color:#aad3cf;color:#aad3cf;}
+
+#button {display:none;background-color:#335c58;color:#0d2c1a;}
+#button:hover {color:#335c58;background-color:#0d2c1a;}
+

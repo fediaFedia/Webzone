@@ -1,0 +1,7 @@
+body {background-image:url('../ASSETS/textures/2.png');background-color:rgb(50,140,178);color:rgb(255,255,255);}
+#console {font-family:Consolas, Sans-Serif;}
+#center {background-image:url('../ASSETS/logos/blackmesa.png');background-size: auto 200px;}
+.folder {background-color:rgb(255,255,255);}
+.dragme {border-color:rgb(255,255,255);color:rgb(255,255,255);}
+#button {background-color:rgb(50,140,178);color:rgb(255,255,255);}
+#button:hover {color:rgb(50,140,178);background-color:rgb(255,255,255);}

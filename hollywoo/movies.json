@@ -1,0 +1,903 @@
+[
+  {
+    "id": "newterra",
+    "name": "Pocahontas Movie",
+    "thumb": "newterra.png",
+    "shortdescription": "An unlikely hero finds their home in the 'new world'",
+    "text": "+title: In +timeperiod, a ship carrying +maincharacter1 arrives in the lush „new world“ of +location. The +rogueelement are mining for +mineral; under supervision of +badguy. +maincharacter1 begins to explore the new territory, and encounters +maincharacter2. Initially she is distrustful of him, but a message from +sidekick helps her overcome her trepidation. The two begin spending time together, +maincharacter2 helps +maincharacter1 understand that all life is valuable, and how all nature is connected circle of life. Furthermore she teaches him how to hunt, grow crops, and of her culture. We find that her father is +supportingcharacter1, and that she is set to be married to +supportingcharacter2, a great warrior, but a serious man, whom +maincharacter2 does not desire, Over time, +supportingcharacter2 tries to kill +maincharacter1 out of jealousy, but he is later killed be the +rogueelement. As the +rogueelement prepare to attack, +maincharacter1 is blamed by the locals, and sentenced to death. Just before they kill him, the +rogueelement arrive. +supportingcharacter1 is nearly killed, and +maincharacter1 sustains injuries from badguy, who is then brought to justice. +maincharacter2 risks her life to save +maincharacter1.",
+    "ending": " +maincharacter1 and +maincharacter2 finally have each other, and the two cultures resolve their differences.",
+    "alternative": "In a shocking twist, +maincharacter1 and +maincharacter2 tragically die fighting as the enemy is victorious over the natives.",
+    "fields": [
+      {
+        "id": "+title",
+        "type": "textarea",
+        "short": "Title",
+        "placeholders": [
+          "Far Away Land",
+          "New Terra",
+          "Dances with Natives",
+          "Invasion",
+          "Human Alien",
+          "Blue People",
+          "Smurf Land"
+        ],
+        "description": "Title of my movie"
+      },
+      {
+        "id": "+timeperiod",
+        "type": "textarea",
+        "short": "Time",
+        "placeholders": [
+          "the 90s",
+          "2134",
+          "1666",
+          "Last Thursday",
+          "the bronze age",
+          "252525",
+          "March"
+        ],
+        "description": "The time is"
+      },
+      {
+        "id": "+location",
+        "type": "textarea",
+        "short": "Where",
+        "placeholders": [
+          "London",
+          "Niccaragua",
+          "my basement",
+          "Pandora",
+          "Tanis",
+          "the swamp",
+          "mars",
+          "Somalia",
+          "Ameristrallia",
+          "The other Austria",
+          "Middle Earth",
+          "Woodstock"
+        ],
+        "description": "The movie is set in"
+      },
+      {
+        "id": "+maincharacter1",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Nicolas Cage",
+          "Justin Bieber",
+          "Jack",
+          "Arnold Schwarznegger",
+          "Shining Armor",
+          "Nickelback",
+          "the lamp",
+          "Robin Hood",
+          "The guy with glasses",
+          "Asian dude",
+          "Johhny Knoxville"
+        ],
+        "description": "Main Character"
+      },
+      {
+        "id": "+maincharacter2",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Miranda Cosgrove",
+          "Joodie Foster",
+          "Melissa Cherry",
+          "Applejack",
+          "My ex",
+          "Dominatrix",
+          "Amy",
+          "your mom",
+          "Angela Merkel",
+          "Queen Victoria"
+        ],
+        "description": "Other Main Character"
+      },
+      {
+        "id": "+supportingcharacter1",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "John Green",
+          "James Cameron",
+          "Samuel L. Jackson",
+          "Samuel L. Jacksons double",
+          "Melinda",
+          "Mr. Sainsbury",
+          "Abe Lincoln",
+          "Prime minister of Finland"
+        ],
+        "description": "Supporting Character"
+      },
+      {
+        "id": "+supportingcharacter2",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "the Casting Crew",
+          "the Aristocrats",
+          "my Pants",
+          "Jim Kerry",
+          "Matt Damon",
+          "Matt Damons Stylist",
+          "iPhone"
+        ],
+        "description": "2nd Supporting Character"
+      },
+      {
+        "id": "+rogueelement",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "villagers",
+          "aristocrats",
+          "zombies",
+          "common folk",
+          "ponies",
+          "zombies",
+          "vampires",
+          "ugly bugs",
+          "bureaucrats",
+          "mongoloids",
+          "mongolians",
+          "fan girls",
+          "furries",
+          "members of the congress",
+          "the 1%",
+          "crappy robots"
+        ],
+        "description": "Strange thing in the story"
+      },
+      {
+        "id": "+badguy",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Sylvester Stallone",
+          "Mitt Romney",
+          "Eggman",
+          "Steve Jobs",
+          "Imposter Prof. Oak",
+          "Hitler",
+          "IKEA",
+          "Stalin",
+          "GlaDOS",
+          "EA Games",
+          "Google",
+          "Jehovah’s Witness",
+          "Osama"
+        ],
+        "description": "The Bad Guy"
+      },
+      {
+        "id": "+sidekick",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Robin",
+          "Brad Pitts stunt double",
+          "Peter Griffin",
+          "Sean Bean",
+          "Wolf",
+          "Spoon",
+          "USB Cable"
+        ],
+        "description": "Lovable Sidekick"
+      },
+      {
+        "id": "+mineral",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "gold",
+          "unobtanium",
+          "annthrax",
+          "candy",
+          "Expensive HDMI Cables",
+          "poptarts",
+          "peanutbutter",
+          "plutonium",
+          "ridiculous sexist stereotypes",
+          "dirt",
+          "lint",
+          "garbage",
+          "expired coupons",
+          "Zunes",
+          "bugs"
+        ],
+        "description": "What everyone wants"
+      },
+      {
+        "id": "+endng",
+        "type": "checkbox",
+        "short": "Ending",
+        "placeholders": [
+          "yes",
+          "no"
+        ],
+        "description": "Alternative Ending"
+      }
+    ]
+  },
+  {
+    "id": "survivorlost",
+    "name": "Survivor Lost",
+    "thumb": "survivorlost.png",
+    "shortdescription": "Disaster on a maiden voyage with a love interest",
+    "text": "+title: The sound of wind breezes as the camera pans from left to right. We see a character holding a piece of tattered clothes, looking onto the horizon, over the +location. +timeduration earlier, we see the same character rushing down the stairs, waving goodbye to their loved ones and leaving out the door in a hurry. A +transportmode is being loaded with cargo and passangers, we see +maincharacter being in the crowd about to enter. The +transportmode is a marvel of its kind, a ultramodern way of transportation for the time, with all the comforts that one would want. On the +transportmode +maincharacter befriends +supportingcharacter after they found themselves drinking +drink at the bar. They tell each other about their travel stories, their lives and ambitions and quickly fall for each other romantically. Meanwhile, in the control deck, all seems calm. The commander of +transportmode insists that safety regulations be ignored to make the trip faster. Unfortunately, this results in the crew not noticing +rogueelement. The +transportmode inevitably crashes into +rogueelement and all seems lost. Daylight sweeps over +location as the few survivors scramble to escape the remnants of +transportmode. We see +maincharacter embracing the lifeless body of +supportingcharacter as tears become heavy. +timeduration go by without any help from others. +maincharacter, amongst the few survivors that remain has lost all hope. \n",
+    "ending": "Then, unexpectedly, we see another +transportmode shining its lights on the +location as the screen fades to black.",
+    "alternative": "We see +maincharacter just like they were in the beginning of the movie, embracing the cloth, presumably of +supportingcharacter. The screen cuts to black, as the tattered remains escape their hands, and the fate is unknown.",
+    "fields": [
+      {
+        "id": "+title",
+        "type": "textarea",
+        "short": "Title",
+        "placeholders": [
+          "Far Away Lost",
+          "Survivor Lost",
+          "Paradise Survivor",
+          "Disaster Island",
+          "The Sinkening",
+          "Britannic",
+          "Will Live"
+        ],
+        "description": "Title of my movie"
+      },
+      {
+        "id": "+timeduration",
+        "type": "textarea",
+        "short": "Time",
+        "placeholders": [
+          "2 weeks",
+          "4 months",
+          "3 minutes",
+          "155 years",
+          "An eternety",
+          "A few moments",
+          "One billion years"
+        ],
+        "description": "Time between something"
+      },
+      {
+        "id": "+location",
+        "type": "textarea",
+        "short": "Where",
+        "placeholders": [
+          "Sea",
+          "hills of trash",
+          "unoccupied territories",
+          "burning forests",
+          "destroyed cities",
+          "endless sands",
+          "endless water",
+          "endless ice",
+          "endless space",
+          "worryingly large pile of bodies",
+          "giant arachnophobia mountains",
+          "amazon warehouses"
+        ],
+        "description": "The movie is set in"
+      },
+      {
+        "id": "+maincharacter",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Jeff Goldblum",
+          "Shawn Mendes",
+          "Harrison Ford",
+          "Tom Cruise",
+          "Cary Grant",
+          "Linkin Park",
+          "IATSE Labor Union",
+          "hivemind of worms",
+          "The guy without glasses",
+          "Donald Trump",
+          "Walmart Greeter"
+        ],
+        "description": "Main Character"
+      },
+      {
+        "id": "+supportingcharacter",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Zoe Saldana",
+          "Secretary",
+          "unadopted dog",
+          "communist party member",
+          "Melinda",
+          "Melissa",
+          "Marie Curie",
+          "Prime minister of the US"
+        ],
+        "description": "Supporting Character"
+      },
+      {
+        "id": "+rogueelement",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "a pile of unsold DVDs",
+          "a plot device",
+          "a chekov's gun",
+          "a improperly parked Jeep Cherokee",
+          "a group of wild horses",
+          "a floating pile of garbage",
+          "another ship",
+          "itself",
+          "man's greatest folly",
+          "mongoloids",
+          "Windows Updates"
+        ],
+        "description": "Strange thing in the story"
+      },
+      {
+        "id": "+transportmode",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "huge ship",
+          "spaceship made out of cardboard",
+          "a 1999 Fiat",
+          "flinstones car",
+          "floating pile of garbage"
+        ],
+        "description": "What transport they used"
+      },
+      {
+        "id": "+drink",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "what appeared to be water",
+          "poison",
+          "sewage",
+          "molten boron"
+        ],
+        "description": "What's the drink"
+      },
+      {
+        "id": "+endng",
+        "type": "checkbox",
+        "short": "Ending",
+        "placeholders": [
+          "yes",
+          "no"
+        ],
+        "description": "Alternative Ending"
+      }
+    ]
+  },
+  {
+    "id": "lastwar",
+    "name": "The Last War",
+    "thumb": "lastwar.png",
+    "shortdescription": "A historical adventure of love, betrayal and redemption",
+    "text": "+title: Set in the +timeperiod times and in +location, the story of a once-powerful +role1 is seen commanding his +armytype, leading them to victory in yet another battle. Meanwhile, in the capital of +location, +badguy is enraged when he is passed over as their heir in favour of his father's favorite +role1. He kills his father and arranges the murder of the role1 's family. Oblivious to +badguy's motives, +role1 continues his campaign only to be caught by surprise of the changing plans for his future. He is sold into slavery to be trained as a +role2 - but his subsequent popularity in the +activity lets him on a path towards salvation. +role2 becomes friends with many other people sharing his fate, and with their help he finally becomes an audience with the +badguy during a celebration in the capital of +location. After a successful fight in +activity, he kneels before +badguy and reveals himself to be +role1. Shocked and dumbfounded, +badguy enters the Arena and challanges +role1. After an intense fight, +badguy succumbs to their injuries and dies. +role1 is pronounced victorious, and their claim to the throne of +location is offered. \n",
+    "ending": "+role1 stands wearily, having suffered many injuries himself, and sees his family in a vision. He decides to join them, as his now weak body drops to the floor of the Arena, as the camera pans upwards into the sky.",
+    "alternative": "+role1 stands wearily, overlooking the cheering crowd around him. He gathers his strength to show the crowd a +sign, marking the beginning of his reign over +location as the screen moves up showing the crowd and the capital.",
+    "fields": [
+      {
+        "id": "+title",
+        "type": "textarea",
+        "short": "Title",
+        "placeholders": [
+          "Empire's Last Stand",
+          "Roman's War",
+          "LAST WAR",
+          "The Soldier",
+          "Against Everyone",
+          "Enemy of the Land"
+        ],
+        "description": "Title of my movie"
+      },
+      {
+        "id": "+timeperiod",
+        "type": "textarea",
+        "short": "Time",
+        "placeholders": [
+          "ancient",
+          "recent",
+          "futuristic",
+          "pleasant",
+          "the bronze age",
+          "the stone age",
+          "jurassic"
+        ],
+        "description": "The time is"
+      },
+      {
+        "id": "+location",
+        "type": "textarea",
+        "short": "Where",
+        "placeholders": [
+          "London",
+          "The area underneath my van",
+          "my basement",
+          "Pandora",
+          "The belt",
+          "a stable Java environment",
+          "West Virginia",
+          "God foresaken land",
+          "The other Austria",
+          "Middle Earth",
+          "Fyre Festival"
+        ],
+        "description": "The movie is set in"
+      },
+      {
+        "id": "+role1",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Commander",
+          "Star Lord",
+          "Jack",
+          "Janitor",
+          "Bus driver",
+          "Gardener",
+          "Accountant",
+          "Prison guard",
+          "Crane operator",
+          "Asian dude",
+          "Spiderman"
+        ],
+        "description": "A role that is being played"
+      },
+      {
+        "id": "+role2",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "homeless person",
+          "drug addict",
+          "mentally ill ant",
+          "limbless pickle",
+          "My ex",
+          "Jesus",
+          "convenience store cashier",
+          "your mom",
+          "Angela Merkel",
+          "Queen Victoria"
+        ],
+        "description": "The other role"
+      },
+      {
+        "id": "+activity",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "swordfighting",
+          "playing The Witcher 3",
+          "dicking around",
+          "smoking weed",
+          "dancing",
+          "fighting",
+          "drinking",
+          "going to the bathroom"
+        ],
+        "description": "Weird activity"
+      },
+      {
+        "id": "+armytype",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "toy soldiers",
+          "assorted M&Ms",
+          "space marines",
+          "imaginary friends",
+          "Westboro Baptist Church members",
+          "the vikings",
+          "tarantulas",
+          "a box of assorted magazines"
+        ],
+        "description": "Weird army"
+      },
+      {
+        "id": "+badguy",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Steve Ballmer",
+          "Sarah Palin",
+          "The Republicans",
+          "The Democrats",
+          "the NRA",
+          "Antivaxxers",
+          "Mao",
+          "Marilin Manson",
+          "Berkowitz",
+          "Random russian guy",
+          "Swarm of angry bees"
+        ],
+        "description": "The Bad Guy"
+      },
+      {
+        "id": "+sign",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "gold",
+          "the bird",
+          "a swastika",
+          "candy",
+          "Expensive HDMI Cables",
+          "poptarts",
+          "peanutbutter",
+          "plutonium",
+          "ridiculous sexist stereotypes",
+          "dirt",
+          "his pog collection",
+          "garbage",
+          "expired coupons",
+          "Zunes",
+          "bugs"
+        ],
+        "description": "What everyone wants to see"
+      },
+      {
+        "id": "+endng",
+        "type": "checkbox",
+        "short": "Ending",
+        "placeholders": [
+          "yes",
+          "no"
+        ],
+        "description": "Alternative Ending"
+      }
+    ]
+  },
+  {
+    "id": "horrorcabin",
+    "name": "Horror Cabin",
+    "thumb": "horrorcabin.png",
+    "shortdescription": "Three friends go on a secluded holiday. Things don't turn out as they expected.",
+    "text": "+title: Three college friends, +character1, +character2 and +character3 decide to take a vacation in the remote area of +location, where their +relative has a +housingtype. After some planning they take their +vehicle to the +location where they intend to have a nice time. After arriving they notice something strange about +housingtype but do not draw any attention to it. Night comes, and the +location starts to slowly reveal its true colors. After a fun party the friends are woken up by a strange noise. They try to look around but have trouble doing it as the power is out. The atmosphere is becoming more menacing by the hour, and the friends decide to leave. Outside they see that their +vehicle has wanished without any trace. +character2 becomes paranoid that they all will die, and runs off into the woods. +character1 and +character3 chase after them, but fail to find them. After some time they discover their body with +weirdweapon sticking out of them. Horrified, they return to the cabin, where they can hear footsteps. +character2 becomes convinced that it is +character3 that killed +character1, so they find +weirdweapon and try to kill them. +character3 defends themselves successfuly by killing +character2 first using +weirdweapon. In shock, they realize what they have done, only to see a strange shadowy figure in the hallway of the house. Laughing maniacally, it appears to be +relative who proceeds to attack +character2 with a +weirdweapon. ",
+    "ending": "+character2 manages to survive by jumping out of the window, running to +character1's body, grabbing +weirdweapon and killing +relative as they lunged at him.",
+    "alternative": "+character2 manages to survive by jumping out of the window, only to be impaled by the still living +character1's +weirdweapon, menacing laughter echos through the +location as the screen turns to black. ",
+    "fields": [
+      {
+        "id": "+title",
+        "type": "textarea",
+        "short": "Title",
+        "placeholders": [
+          "Horror Cabin",
+          "Black Forest 2",
+          "Delivery Once",
+          "Three To None",
+          "Forest House",
+          "Dead 3 Dead",
+          "Final Trip"
+        ],
+        "description": "Title of my movie"
+      },
+      {
+        "id": "+housingtype",
+        "type": "textarea",
+        "short": "Type of housing",
+        "placeholders": [
+          "barge",
+          "beat up RV",
+          "old schoolhouse",
+          "mud house",
+          "murder cabin",
+          "paranormal condo",
+          "slaughterhouse"
+        ],
+        "description": "What is it"
+      },
+      {
+        "id": "+location",
+        "type": "textarea",
+        "short": "Where",
+        "placeholders": [
+          "mountains of Kansas",
+          "flatlands of Colorado",
+          "swamplands of Nevada",
+          "deserts of Maine",
+          "old commieblock district",
+          "former republic of yugoslavia",
+          "mars",
+          "deserted island",
+          "murder woods",
+          "times square",
+          "applebees"
+        ],
+        "description": "The movie is set in"
+      },
+      {
+        "id": "+character1",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Jack",
+          "Jim",
+          "John",
+          "James",
+          "Johnny",
+          "John Lenon",
+          "Jesus",
+          "Jamie Lannister",
+          "Joan d'ARC",
+          "Jojo"
+        ],
+        "description": "1st Character"
+      },
+      {
+        "id": "+character2",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Ben",
+          "Biff",
+          "BTK Killer",
+          "Bugs Bunny",
+          "Brad Pitt",
+          "Bear",
+          "Bowling Ball",
+          "Boris Johnson",
+          "Borrowed Underpants",
+          "Billy West"
+        ],
+        "description": "2nd Character"
+      },
+      {
+        "id": "+character3",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Amanda",
+          "Amy",
+          "Aristotile",
+          "Anderson Mister",
+          "Atlanta Falcons",
+          "Another Friend",
+          "Andy",
+          "Affluent Girl"
+        ],
+        "description": "3rd Character"
+      },
+      {
+        "id": "+relative",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "murder aunt",
+          "creepy uncle",
+          "weird cousin",
+          "serial killer half brother",
+          "incestous half-cousin",
+          "your mom",
+          "escaped convict"
+        ],
+        "description": "Relative"
+      },
+      {
+        "id": "+vehicle",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "beat up cadillac",
+          "horseless horse drawn wagon",
+          "flinstones car",
+          "gas powered Tesla",
+          "stolen van",
+          "bicycle",
+          "segway",
+          "uncharged hoverboard",
+          "bathtub",
+          "cardboard box",
+          "luxury yacht"
+        ],
+        "description": "Strange thing in the story"
+      },
+      {
+        "id": "+weirdweapon",
+        "type": "textarea",
+        "short": "The weird Weapon",
+        "placeholders": [
+          "a sharpened sharpie",
+          "a can opener",
+          "a nerf gun",
+          "a crossbow",
+          "a scream powered pistol",
+          "an AK-47",
+          "a chekov's gun",
+          "an ugly spider",
+          "a goat's horn",
+          "a half eaten bar of snickers"
+        ],
+        "description": "The weird Weapon"
+      },
+      {
+        "id": "+endng",
+        "type": "checkbox",
+        "short": "Ending",
+        "placeholders": [
+          "yes",
+          "no"
+        ],
+        "description": "Alternative Ending"
+      }
+    ]
+  },
+  {
+    "id": "societygames",
+    "name": "The Society Games",
+    "thumb": "societygames.png",
+    "shortdescription": "In an insane dystopia, our hero discovers their purpose and joins the resistance",
+    "text": "+title: In what was once +location, +oppressiveregime maintains its hold on its surrounding areas. +maincharacter1 is entering adolescence and they have to go through some new challanges to become a part of society. +oppressiveregime holds +activity each year that puts its participants to the test. +maincharacter1 unwillingly becomes involved in the +activity, and it shines clear that they possess special talents over the others. +badguy notices +maincharacter1's talent of +specialtalent and uses their influence to make life difficult for them. Throghout +activity +maincharacter1 becomes friends with +supportingcharacter who helps guide them throughout the +activity. Without realising, +maincharacter1 becames a central piece in a political movement that's aimed at bringing down +oppressiveregime and ending +activity once and for all. +maincharacter1 is introduced to +maincharacter2, whom they quickly develop a love interest for. Escaping and forced into hiding from +badguy, +maincharacter1 delves into the life of a resistance hero, with the help of their friends and +maincharacter2. Eventually +badguy launches an attack that kills many of +maincharacter1's friends, including +supportingcharacter. Furious, +maincharacter1 plots to infiltrate +oppressiveregime's stronghold and kill +badguy, which they succeed in doing thanks to their +specialtalent ability. ",
+    "ending": "+maincharacter1 is about to embrace +maincharacter2, but they push them away, only to reveal that this was their plan all along. Not to end the +oppressiveregime but the be its new leader. +maincharacter2 slits +maincharacter1's throat, and dropping the blade as the screen fades. ",
+    "alternative": "At the end, +maincharacter1 embraces +maincharacter2, kissing them passionatelly as we see the city background, and along with it, +oppressiveregime burn.",
+    "fields": [
+      {
+        "id": "+title",
+        "type": "textarea",
+        "short": "Title",
+        "placeholders": [
+          "The Society Games",
+          "Royal Battle",
+          "Resistant",
+          "Invasion",
+          "Maze Navigator",
+          "Dystopia Now",
+          "Resistance 2: The Resistening"
+        ],
+        "description": "Title of my movie"
+      },
+      {
+        "id": "+oppressiveregime ",
+        "type": "textarea",
+        "short": "The Oppressive Regime",
+        "placeholders": [
+          "The 90s",
+          "USA",
+          "The Russian Federation",
+          "The UN",
+          "Disney",
+          "Saudi Arabia",
+          "Facebook"
+        ],
+        "description": "The time is"
+      },
+      {
+        "id": "+location",
+        "type": "textarea",
+        "short": "Where",
+        "placeholders": [
+          "London",
+          "Iran",
+          "the pantry",
+          "Pandora",
+          "Pork Pond",
+          "a landfill",
+          "Idiotsville",
+          "LLANFAIRPWLLGWYNGYLL",
+          "a back seat of my car",
+          "an empty tuna can",
+          "the moon"
+        ],
+        "description": "The movie is set in"
+      },
+      {
+        "id": "+maincharacter1",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Henry Cavill",
+          "Indiana Jones",
+          "pewdiepie",
+          "used napkin",
+          "lassie",
+          "cat",
+          "midget",
+          "Robin Hood",
+          "The guy with glasses",
+          "Russian Tovarish"
+        ],
+        "description": "Main Character"
+      },
+      {
+        "id": "+maincharacter2",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Miranda Cosgrove",
+          "Joodie Foster",
+          "Mila Kunis",
+          "Katy Perry",
+          "The girl from titanic",
+          "Cortana",
+          "Evil AI",
+          "Magic 8 Ball",
+          "Hilary Clinton",
+          "The Queen of England"
+        ],
+        "description": "Other Main Character"
+      },
+      {
+        "id": "+supportingcharacter",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "John Green",
+          "James Cameron",
+          "Samuel L. Jackson",
+          "Samuel L. Jacksons double",
+          "Miranda Rights",
+          "Jeff Bezos",
+          "Zombie George Washington",
+          "DHL Delivery Guy"
+        ],
+        "description": "Supporting Character"
+      },
+      {
+        "id": "+specialtalent",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "sleeping like a boss",
+          "running like a retard",
+          "speeding in a 20 zone",
+          "kayaking",
+          "collecting pogs",
+          "invading Iran",
+          "dancing with wolves",
+          "limboing",
+          "olympic napping",
+          "spawnkilling",
+          "crying"
+        ],
+        "description": "Strange special talent"
+      },
+      {
+        "id": "+badguy",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "Alan Rickman",
+          "Mitt Romney",
+          "Christopher Waltz",
+          "Steven Spielberg",
+          "HR",
+          "Walmart Security",
+          "Windows 10",
+          "Trotsky",
+          "Alexa",
+          "EA Games",
+          "Microsoft"
+        ],
+        "description": "The Bad Guy"
+      },
+      {
+        "id": "+activity",
+        "type": "textarea",
+        "short": "Name",
+        "placeholders": [
+          "eating sand",
+          "folk dancing",
+          "killing each other",
+          "downloading music without paying",
+          "rebuilding the opera house",
+          "painting with only blue",
+          "plugging the USB cable incorrectly"
+        ],
+        "description": "Strange activity"
+      },
+      {
+        "id": "+endng",
+        "type": "checkbox",
+        "short": "Ending",
+        "placeholders": [
+          "yes",
+          "no"
+        ],
+        "description": "Alternative Ending"
+      }
+    ]
+  }
+]

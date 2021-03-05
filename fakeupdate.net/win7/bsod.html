@@ -1,0 +1,68 @@
+<html><head><title>BSOD</title>
+
+<style>
+
+body {
+	background:#000000 top left no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+vertical-align:top; 
+text-align:center;
+z-index: -1;
+margin:0;
+padding:0;
+overflow:hidden;
+ cursor:none;}
+ 
+ 
+#myImage {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+</style>
+<SCRIPT TYPE="text/javascript"> 
+
+var message="Sorry, right-click has been disabled"; 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) { 
+if (e.which==2||e.which==3) {(message);return false;}}} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+document.oncontextmenu=new Function("return false") 
+// --> 
+</SCRIPT> 
+
+<script type="text/javascript">
+<!-- 
+
+function delayer(){
+
+    document.getElementById("bsod").style.display="block";
+
+} 
+
+
+function hide() {
+    document.getElementById("bsod").style.display="none";
+}
+
+//-->
+</script>
+
+
+</head>
+
+<body onload="setTimeout('delayer()', 1000)">
+
+<div id = "bsod" style="display:none"><img id = "myImage" src = "http://fakeupdate.net/assets/img/SSa5BPv.png"></div><br>
+
+
+
+</body></html> 

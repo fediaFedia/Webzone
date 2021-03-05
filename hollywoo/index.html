@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Hollywoo 2</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+
+  <style id="compiled-css" type="text/css">
+
+
+
+#mainlogo {z-index:999;cursor:pointer;position:fixed;left:30px;top:30px;width:250px;}
+  body {background:black;}
+      #centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1300px;
+    height: 296px;
+    margin-left: -650px;
+    margin-top: -148px;
+}
+
+
+#mobilelogo {
+
+
+
+
+display:none;
+	
+
+
+}
+      #centeredE {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1300px;
+    height: 296px;
+    margin-left: -650px;
+    margin-top: -308px;
+	    text-align: center;
+
+}
+
+
+/* Navbar Styles */
+.navbar{border-radius:0;}
+.navbar-toggler{border:1px solid rgba(0,0,0,0.2);}
+.navbar-toggler:hover{background:rgb(240,240,240)}
+.navbar-toggler:focus{outline:0;}
+
+/* Navbar Collapse Styles To Stack Items At Mobile Widths*/
+@media(max-width:47.9em) {
+  .navbar .navbar-brand {float:none;display: inline-block;}
+  .navbar .navbar-nav>.nav-item { float: none; margin-left: .1rem;}
+  .navbar .navbar-nav {float:none !important;}
+  .nav-item{width:100%;text-align:left;} 
+}
+
+.thumb .tooltiptext {
+  visibility: hidden;
+  width: 400px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -200px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.thumb:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.moviethumb {cursor:pointer;}
+.writingblock {
+font-family:Courier New;
+width: 725px;
+height: 550px;
+background:
+#edeeee;
+padding: 20px;
+position: absolute;
+margin-left: -360px;
+margin-top: -320px;
+z-index: 999;
+top: 50%;
+left: 50%;
+font-size: 22px;
+padding: 40px;
+opacity:1.0;
+
+}
+
+
+	
+	
+.writingblockE {
+
+font-family: Courier New;
+width: 725px;
+height: 550px;
+background:
+#fff;
+padding: 40px;
+opacity: 1.0;
+padding: 50px;
+position: absolute;
+margin-left: -360px;
+margin-top: -350px;
+z-index: 999;
+top: 50%;
+font-size:13px;
+left: 50%;
+
+
+	
+	
+}
+
+
+
+
+.letsgo {
+
+font-family: Courier New;
+width: 645px;
+height: 80px;
+background:
+#000;
+color:
+#fff;
+border-radius: 15px;
+padding: 40px;
+opacity: 1.0;
+padding: 20px;
+position: absolute;
+margin-left: -325px;
+margin-top: 180px;
+z-index: 999;
+top: 50%;
+left: 50%;
+border: 0;
+font-size: 25px;
+}
+
+
+.start {
+
+font-family: Courier New;
+width: 645px;
+height: 80px;
+
+
+opacity: 1.0;
+text-align:center;
+position: absolute;
+margin-left: -325px;
+margin-top: 80px;
+z-index: 999;
+top: 50%;
+left: 50%;
+border: 0;
+font-size: 25px;
+}
+
+
+
+.back {
+
+width: 100px;
+height: 100px;
+
+position: absolute;
+margin-left: -480px;
+margin-top: -80px;
+z-index: 999;
+top: 50%;
+left: 50%;
+border: 0;
+font-size: 25px;
+}
+
+
+table tr:first-child td {
+  font-weight:bold;
+
+}
+
+
+table {
+
+  width: 950px; 
+  line-height:30px;
+  white-space: nowrap; 
+}
+
+
+.countTable table tr td:first-child + td + td {color:blue;
+
+text-align:right;
+
+} /* third column */
+.countTable table tr td:first-child + td + td + td {color:red;} /* fourth column */
+
+
+
+td:nth-child(n) {  
+max-width: 300px;
+min-width: 300px;
+}
+
+
+table td + td{  /* this will go to the 2nd column of a table directly */
+
+  width:250px;
+text-align:left;
+margin-left:20px;
+
+}
+
+
+table td + td + td{  /* this will go to the 2nd column of a table directly */
+
+  width:250px;
+padding-left:50px;
+}
+
+input {border:0;background:none;text-align:right;}
+
+
+#cameron {
+
+width: 500px;
+height: 308px;
+position: absolute;
+margin-left: -661px;
+margin-top: -388px;
+z-index: 999;
+top: 50%;
+left: 50%;
+
+
+}
+
+#fairuse {display:block;}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif) center no-repeat #000;
+}
+
+
+
+  @media all and (max-width: 600px) and (orientation:portrait) 
+{
+
+
+#upperlinks {display:none;}
+table {
+    width: 250px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+.writingblock {
+    font-family: Courier New;
+    width: 350px;
+    height: 550px;
+    background: 
+    #edeeee;
+    padding: 20px;
+    position: absolute;
+    margin-left: -175px;
+    margin-top: -320px;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    font-size: 12px;
+    padding: 25px;
+    opacity: 1.0;
+}
+table td + td{  /* this will go to the 2nd column of a table directly */
+
+  width:150px;
+text-align:left;
+margin-left:20px;
+
+}
+
+td:nth-child(n) {
+    max-width: 150px;
+    min-width: 150px;
+}
+#fairuse {display:none;}
+.writingblockE {
+    font-family: Courier New;
+    width: 350px;
+    height: auto;
+    background: 
+    #fff;
+    padding: 40px;
+    opacity: 1.0;
+    padding: 50px;
+    position: absolute;
+    margin-left: -175px;
+    margin-top: -300px;
+    z-index: 999;
+    top: 50%;
+    font-size: 13px;
+    left: 50%;
+}
+
+
+.start {
+    font-family: Courier New;
+    width: 645px;
+    height: 80px;
+    opacity: 1.0;
+    text-align: center;
+    position: absolute;
+    margin-left: -325px;
+    margin-top: -180px;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    border: 0;
+    font-size: 15px;
+    color: 
+    white;
+}.start {
+    font-family: Courier New;
+    width: 645px;
+    height: 80px;
+    opacity: 1.0;
+    text-align: center;
+    position: absolute;
+    margin-left: -325px;
+    margin-top: -180px;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    border: 0;
+    font-size: 15px;
+    color: 
+    white;
+}
+#centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 296px;
+    margin-left: -200px;
+    margin-top: -148px;
+}
+
+#centered img {
+
+width:300px;
+}
+
+#mainlogo {
+
+
+
+
+display:none !important;
+	
+
+
+
+}
+
+
+#mobilelogo {
+
+
+width:100%;
+
+text-align:center;
+display:block !important;
+	
+
+
+}
+#centered img {
+    width: 380px;
+}
+#mobilelogo img {width:120px;margin-top: 25px;}
+
+.moviethumb {width:50px;}
+
+}
+
+  </style>
+
+<script language="javascript" src="lz-string.js"></script>
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">//<![CDATA[
+
+    window.onload=function(){
+      
+
+	  var coreURL = ""
+
+var getLocations = "movies.json?nocache=123445";
+$.getJSON(getLocations, function (json) {
+console.log(json);
+
+$('#centeredE').html('');
+
+    var $grouplist = $('#centeredE');
+	var $writingblock = $('.writingblock');
+	
+	var $writingblockE = $('.writingblockE');
+	
+	var $writingblockOriginal = $('.writingblockOriginal');
+	var $endingsOriginal = $('.endingsOriginal');
+	
+    $.each(json, function() {
+	
+	console.log("Here;s one " + this.thumb);
+	
+        $('<a class="thumb"><img class="moviethumb" id="' + this.id + '" tooltip="w" src="thumbs/' + this.thumb + '"/> <span class="tooltiptext">' + this.shortdescription + '</span></a>').appendTo($grouplist);
+  
+  
+  $('<table class="countTable" id="' + this.id + '"></table>').appendTo($writingblock);
+  
+  
+  
+  
+    $('<p class="written" id="' + this.id + '">' + this.text + '</p>').appendTo($writingblockE);
+
+	
+    $('<p id="' + this.id + '" class="originalText">' + this.text + '</p>').appendTo($writingblockOriginal);
+	
+	
+
+	$('<p id="E' + this.id + '" class="happyending">' + this.ending + '</p>').appendTo($endingsOriginal);
+	$('<p id="E' + this.id + '" class="sadending">' + this.alternative + '</p>').appendTo($endingsOriginal);
+	
+
+  
+  
+
+  var parentID = this.id
+   console.log("parent E " + parentID);
+  
+ $.each(this.fields, function() { 
+
+var $appendfieldswhere = $('#' + parentID);
+ 
+ 
+  $(".written").hide();
+	  $('#newterra').hide();
+ $('#lastwar').hide();
+  $('#horrorcabin').hide();
+    $('#survivorlost').hide();
+	 $('#societygames').hide();
+	
+	  $(".letsgo").hide();
+	  
+	  	  $(".writingblock").hide();
+		  	  $(".writingblockE").hide();
+ 
+var randomitems = this.placeholders;
+var randomitem = randomitems[Math.floor(Math.random()*randomitems.length)];
+
+
+ console.log(randomitem);
+ 
+$('<tr id="sectionlist"><td>' + this.description + '</td><td><input id="' + parentID + '" hint1="' + randomitems[0] + '" hint2="' + randomitems[1] + '" hint3="' + randomitems[2] + '" hint4="' + randomitems[3] + '" hint5="' + randomitems[4] + '" hint6="' + randomitems[5] + '" hint0="' + randomitems[6] + '" class="inputstuff" data-id=' + this.id + ' placeholder="' + this.short + '"></input></td><td id="hint"><a data-id="' + randomitem + '" class="check-id" href="#meh" >' + randomitem + '</a></td></tr><br>').appendTo($appendfieldswhere);
+
+
+
+ });
+  
+      
+  
+
+  });
+	
+	
+
+});
+	  
+	
+	  
+	  
+	  
+	  
+	  
+
+    }
+	
+	
+	
+
+
+
+  //]]>
+  
+  function replaceText() {
+  
+  
+    var appState = $('#applicationState').val().toString();
+  $(".written").hide();
+   
+  $("#" + appState + ".written").hide();
+  
+    $("#regularback").hide();
+  $("#reloadback").show();
+  
+
+  $(".writingblock").hide();
+  $(".writingblockE").show();
+  
+  
+  
+  
+  
+  
+    var randomCameron = Math.floor(Math.random() * 9);
+  $("#cameron").attr("src", "cameron" + randomCameron + ".png");
+    $("#cameron").slideUp( 300 ).delay( 15000 ).slideUp( 300 ).fadeIn( 400 );
+  
+   var textOriginal = $("#" + appState + ".originalText").text();
+  $("#" + appState + ".written").html(textOriginal)
+
+  $("#" + appState + ".inputstuff" ).each(function( index ) {
+  console.log( index + ": " + $( this ).attr('data-id') );
+  
+  var item = $( this ).attr('data-id');
+  var itemReplace = $( this ).val();
+  
+  
+ var happyendingText =  $("#E" + appState + ".happyending").text().split(item).join(itemReplace);
+ $("#E" + appState + ".happyending").html(happyendingText);
+ 
+ var sadendingText = $("#E" + appState + ".sadending").text().split(item).join(itemReplace);
+   $("#E" + appState + ".sadending").html(sadendingText);
+
+    var text = $("#" + appState + ".written").html().split(item).join(itemReplace); 
+	
+	
+var movieTitle =	$("input[placeholder=Title]#" + appState).toString();
+	
+		var $writingblockE = $('.writingblockE');
+		
+	$('').appendTo($writingblockE);
+	$('').appendTo($writingblockE);
+	
+
+	
+	
+	 $("#" + appState + ".written").html(text)
+	 
+	 
+	 
+
+
+ 
+ 
+ 	$('').appendTo($writingblockE);
+
+  console.log(text);
+  
+  
+
+  
+  
+  
+  
+  
+ 
+});
+
+
+ // typeWriter();
+  lametypeWriter();
+  
+   var appState = $('#applicationState').val().toString();
+	var happyending = $("input[placeholder=Ending]#" + appState).val().toString();
+	if (happyending === "yes" || happyending === "Yes") {
+
+
+	 	
+var happy = $("#E" + appState + ".happyending").html().toString();
+ $("#" + appState + ".written").append( happy );
+ 	console.log("Happy Ending" + happy);
+
+
+	
+}
+
+else {
+var sad = $("#E" + appState + ".sadending").html().toString();
+	console.log("Sad Ending " + sad);
+	
+ 	
+
+ $("#" + appState + ".written").append( sad );
+
+}
+  
+  
+  }
+  
+
+  
+
+$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+
+$( document ).ready(function(){
+
+
+
+
+
+
+
+
+
+
+$(document).on('click', "img.moviethumb", function() {
+     
+	 var str =   $(this).attr('id');
+	 console.log("clicked on image" + str);
+	 
+	  $("#regularback").show();
+	  $("#centeredE").hide();
+	 
+	 $('#applicationState').val(str);
+	 
+	 $(".writingblock").show();
+	
+	 
+	 
+	 
+	 
+	 	  $('#newterra').hide();
+ $('#lastwar').hide();
+  $('#horrorcabin').hide();
+	 
+	 $("#" + str).show();
+	 
+	 
+	 validate();
+  $('input').on('keyup', validate);
+
+	 
+	 
+});
+
+
+
+$(document).on('click', "a.check-id", function() {
+     
+	 
+var str =   $(this).attr('data-id');
+var next =  $(this).parent().attr('data-id')
+console.log("Copied Text " + next);
+
+ validate();
+ 
+// alert($(this).parent("tr").attr('id'));   
+
+$(this).closest("tr").find('[class*="inputstuff"]').val(str);
+	 
+});
+ 
+  
+});
+
+
+function downloadText() {
+var textFile = null,
+
+  makeTextFile = function (text) {
+    var data = new Blob([text], {type: 'text/plain'});
+console.log("Creating TXT");
+    // If we are replacing a previously generated file we need to
+    // manually revoke the object URL to avoid memory leaks.
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
+    }
+console.log("making text");
+    textFile = window.URL.createObjectURL(data);
+
+    return textFile;
+  };
+
+  var create = document.getElementById('create'),
+    text = $("#demo").text();
+
+	
+	this.create = function() {
+
+ 
+  console.log("Creating TXT");
+
+	$("#downloadlink").show();
+	$("#downloadlink").attr("href", makeTextFile(text));
+
+}
+
+
+}
+
+function validate() {
+
+console.log("Validating");
+
+   var appState = $('#applicationState').val().toString();
+  var inputsWithValues = 2; //change to 2
+  
+  // get all input fields except for type='submit'
+var myInputs = $("#" + appState + ".inputstuff" );
+
+ myInputs.each(function(e) {
+    // if it has a value, increment the counter
+    if ($(this).val()) {
+      inputsWithValues += 1;
+    }
+  });
+
+  if (inputsWithValues > myInputs.length) {
+   
+	console.log("Disabled False");
+	
+	  $(".letsgo").show();
+	
+  } else {
+   
+			  $(".letsgo").hide();
+  }
+}
+
+
+function thinkforme() {
+
+
+     var appState = $('#applicationState').val().toString();
+	 
+	 
+	  $("#" + appState + ".inputstuff" ).each(function() {
+	  
+	  var randomness = Math.floor(Math.random() * 7);
+	  
+	  hint =   $(this).attr("hint" + randomness);
+	  $(this).val(hint);
+	    $(".letsgo").show();
+	  
+	  });
+	  
+	  
+	  
+console.log("think for me");
+
+}
+
+
+  </script>
+  
+  
+
+<script>
+var i = 0;
+var txt = 'Lorem ipsum dummy text blabla. Lorem ipsum dummy text blabla. Lorem ipsum dummy text blabla. Lorem ipsum dummy text blabla.';
+var speed = 10;
+
+ 
+
+
+console.log(text);
+
+
+function lametypeWriter() {
+console.log("Starting Lame Typewriter");
+   var appState = $('#applicationState').val().toString();
+   
+   var text =  $("#" + appState + ".written").html();
+   
+    document.getElementById("demo").innerHTML = text;
+	
+	
+	var compressed = LZString.compressToBase64(text);
+	$("#permalink").attr("href", "synopsis.html?i=" + compressed)
+console.log(compressed);
+	
+}
+
+function typeWriter() {
+
+console.log("Starting Typewriter");
+   var appState = $('#applicationState').val().toString();
+   
+ //  console.log("Starting Typewriter" + appState);
+   
+var text =  $("#" + appState + ".written").html();
+
+ //  console.log("Starting Typewriter" + text);
+   
+   
+ var str2 = "\n\nTHE END";
+ 
+ //   console.log("Starting Typewriter" + str2);
+
+  var res = text.concat(str2);
+  
+   //   console.log("Starting Typewriter" + res);
+  if (i < res.length) {
+  
+  
+    document.getElementById("demo").innerHTML += res.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+	
+	
+	
+	
+  }
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+
+
+ <span id="mobilelogo"> <a  href="index.html"><center><img onclick="location.reload();" style="" src="ideamaker.png" /></a></center></span>
+ 
+<a  href="index.html"><img id="mainlogo" onclick="location.reload();" style="" src="ideamaker.png" /></a>
+<span id="upperlinks" style="z-index:999; margin:20px;position:fixed;right:10px;top:10px;" ><a href="what.html">What?</a> &nbsp; | &nbsp; <a href="mailto:tvhorse@outlook.com">Suggest an Idea</a></span>
+<div style="opacity:0.1;" class="endingsOriginal">
+
+</div>
+
+ <img class="back" id="regularback" style="display:none;"  onclick='$("#applicationState").val("");$("#demo").html("");$("#newterra").hide();$("#lastwar").hide();$("#societygames").hide();$("#horrorcabin").hide();$("#survivorlost").hide();$("#centeredE").show();$(".letsgo").hide();$(".writingblock").hide();$(".writingblockE").hide();$("#cameron").hide();' src="back.png" />
+
+ <img class="back" id="reloadback" style="display:none;" onclick='location.reload();' src="back.png" />
+
+ 
+ 
+<div class="se-pre-con"></div>
+<h1 class="start">Select a template to begin</h1>
+
+
+ <img id="cameron" style="display:none;" src="cameron.png" />
+ 
+<input style="color:black;z-index:999;margin-top:50px;" id="applicationState"></input>
+
+
+
+
+
+
+<div class="writingblock">
+<a type="button" style="cursor:pointer;" value="Think for me" onclick="thinkforme()" id="MyButton">Think for me...</a>
+
+
+
+	 <button class="letsgo" onclick="replaceText()">LET'S GO ALREADY</button>
+
+
+
+
+</div>
+
+
+
+<div class="writingblockE">
+
+
+
+<h2>Synopsis</h2>
+<p id="demo"></p>
+
+<button style="backgroud:#bbb;border:0;padding:10px;" id="create" onclick='(new downloadText()).create();' >Create text file</button> 
+<a download="moviescript.txt" id="downloadlink" style="display: none">Download</a>
+<a id="permalink" href="#">Permalink</a>
+
+</div>
+
+
+<div hidden class="writingblockOriginal">
+</div>
+<div id="centeredE">
+
+
+</div>
+
+<div id="centered">
+
+        <img src="typewriter.png" />
+		<center>
+  <span id="fairuse" style="font-size:12.5px; z-index:999; color:#555;text-align:center;" ><br>FAIR USE NOTICE: This site may contain copyrighted material the use of which has not always been specifically authorized by the copyright owner. We are making such material available in our efforts to produce commentary, criticism and parody of the Movie Industy. We believe this constitutes as fair use of any such material provided for in Section 107 of the US Copyright Law. If you are the content owner of any material presented on this site, please contact if you wish to remove such material.<br></span>
+	</center>
+
+</div>
+
+    <script>
+  
+  
+  </script>
+  <script>
+
+
+  </script>
+</body>
+</html>

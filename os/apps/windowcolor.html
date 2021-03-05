@@ -1,0 +1,99 @@
+
+<script src="../assets/libs/jquery/jquery.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    if (parent) {
+        var oHead = document.getElementsByTagName("head")[0];
+        var arrStyleSheets = parent.document.getElementsByTagName("style");
+        for (var i = 0; i < arrStyleSheets.length; i++)
+            oHead.appendChild(arrStyleSheets[i].cloneNode(true));
+    }
+}
+</script>
+
+		
+		
+	<div class="persistentWindowContent theme">
+		<h2 style="padding:0;margin:0;font-weight:normal;">Window Color</h2><br>
+		<p>You can change the color of windows, the Start menu, and the taskbar. <br>Pick one of the available colors </p>
+		<div class="squareBig" style="background:#000000;" onclick='$("iframe").css({"background-color":"#000000"});localStorage.setItem("windowcolor", "0,0,0");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "0,0,0";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+		<div class="squareBig" style="background:#364559;" onclick='$("iframe").css({"background-color":"#364559"});localStorage.setItem("windowcolor", "54,69,89");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+		<div class="squareBig" style="background:#767676;" onclick='$("iframe").css({"background-color":"#767676"});localStorage.setItem("windowcolor", "118,118,118");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+		<div class="squareBig" style="background:#5786ce;" onclick='$("iframe").css({"background-color":"#5786ce"});localStorage.setItem("windowcolor", "87,134,206");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+		<div class="squareBig" style="background:rgb(91, 129, 129)" onclick='$("iframe").css({"background-color":"rgb(91, 129, 129)"});localStorage.setItem("windowcolor", "91, 129, 129");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+		<div class="squareBig" style="background:#de4c4c;" onclick='$("iframe").css({"background-color":"#de4c4c"});localStorage.setItem("windowcolor", "222,76,76");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+		<div class="squareBig" style="background:rgb(40, 45, 48);" onclick='$("iframe").css({"background-color":"rgb(40, 45, 48)"});localStorage.setItem("windowcolor", "40, 45, 48");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+		<div class="squareBig" style="background:#8e6e6d;" onclick='$("iframe").css({"background-color":"#8e6e6d"});localStorage.setItem("windowcolor", "142,110,110");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+		<div class="squareBig" style="background:#7b8da6;" onclick='$("iframe").css({"background-color":"#7b8da6"});localStorage.setItem("windowcolor", "123,141,166");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'></div>
+
+		<div class="squareBig" style="padding:8px;background:#888;" onclick='promptWindowColor()'>Input<br>Color</div>
+	
+
+		<!-- tegnioUI.themeStyle.main.set({ "background-image" : "url("http://i.imgur.com/0yIjZxd.gif" });
+
+		tegnioUI.themeStyle.set("background-image" : "url(http://i.imgur.com/0yIjZxd.gif)")
+
+
+		tegnioUI.themeStyle.set('.tegnioPersistentWindow', { "background-image" : "url(http://i.imgur.com/0yIjZxd.gif)" });  -->
+
+		
+
+		
+
+	
+
+		<br>
+		<br>
+		<br>
+		<br>
+		
+<br><br>
+		
+		<button id="buttan" onclick='$("#slidershow").css("display", "block");localStorage.setItem("windowalpha", "0.8");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'>Enable Glass</button>
+		<button id="buttan" onclick='$("#slidershow").css("display", "none");localStorage.setItem("windowalpha", "1.0");getWindowAlpha = localStorage.getItem("windowalpha") || "1.0";getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + getWindowAlpha + ")" });'>Disable Glass</button>
+		
+		<br><br>
+		
+		<div id="slidershow" style="display:none;">
+		<br>
+		Transparency:<br><br>
+				<div id="slider"></div>
+		
+				<script>
+		$("#slider").slider(
+{
+            value:1.0,
+            min: 0.2,
+            max: 1.1,
+            step: 0.05,
+            slide: function( event, ui ) {
+               localStorage.setItem("windowalpha", ui.value);
+getWindowColor = localStorage.getItem("windowcolor") || "20,20,20";
+tegnioUI.themeStyle.set(".tegnioPersistentWindow",{ "background-color" : "rgba(" + getWindowColor + "," + ui.value + ")" });
+            }
+}
+);
+
+
+
+
+</script>
+<br><sub>Enabling Transparency may affect performance<sub>
+</div>
+		
+		
+		
+		<hr>
+<div style="clear:both;">
+
+		
+		<div style="width:180px;height:50px;margin-bottom:20px;float:left;">
+
+		Desktop Code Color: <br><br>
+		<div  class="square" style="background:#000000;" onclick='localStorage.setItem("color2", "#000000");$("body").css("color", "#000000");'></div>
+		<div  class="square" style="background:#ffffff;" onclick='localStorage.setItem("color2", "#ffffff");$("body").css("color", "#ffffff");'></div>
+		<br>
+		</div>
+		</div>
+
+	</div>

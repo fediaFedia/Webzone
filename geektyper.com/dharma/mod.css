@@ -1,0 +1,8 @@
+body {background-image:url('../ASSETS/textures/0.png');background-color:rgb(230,230,230);color:rgb(52,52,52);}
+#console {font-family:Arial, Sans-Serif;}
+#center {background-image:url('../ASSETS/logos/dharma_i.png');}
+.folder {background-color:rgb(52,52,52);}
+.dragme {border-color:rgb(52,52,52);color:rgb(152,152,152);}
+
+#button {background-color:rgb(52,52,52);color:rgb(230,230,230);}
+#button:hover {color:rgb(52,52,52);background-color:rgb(180,180,180);}

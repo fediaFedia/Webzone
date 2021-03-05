@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+   
+   
+   
+   
+    <title>Mind Reader</title>
+
+<style>
+
+
+body {background:#afdfdf;border:0;margin:0;padding:0;overflow:hidden;color:White;font-family:segoe UI;}
+
+.bg1 {position:fixed;width:100%;height:calc((20vh) + 188px);background:#a2cba1;bottom:0px;}
+
+
+.Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background:url(mindreader.png) no-repeat center center;
+
+  width:100%;
+  height:576px;
+}
+
+.Center2 {
+width:500px;
+position:fixed;
+top:50%;
+left:50%;
+margin-top:-270px;
+background:white;
+
+margin-left:-250px;
+max-width:100%;
+  max-height:500px;
+  min-height:350px;
+  
+  
+  
+  
+}
+
+
+
+.what1 {
+width:576px;
+position:fixed;
+top:50%;
+left:50%;
+height:400px;
+margin-top:-270px;
+text-align:center;
+font-size:50px;
+color:black;
+background:white;
+margin-left:-250px;
+ word-wrap: break-word;
+
+/* Text may be inflated */
+text-size-adjust: auto;
+
+  
+}
+
+
+.what2 {
+width:400px;
+position:fixed;
+top:50%;
+left:50%;
+height:400px;
+margin-top:-170px;
+text-align:center;
+font-size:50px;
+color:black;
+background:white;
+margin-left:-200px;
+ word-wrap: break-word;
+
+/* Text may be inflated */
+text-size-adjust: auto;
+
+  
+  
+}
+</style>
+
+	
+
+
+<script>
+window.onload = function() {
+
+var str1 = "http"
+var myString = location.search.split('?')[1].replace(/%20/g, ' ');
+var str2 = myString.substring(0, 4); 
+
+if (str1 == str2)
+
+{
+
+document.getElementById("demo").innerHTML = "<img src='" + myString + "' class='Center2' />"
+
+}
+
+else if (myString){
+
+string = location.search.split('?')[1].replace(/%20/g, ' ');
+
+document.getElementById("demo").innerHTML = "<div class='what1'><span class='what2'>" + string + "<span></div>"
+
+
+}
+
+
+else {
+
+
+var random;
+
+
+random = Math.ceil(Math.random() * 10);
+
+document.getElementById("random-image").src="img/" + random + ".jpg";
+
+}
+
+
+}
+
+
+
+</script>	
+	
+	
+	
+	
+  </head>
+  <body>
+ 
+<img class="bg1"></div>
+
+
+   
+<div id="demo" style="background:White;">
+
+
+
+
+
+
+
+
+<img id="random-image" style="" src="" class="Center2" />
+
+
+
+
+</div>
+  
+ <div class="Center"></div>
+
+  
+  
+  </body>
+</html>

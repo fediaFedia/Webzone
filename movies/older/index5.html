@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<title>Watching TV with Alex</title>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META NAME="ROBOTS" CONTENT="NONE">
+<style type="text/css">
+body {color:black;overflow:hidden;background-color:#b9b7b9;font-family:Arial;padding:0;margin:0;}
+
+
+#video_main {
+  position: fixed;
+
+  left: 0;
+  bottom: -100px;
+background-color:#000;
+  width:100vw;
+  z-index: -1;
+  
+}
+
+#iframe {border-radius: 3px; width:40vw;height:22.5vw;border:10px solid black; padding:5px 5px 15px 5px; background:black;
+
+right:8vw;top:8vw;
+
+position:fixed;z-index:999;
+
+}
+
+#textstuff {width:35vw;margin-left:8vw;margin-top:10vw;z-index:999;}
+button {padding:15px; font-size:20px; border:0;color:#fff;background:#444;}
+
+
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document url-prefix("http") {
+
+h1 {
+  font-family: "Segoe UI" !important;
+  font-weight: 300 !important;
+}
+
+}
+
+
+h1 { font-weight: lighter;color:black;font-weight:normal;font-family:Segoe UI Light, Segoe UI, Arial, Sans-serif;font-size:3vw;}
+
+
+
+@media screen and (max-width: 1184px){
+
+#textstuff {display:none;}
+}
+
+
+</style>
+
+</head>
+<body> 
+
+
+
+  <video id="video_main" autoplay loop>
+    <source src="mainhorse.mp4" type="video/mp4">
+    <source src="hey.ogg" type="video/ogg">
+<a href="hey.swf">Browser is so suck</a>
+  </video>
+
+
+
+
+<iframe style="" id="iframe"   src="https://www.youtube.com/embed/5sGsBoX6vUo?autoplay=0&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+
+<div id="textstuff" style="">
+<h1 id="regTitle" style=" ">
+Watching TV <b>with Alex</b></h1>
+<h2>Recommend me a...</h2>
+<button class="movies">Movie</button>
+<button class="tvshows">TV Show</button>
+<button style="display:none;" class="cartoons">Cartoon</button>
+<button class="youtube">YouTube</button>
+
+<br><br>
+
+
+</div>
+
+
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(".tvshows").click(function(){
+        $.getJSON("tvshows.json", function(result){
+		console.log("wheat");
+            $.each(result, function(i, field){
+                $("div").append(field + " ");
+            });
+        });
+    });
+});
+</script>
+
+</body> 
+</html>

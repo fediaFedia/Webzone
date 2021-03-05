@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+
+body {
+    font-size: 14px;
+    font-family: Segoe UI, sans-serif;
+}
+.quoteblock {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background: #f5f5f5;
+    padding: 5px 5px 5px 15px;
+    border-left-style: solid;
+    border-left-width: 6px;
+}
+
+#author {color:#ccc;}
+</style>
+
+</head>
+<body>
+
+<p><span id="number"></span> quotes - all</p>
+
+<div class="quotes">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+        $.getJSON("quotes.json", function(result){
+	var len = result.length;
+	$('#number').html(len);
+$.each(result, function(i, item) {
+ 	$( ".quotes" ).append( "<div class='quoteblock'><span id='id'>#" + result[i].id + "</span><br><span id='title'>" + result[i].quote.replace(/\n/g, "<br>") + "</span><br><span id='author'>" + result[i].author + "</span></div>" );
+});
+});
+</script>
+
+</body>
+</html>

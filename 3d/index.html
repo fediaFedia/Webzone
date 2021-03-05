@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title>Tegnio 3D Model Viewer</title>
+	
+	<link href="css/stlviewer.css" rel="stylesheet">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/jscolor/jscolor.js"></script>
+	<script src="js/thingiview/Three.js"></script>
+    <script src="js/thingiview/plane.js"></script>
+    <script src="js/thingiview/thingiview.js"></script>
+
+
+	<script>
+	$(document).ready(function() {
+
+		thingiurlbase = "js/thingiview";
+        thingiview = new Thingiview("stlviewer");
+        thingiview.setObjectColor('#FF0000');
+        thingiview.setBackgroundColor('#000');
+		thingiview.initScene();
+        thingiview.setCameraView('iso');
+
+		if (!Modernizr.draganddrop) {
+			$('#message').html("Your browser cannot handle drag and drop.");
+		}
+
+		function handleDrop(e) {
+			e.stopPropagation(); // Stops some browsers from redirecting.
+			e.preventDefault();
+
+			var files = e.dataTransfer.files;
+			for (var i = 0, f; f = files[i]; i++) {
+				// Read the File objects in this FileList.
+
+				console.log(f.name + " - " + f.type)
+
+				if (!/.*\.stl$/i.test(f.name)){
+					alert("File type not recognised.")
+					continue;
+				}
+				
+				var reader = new FileReader();
+
+				// Closure to capture the file information.
+				reader.onload = (function(theFile) {
+					return function(e) {
+
+						var fileContents = e.target.result;
+
+						if (fileContents.match(/^solid/)) {
+							thingiview.loadSTLString(fileContents);
+
+						} else {
+							var reader2 = new FileReader();
+							reader2.onload = (function(theFile){
+								return function(e) {
+									thingiview.loadSTLBinary(e.target.result);
+								};
+							})(theFile);
+							reader2.readAsBinaryString(theFile);
+						}
+					};
+				})(f);
+
+				reader.readAsText(f);
+
+				$('#message').text(f.name);
+			}
+		}
+		
+		var dropZone = document.getElementById("stlviewer");
+		dropZone.addEventListener('drop', handleDrop, false);
+
+		// for Firefox
+		dropZone.ondragover = function(e) {
+    		e.preventDefault();
+		};
+
+		$('#backround_colour').change(function(){
+			thingiview.setBackgroundColor('#'+$(this).val());
+		});
+
+		$('#model_colour').change(function(){
+			thingiview.setObjectColor('#'+$(this).val());
+		});
+
+	});
+	</script>
+</head>
+<body style="overflow:hidden;margin:0;padding:0;font-family:Segoe UI;">
+
+	<div id="stlviewer"></div>
+	<div id="message">	Drag and drop STL file to the window to display.</div>
+	<div class="settings" style="position:fixed;top:20px;left:20px;vertical-align:middle;line-height:80px;">
+	<img style="margin-top:20px;margin-bottom:-18px;margin-right:10px;" src="tg.png" >
+		BG: <input style="width:60px;border:1px solid grey;padding:5px;text-align:center;" class="color" id="backround_colour" value="000000"> &nbsp; 	Model: <input style="width:60px;border:1px solid grey;padding:5px;text-align:center;" class="color" id="model_colour" value="FF0000">
+		&nbsp;
+	</div>
+	
+
+</body>
+</html>

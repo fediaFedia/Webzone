@@ -1,0 +1,151 @@
+* {
+margin: 0;
+padding: 0;
+}
+body {
+font: 71%/1.5 Verdana, Sans-Serif;
+background: #222;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+
+  /* No support for these yet, use at own risk */
+  -o-user-select: none;
+  user-select: none;   
+}
+#container {
+  margin: auto;
+  position: absolute;
+top: 70%;
+left: 50%;
+margin-top: -150px;
+margin-left: -500px;
+width: 1000px;
+height:300px;
+}
+
+  .image {
+
+      position: fixed;
+      width: 100%;
+	  top:0;
+      height: 100%;
+     
+      background-size: cover;
+z-index:-1;
+
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+
+    }
+	
+	
+
+
+#quitboring{background-image: url(img/quitboring.jpg);}
+#wrong{background-image: url(img/wrong.gif);}
+#engineer{background-image: url(img/engineer.jpg);}
+#roadhouse{background-image: url(img/roadhouse.jpg);}
+#trololo{background-image: url(img/trololo.jpg);}
+#yeah{background-image: url(img/yeah.jpg);}
+#unstoppable{background-image: url(img/unstoppable.jpg);}
+#inception{background-image: url(img/inception.jpg);}
+#ohno{background-image: url(img/ohno.jpg);}
+#popholditdown{background-image: url(img/popholditdown.jpg);}
+#achievementget{background-image: url(img/achievementget.jpg);}
+#surprisemotherfucker{background-image: url(img/surprisemotherfucker.jpg);}
+#fuckherrightinthepussy{background-image: url(img/fuckherrightinthepussy.jpg);}
+#dropit{background-image: url(img/dropit.jpg);}
+#giggity{background-image: url(img/giggity.jpg);}
+#hobbits{background-image: url(img/hobbits.jpg);}
+#jappleack{background-image: url(img/jappleack.jpg);}
+#keyboardcat{background-image: url(img/keyboardcat.jpg);}
+#leeerony{background-image: url(img/leeroy.jpg);}
+#zoidberg{background-image: url(img/zoidberg.jpg);}
+#xfiles{background-image: url(img/xfiles.jpg);}
+#crickets{background-image: url(img/crickets.jpg);}
+#vuvuzela{background-image: url(img/vuvuzela.jpg);}
+#badumtss{background-image: url(img/badumtss.jpg);}
+#nope{background-image: url(img/nope.jpg);}
+#modem{background-image: url(img/modem.jpg);}
+
+
+
+#write {
+margin: 0 0 5px;
+padding: 5px;
+width: 985px;
+height: 100px;
+font: 1em/1.5 Verdana, Sans-Serif;
+background: #fff;
+border: 1px solid #f9f9f9;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+}
+#keyboard {
+margin: 0;
+padding: 0;
+list-style: none;
+cursor:default;
+}
+    #keyboard li {
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 64px;
+	cursor:default;
+    height: 54px;
+    line-height: 14px;
+    text-align: center;
+    background: #fff;
+padding-top:10px;
+padding-bottom:-10px;
+    border: 1px solid #f9f9f9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    }
+        .capslock, .tab, .left-shift {
+        clear: left;
+        }
+            #keyboard .tab, #keyboard .delete {
+            width: 70px;
+            }
+            #keyboard .capslock {
+            width: 100px;
+            }
+            #keyboard .return {
+            width: 105px;
+            }
+            #keyboard .left-shift {
+            width: 125px;
+            }
+            #keyboard .right-shift {
+            width: 151px;
+            }
+        .lastitem {
+        margin-right: 0;
+        }
+        .uppercase {
+        text-transform: uppercase;
+        }
+        #keyboard .space {
+        clear: left;
+        width: 681px;
+        }
+        .on {
+        display: none;
+        }
+        #keyboard li:active {
+        position: relative;
+        top: 1px;
+        left: 1px;
+		background:#555;
+		color:#fff;
+        border-color: #e5e5e5;
+        cursor: normal;
+        }
+		
+		
+#q {background-image:url(q.jpg) !important;}

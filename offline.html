@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>GEEKtyper.com</title>
+
+
+<style>
+
+
+	body{ 
+	
+	font-family:Arial, Segoe UI;
+	background-color:rgb(0, 0, 0);
+	background-repeat: repeat;
+	 background-position: center center;
+	     background-attachment: fixed;
+		 margin:0;
+		 padding:0;
+	 user-select:none;
+-moz-user-select:none;
+-webkit-user-select:none;
+-ms-user-select:none;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+overflow:hidden;
+z-index:0;
+color:rgb(255, 250, 250);
+}
+
+
+#console {
+z-index:44;
+padding:10px;
+
+}
+
+
+#center {
+position:fixed;
+height:100%;
+width:100%;
+z-index:-1;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAADcCAMAAAAshD+zAAAAb1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8v0wLRAAAAJXRSTlMAgIeDYoqOjZF1emgXBFMPEgdwSCJsClxOJxtYRB9gNCw4MDw/fLwiewAAC71JREFUeNrU29ei2jAMBmANJDuDhCRA2Pv9n7F70FKIrbil3/U5BDsGOT8ypDWty/3puutW/aRo23y147YtJn3V7a6XfTlr4D9Vzy9dP8mQnBMR+sTvl+SYiETEOcKsOKwu8xn8V5bzc1VkSF6FmPEbfwC4esavmEmcEmaL6jqv4X+w3J+rjEmcEOMd4hJg2greYRYR4nx7e/cB1sdqwSrM+IB28NFJ8AFmUWq357ddorNzn5EXxscoW8InveJjLF7yw7WEt1NftrkIMf6RHuGzzZM/YhLB/vhe929eZc4xPqPFFL5YeXyGxeXbNbyJ+jxBFXyOaQ5fLXPC50S5uL3D7St3uSPGV9wWvjs7fIXJ5asN/Fv7KlfC1xhn8MNC8DVW/Kerc1OhCg6hu7uPqDAOQMr9vxpeWZFjHMRlS/hZ73EQFunn8PfNVrkyDsPuCHdKHPyvytsN/F3NLXeEQ8kEftEpDkWadzX8RadWGQdj2cMvlhkF/L/mZ/hbyq04DKAV/OaijMOJO+zhrzjmyhhA8FE9LhwGYIe3BpIrJ44xiN7ggTUxhmC/mENi11wZg9BiCo9UimEcd1NIqO6VMJCe4KEZM4ZhLTaQzCV3GEoP8Ac3zxjI8RkS2ZFgKOI/TnaTCYYSqaaQQN0rYzBdwR8dBYOxLkoY3T5TDEd5DX82cRhO8xOM7ISKEfQMT2yIMZyM/cG7CWEEt2jgmZXHCOwqGFGlhBFY1vBUnce9rj80MJKm94wxXA8v3BzGYC1qGMVy4jEKcwkvTBeCUbQtRxlb4TGO7+CltWOMolkJZnWhGEfyJbx28BjH2UdXt4px2B1hgA0zxnH5xromFSNJAYOsFBPcu7RjY5nDCz8C6EiSzSDadOIxlq9goKNnjKRtDQEC4sWAbOFFOXAYS4sG4lQeo+kO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);
+background-repeat:no-repeat;
+background-position:center;
+background-size: auto 200px;
+}
+
+
+</style>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<script src='../ASSETS/script.js' type='text/javascript'></script> 
+
+
+
+<script type='text/javascript'>
+getKernel = localStorage.getItem('kernelsZ') || '../ASSETS/kernels/0s.txt';
+Typer.file = (getKernel);
+Typer.text= "nixcraft@wks05:-$ grep root /etc/nmap \r\n" +
+"eoot:x:0:0:root:/root:/bin/bash \r\n" +
+" \r\n" +
+"nmap -sT -A localhost \r\n" +
+" \r\n" +
+"Starting nmap V. 3.00 \r\n" +
+"Interesting ports on localhost.localdomain (127.0.0.1): \r\n" +
+"(The 1596 ports scanned but not shown below are in state: closed) \r\n" +
+"Port       State       Service \r\n" +
+"22/tcp     open        ssh \r\n" +
+"111/tcp    open        sunrpc \r\n" +
+"515/tcp    open        printer \r\n" +
+"834/tcp    open        unknown \r\n" +
+"6000/tcp   open        X11 \r\n" +
+"Remote OS guesses: Linux Kernel 2.4.0 or Gentoo 1.2 Linux 2.4.19 rc1-rc7) \r\n" +
+" \r\n" +
+"Nmap run completed -- 1 IP address (1 host up) scanned in 5 seconds \r\n" +
+" \r\n" +
+"cat /etc/services | grep 834 \r\n" +
+"tcp   0    0 0.0.0.0:834    0.0.0.0:*   LISTEN   653/ypbind \r\n" +
+"lsof -i | grep 834 \r\n" +
+" \r\n" +
+"ypbind      653        0    7u  IPv4       1319                 TCP *:834 (LISTEN) \r\n" +
+"ypbind      655        0    7u  IPv4       1319                 TCP *:834 (LISTEN) \r\n" +
+"ypbind      656        0    7u  IPv4       1319                 TCP *:834 (LISTEN) \r\n" +
+"ypbind      657        0    7u  IPv4       1319                 TCP *:834 (LISTEN) \r\n" +
+" \r\n" +
+"Discovered open port 80/top on 207.46.250.119 \r\n" +
+" \r\n" +
+"nixcraft@wks05:-$ telnet -l root 207.46.250.119 \r\n" +
+"Trying 207.46.250.119 \r\n" +
+"Connected to localhost \r\n" +
+" \r\n" +
+"login: root \r\n" +
+"password: *********** \r\n" +
+" \r\n" +
+"Last login: Tue Aug 10 16:51:20 from Billy_G \r\n" +
+"Welcome to localhost! \r\n" +
+" \r\n" +
+"[root@localhost]# mv ~ /dev/null \r\n";
+Typer.init();
+</script>
+</head>
+<body>
+<div id="LetterCount" style="display:none;"></div>
+<div id="center">
+</div>
+<div id='console'>
+SCP_Secure_Systems_v3.2654.2 <br/></br>WARNING: LEVEL 4 Authorisation Needed</br>You are offline. Press any key.</div>
+</div>
+</div>
+</body>
+</html>

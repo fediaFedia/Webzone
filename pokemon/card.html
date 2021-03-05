@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>3D Card Viewer</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="three.min.js"></script>
+  <script src="js/orbitControls.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/card.css">
+</head>
+<body>
+<div id="loading">Loading</div>
+  <div id="hint">Tap & hold to drag around</div>
+
+  <script>
+  	if (localStorage.length === 0) {
+
+
++localStorage.setItem("Counter", 1);
+}
+
+else {
+
+	var i = parseInt(localStorage.getItem("Counter"));
+
+		if (i > 4) {
+	    document.getElementById("hint").style.display = "none";
+		console.log("hide on 4th reload");
+	
+	
+	}
+	else {
+	
+		var newVal = i++;
+		console.log("setting" + newVal);
+		
+ localStorage.setItem("Counter", ++i);
+
+	
+
+}
+}
+    setTimeout(function () {
+      document.getElementById("hint").style.display = "none";
+    }, 3000);
+	
+
+	
+	
+
+	
+
+	
+	
+	
+  </script>
+
+  <script type="text/javascript" src="js/3D.js"></script>
+  <div id="back" onclick="console.log('back');window.history.back();" class="arrow left"></div>
+
+</body>
+</html>

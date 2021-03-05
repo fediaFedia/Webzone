@@ -1,0 +1,8 @@
+body {background-image:url('../ASSETS/textures/0.png');background-repeat:repeat-x;background-color:rgb(21,22,24);color:rgb(166,171,180);}
+#console {font-family:Arial, Sans-Serif;}
+#center {background-image:url('../ASSETS/logos/shield.png');}
+.folder {background-color:rgb(166,171,180);}
+.dragme {border-color:rgb(166,171,180);color:rgb(166,171,180);}
+
+#button {background-color:rgb(166,171,180);color:rgb(21,22,24);}
+#button:hover {color:rgb(21,22,24);background-color:rgb(166,171,180);}

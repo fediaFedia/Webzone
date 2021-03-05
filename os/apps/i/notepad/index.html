@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Learning IE8 - localStorage and sessionStorage - jsFiddle demo by brianblakely</title>
+
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    * {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+html,
+body,
+div {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+overflow:hidden;
+}
+div {
+    float: right;
+    width: 50%;
+}
+div:first-child {
+    float: left;
+}
+h2 {
+    margin: 0;
+    padding: 1% 0 0 1%;
+    height: 10%;
+    font-size: 1em;
+}
+textarea {
+    padding: 1%;
+    width: 95%;
+    height: 85%;
+	background: black;
+color: white;
+border: 0;
+}
+
+
+  </style>
+  
+</head>
+<body>
+
+
+    <textarea id="local-storage-pad"></textarea>
+
+<div>
+
+
+</div>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+function lsPad() {
+    localStorage.setItem('lspad', elLSPad.value);
+}
+function lsPadClear() {
+    elLSPad.value = '';
+    localStorage.removeItem('lspad');
+}
+
+
+var elLSPad = document.getElementById('local-storage-pad'),
+    elLSPadClear = document.querySelector('button'),
+    elSSPad = document.getElementById('session-storage-pad');
+
+if(window.addEventListener) {
+    elLSPad.addEventListener('keyup', lsPad);
+
+ 
+} else {
+    elLSPad.attachEvent('onkeyup', lsPad);
+    elLSPadClear.attachEvent('onclick', lsPadClear);
+}
+
+elLSPad.value = localStorage.getItem('lspad') || '';
+
+//]]>  
+
+</script>
+
+
+</body>
+
+
+</html>
+

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Slow Reader</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+  
+var scrollingDiv = document.getElementById('scrollDiv');
+scrollingDiv.addEventListener('touchmove', function(event){
+    event.stopPropagation();
+});
+</script>
+  
+  
+  
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+  <script
+    type="text/javascript"
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+    
+  ></script>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <script type="text/javascript" src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+	
+	
+      <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/base/jquery-ui.css">
+  <style type="text/css">
+  
+  body {-webkit-tap-highlight-color: transparent; overflow:hidden;background:white;}
+    .demo {
+    padding: 20px !important;
+	
+	webkit-transition: opacity 2.0s ease-in;
+       -moz-transition: opacity 2.0s ease-in;
+         -o-transition: opacity 2.0s ease-in;
+}
+;
+ .ui-slider {
+    position: relative;
+    text-align: left;
+	-webkit-tap-highlight-color: transparent;
+}
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 2em;
+    height: 2em;
+    cursor: default;
+		-webkit-tap-highlight-color: transparent;
+
+}
+.ui-slider .ui-slider-range {
+	-webkit-tap-highlight-color: transparent;
+
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+}
+/* For IE8 - See #6727 */
+ .ui-slider.ui-state-disabled .ui-slider-handle, .ui-slider.ui-state-disabled .ui-slider-range {
+    filter: inherit;
+		-webkit-tap-highlight-color: transparent;
+
+}
+.ui-slider-horizontal {
+    height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.3em;
+    margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+    right: 0;
+}
+.ui-slider-vertical {
+    width: 1.5em;
+    height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+    left: -.3em;
+    margin-left: 0;
+    margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+    left: 0;
+    width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+    bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+    top: 0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-radius: 0px;
+}
+.ui-slider-range, .ui-widget-header, .ui-slider-range-min, .ui-slider, .ui-slider-vertical, .ui-widget, .ui-widget-content {
+    border-radius: 10px;
+}
+
+
+
+
+
+.textbody { width:80%;position:fixed;padding:30px;top:0px;font-size:23px;}
+
+
+
+
+
+
+
+
+
+
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 50px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+	bottom:0px;
+	left:0px;
+	position:fixed;
+	z-index:999;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+  </style>
+  <!-- TODO: Missing CoffeeScript 2 -->
+  
+  
+  <script>
+  
+
+  </script>
+
+  
+
+<script>
+   $scope.onTap = function(e) {
+      if(ionic.Platform.isIOS()) {
+        $scope.barProgress = (e.target.max / e.target.offsetWidth)*(e.gesture.touches[0].screenX - e.target.offsetLeft);
+      }
+    };
+	
+	</script>
+	
+	
+	
+
+
+</head>
+<body>
+<div class="slidecontainer">
+  <input type="range" min="1" max="550" value="500" class="slider" id="myRange">
+</div>
+
+
+  <div class="demo" onclick='$( ".slidecontainer" ).fadeToggle( "slow", "linear" );'>
+ 
+    <br />
+    <div id="slider-vertical" style="height:80vh;position:fixed;right:10px;top:50px;"></div>
+</div>
+
+<p class="textbody" id="amount">
+
+
+ If you really want to hear about it, the first thing you'll probably want to know is where I was born, an what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that David Copperfield kind of crap, but I don't feel like going into it, if you want to know the truth. In the first place, that stuff bores me, and in the second place, my parents would have about two hemorrhages apiece if I told anything pretty personal about them. They're quite touchy about anything like that, especially my father. They're nice and all--I'm not saying that--but they're also touchy as hell. Besides, I'm not going to tell you my whole goddam autobiography or anything. I'll just tell you about this madman stuff that happened to me around last Christmas just before I got pretty run-down and had to come out here and take it easy. I mean that's all I told D.B. about, and he's my brother and all. He's in Hollywood. That isn't too far from this crumby place, and he comes over and visits me practically every week end. He's going to drive me home when I go home next month maybe. He just got a Jaguar. One of those little English jobs that can do around two hundred miles an hour. It cost him damn near four thousand bucks. He's got a lot of dough, now. He didn't use to. He used to be just a regular writer, when he was home. He wrote this terrific book of short stories, The Secret Goldfish, in case you never heard of him. The best one in it was "The Secret Goldfish." It was about this little kid that wouldn't let anybody look at his goldfish because he'd bought it with his own money. It killed me. Now he's out in Hollywood, D.B., being a prostitute. If there's one thing I hate, it's the movies. Don't even mention them to me. 
+
+</p>
+
+</div>
+<!--
+<button id='decrease' type="button">-</button>
+<button id='increase' type="button">+</button>
+   -->
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "rN4SF"
+      }], "*")
+    }
+  </script>
+  
+  
+  	<script>
+	var slider = document.getElementById("myRange");
+var output = document.getElementById("amount");
+
+
+  var block5 = 'If you really want to hear about it, the first thing you\'ll probably want to know is where I was born, an what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that David Copperfield kind of crap, but I don\'t feel like going into it, if you want to know the truth. In the first place, that stuff bores me, and in the second place, my parents would have about two hemorrhages apiece if I told anything pretty personal about them. They\'re quite touchy about anything like that, especially my father. They\'re nice and all--I\'m not saying that--but they\'re also touchy as hell. Besides, I\'m not going to tell you my whole goddam autobiography or anything. I\'ll just tell you about this madman stuff that happened to me around last Christmas just before I got pretty run-down and had to come out here and take it easy. I mean that\'s all I told D.B. about, and he\'s my brother and all. He\'s in Hollywood. That isn\'t too far from this crumby place, and he comes over and visits me practically every week end. He\'s going to drive me home when I go home next month maybe. He just got a Jaguar. One of those little English jobs that can do around two hundred miles an hour. It cost him damn near four thousand bucks. He\'s got a lot of dough, now. He didn\'t use to. He used to be just a regular writer, when he was home. He wrote this terrific book of short stories, The Secret Goldfish, in case you never heard of him. The best one in it was "The Secret Goldfish." It was about this little kid that wouldn\'t let anybody look at his goldfish because he\'d bought it with his own money. It killed me. Now he\'s out in Hollywood, D.B., being a prostitute. If there\'s one thing I hate, it\'s the movies. Don\'t even mention them to me.';
+  var block4 = 'You\'ll probably want to know is where I was born, an what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that magic kind of crap, but I don\'t feel like going into it. In the first place, that stuff bores me, and in the second place, my parents would have about two hemorrhages apiece if I told anything pretty personal about them. They\'re touchy about anything like that. They\'re nice and all--I\'m not saying that--but they\'re also touchy as hell. Besides, I\'m not going to tell you my whole goddam autobiography or anything. I\'ll just tell you about this madman stuff that happened to me around last Christmas. I mean that\'s all I told D.B. about, and he\'s my brother and all. He\'s in Hollywood. That isn\'t too far from this crumby place, and he comes over and visits me every week end. He\'s going to drive me home when I go home next month. He just got a Jaguar. It cost him damn near four thousand bucks. He\'s got a lot of dough, now. He didn\'t use to. He wrote this terrific book of short stories, The Secret Goldfish, in case you never heard of him. It was about this little kid that wouldn\'t let anybody look at his goldfish because he\'d bought it with his own money. It killed me. Now he\'s out in Hollywood, D.B., being a prostitute. If there\'s one thing I hate, it\'s the movies.';
+  var block3 = 'I don\'t feel like going into my past and childhood, it bores me, and secondly, my parents would have about two hemorrhages apiece if I told anything pretty personal about them. They\'re nice and all--I\'m not saying that--but they\'re also touchy as hell. Besides, I\'m not going to tell you my whole autobiography. I\'ll just tell you about this madman stuff that happened to me around last Christmas. It\'s about my brother who\'s in Hollywood. He\'s going to drive me home when I go home next month, after his frequent visit. He just got a Jaguar that cost him four thousand bucks. He\'s got a lot of dough; he didn\'t use to. He wrote this terrific book of short stories, The Secret Goldfish; it was about this little kid that wouldn\'t let anybody look at his goldfish because he\'d bought it with his own money. Now he\'s out in Hollywood, D.B., being a prostitute. I hate the movies.';
+   var block2 = 'I\'m not going to talk about my childhood, besides, my parents are too touchy to mention anything about them. Instead, I\'ll tell you about this madman stuff that happened to me last Xmas. My Hollywood brother, who just got a Jaguar for 4000 bucks. He got rich after writing this book of short stories - The Secret Goldfish. It was about a little kid that wouldn\'t let anybody look at his goldfish, because he\'d bought it with his own money. Now he\'s out in Hollywood, being a prostitute. I hate movies.'; 
+  	    var block1 = 'I\'ll tell you about this madman stuff that happened to me last Xmas. My Hollywood brother, who just got a Jaguar; he got rich after writing this book of short stories - The Secret Goldfish. It was about a little kid that wouldn\'t let anybody look at his goldfish, because he\'d bought it with his own money. Now he\'s out there, selling himself. I hate movies.'; 
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    
+	
+	
+	
+	if (slider.value > 1 && slider.value < 100) {
+		
+		output.innerHTML = slider.value;
+		$("#amount").text(block1);
+		$("body").css("background","#fef140");
+$("p").css("font-size","29.2px");
+
+		}
+		
+		else if (slider.value > 100 && slider.value < 200) {
+		
+		output.innerHTML = slider.value;
+		$("#amount").text(block2);
+		$("body").css("background","#fff989");
+		$("p").css("font-size","25px");
+
+		}
+		
+				else if (slider.value > 200 && slider.value < 300) {
+		
+		output.innerHTML = this.value;
+		$("#amount").text(block3);
+		
+				$("body").css("background","#fffba4");
+				$("p").css("font-size","19px");
+
+		
+		}
+		
+				else if (slider.value > 300 && slider.value < 400) {
+				$("body").css("background","#fffdcd");
+$("p").css("font-size","15.5px");
+		$("#amount").text(block4);
+		
+		}
+		
+		
+				else if (slider.value > 400 && slider.value < 500) {
+				$("body").css("background","#fefef4");
+
+		$("#amount").text(block5);
+		$(".textbody").css("font-size","14px");
+		
+		}
+	
+} 
+
+</script>
+
+
+</body>
+</html>

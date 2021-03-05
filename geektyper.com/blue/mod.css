@@ -1,0 +1,8 @@
+body {background-image:url('../ASSETS/textures/bluebg.jpg');background-color:rgb(87,150,208);color:rgb(255,255,255);}
+#console {font-family:Arial, Sans-Serif;}
+#center {background-image:url('../ASSETS/logos/tegnio.png');}
+.folder {background-color:rgb(255,255,255);}
+.dragme {border-color:rgb(255,255,255);color:rgb(255,255,255);}
+
+#button {background-color:rgb(255,255,255);color:rgb(87,150,208);}
+#button:hover {color:rgb(255,255,255);background-color:rgb(87,150,208);}

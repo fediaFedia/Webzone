@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Paint, 1-canvas - jsFiddle demo by mquickel</title>
+  
+ 
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    body {
+	width:600px;
+	margin:0 auto;
+	padding:0px;
+	cursor:crosshair;
+
+	}
+#container {
+	margin-top:30px;
+	height:800px;
+	display:block
+	float:left;
+	background-color:white;
+	}
+#color {
+	display:block;
+	}
+#colorChoice {
+	width:150px;
+	margin:0 auto;
+	}
+input {
+	margin-left:0px;
+	}
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+window.onload=function(){
+(function() {
+    var canvas = document.getElementById('paint');
+    var ctx = canvas.getContext('2d');
+	var imageObj = new Image();
+	
+	/* Loading the Image*/
+	imageObj.onload = function() {
+        ctx.drawImage(imageObj, 0, 0);
+		/* Setting the paint to be Underneath the Drawing */
+		ctx.globalCompositeOperation="destination-over";
+		};
+	  
+
+
+    var mouse = {x: 0, y: 0};
+    var last_mouse = {x: 0, y: 0};
+
+    /* Mouse Capturing Work */
+    canvas.addEventListener('mousemove', function(e) {
+        last_mouse.x = mouse.x;
+        last_mouse.y = mouse.y;
+
+        mouse.x = e.pageX - this.offsetLeft;
+        mouse.y = e.pageY - this.offsetTop;
+    }, false);
+
+	var brushColor = 'black';
+	
+     document.getElementById('brushBlack').onclick = function () {
+     brushColor = 'black';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	
+     document.getElementById('brushGrey').onclick = function () {
+     brushColor = 'grey';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushBrown').onclick = function () {
+     brushColor = 'brown';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushRed').onclick = function () {
+     brushColor = 'red';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushOrange').onclick = function () {
+     brushColor = 'orange';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushChocolate').onclick = function () {
+     brushColor = 'chocolate';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushYellow').onclick = function () {
+     brushColor = 'yellow';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushLime').onclick = function () {
+     brushColor = 'lime';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushGreen').onclick = function () {
+     brushColor = 'green';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushDeepSkyBlue').onclick = function () {
+     brushColor = 'deepskyblue';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushBlue').onclick = function () {
+     brushColor = 'blue';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	     document.getElementById('brushPurple').onclick = function () {
+     brushColor = 'purple';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	
+	     document.getElementById('brushWhite').onclick = function () {
+     brushColor = 'white';
+     ctx.strokeStyle = brushColor;
+    };
+	
+	
+	
+	
+	document.getElementById('small').onclick = function () {
+ctx.lineWidth = 5;
+    };
+	
+		document.getElementById('medium').onclick = function () {
+ctx.lineWidth = 15;
+    };
+	
+		document.getElementById('large').onclick = function () {
+ctx.lineWidth = 30;
+    };
+	
+			document.getElementById('xlarge').onclick = function () {
+ctx.lineWidth = 50;
+    };
+
+
+    /* Drawing on Paint App */
+    ctx.lineWidth = 20;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+	ctx.strokeStyle = brushColor;
+
+	canvas.addEventListener('mousedown', function(e) {
+        canvas.addEventListener('mousemove', onPaint, false);
+    }, false);
+
+    canvas.addEventListener('mouseup', function() {
+        canvas.removeEventListener('mousemove', onPaint, false);
+    }, false);
+
+    var onPaint = function() {
+        ctx.beginPath();
+        ctx.moveTo(last_mouse.x, last_mouse.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.closePath();
+        ctx.stroke();
+		
+
+    };
+
+}());
+}//]]>  
+
+</script>
+
+
+
+
+</head>
+<body>
+  <!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="colorCSS2.css">
+</head>
+<body>
+<input style="background:black;border:0;" id="brushBlack" type="button" name="color" value=" "  />
+<input style="background:grey;border:0;" id="brushGrey" type="button" name="color" value=" "  />
+<input style="background:brown;border:0;" id="brushBrown" type="button" name="color" value=" "  />
+<input style="background:red;border:0;" id="brushRed" type="button" name="color" value=" "  />
+<input style="background:orange;border:0;" id="brushOrange" type="button" name="color" value=" "  />
+<input style="background:chocolate;border:0;" id="brushChocolate" type="button" name="color" value=" "  />
+<input style="background:yellow;border:0;" id="brushYellow" type="button" name="color" value=" " />
+<input style="background:lime;border:0;" id="brushLime" type="button" name="color" value=" " />
+<input style="background:green;border:0;" id="brushGreen" type="button" name="color" value=" " />
+<input style="background:deepskyblue;border:0;" id="brushDeepSkyBlue" type="button" name="color" value=" " />
+<input style="background:blue;border:0;" id="brushBlue" type="button" name="color" value=" " />
+<input style="background:purple;border:0;" id="brushPurple" type="button" name="color" value=" " />
+<input style="background:white;border:0;" id="brushWhite" type="button" name="color" value=" "  />
+<br>
+<br>
+<input style="background:white;border:0;" id="small" type="button" name="color" value="S"  />
+<input style="background:white;border:0;" id="medium" type="button" name="color" value="M"  />
+<input style="background:white;border:0;" id="large" type="button" name="color" value="L"  />
+<input style="background:white;border:0;" id="xlarge" type="button" name="color" value="XL"  />
+<div id="container">
+	<div id="sketch">
+		<canvas id="paint" width="600px" height="600px"></canvas>
+	</div>
+
+</div>
+
+</body>
+</html>
+  
+</body>
+
+
+</html>
+

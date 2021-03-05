@@ -1,0 +1,123 @@
+<style>
+
+.tg-031e {color:white !important;}
+body {overflow:hidden;}
+
+
+#apps-folder {display:none;}
+#docs-folder {display:none;}
+.explorer-header {}
+
+.explorer-header .address {display: inline-block;}
+
+.explorer-header .searchbar {float:right;}
+
+.explorer-header .searchbar input {width:100%;}
+.explorer-header .address input {width:100%;}
+
+.explorer-header .nav {
+padding: 5px;
+display: inline-block;
+
+}
+
+
+.explorer-sidebar {
+
+width: 100px;
+
+padding: 10px;
+height: 100%;
+float: left;
+margin-top: 20px;
+
+
+}
+
+.side {color:#ccc;margin:15px 0px 15px 0px;line-height: 30px;}
+
+
+.side:before {
+    content: "";
+    display: block;
+    background: url("icon.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin: 5px 6px 0 0;
+}
+
+
+</style>
+
+
+
+<div style="min-height:300px;">
+
+
+	<div class="explorer-header">
+	
+	<div class="row">
+
+<div class="col-xs-2"><div class="nav">◀
+	</div>	<div class="nav">▶
+	</div></div>
+<div class="col-xs-6 address"><input type="text"></input></div>
+<div class="col-xs-4 searchbar"><input type="text" class="ui-input" placeholder="Search"></input></div>
+	
+	
+
+		</div>
+		
+	<div class="explorer-sidebar">
+	<span class="side app" id="explorer">Main</span>
+	<br>
+<span class="side app" id="calculator">Calculator</span>
+	<br>
+<span class="side app" id="paint">Paint</span>
+	
+	</div>
+	
+	
+	<div id="root-folder">
+<h2>Empty (0KB)</h2>
+	</div>
+	
+	<div id="docs-folder">
+	C
+	</div>
+	
+	<div id="apps-folder">
+	<div class="folderE control" style="background-color: rgb(255, 165, 0);"><p>Control</p></div>
+	<div class="folderE admintest" style="background-color: rgb(255, 165, 0);"><p>Admin</p></div>
+	<div class="folderE app-explorer" id="calculator" style="background-color: rgb(255, 165, 0);"><p>Map</p></div>
+	<div onclick="console.log('e');" class="folderE app" id="calculator" width="150" height="300" style="background-color: rgb(255, 165, 0);"><p>Calculator</p></div>
+	<div class="folderE iframe" id="freecell" style="background-color: rgb(255, 165, 0);"><p>Freecell</p></div>
+	<div class="folderE iframe" width="400" height="550" id="conspiracy" style="background-color: rgb(255, 165, 0);"><p>Conspiracy</p></div>
+	<div class="folderE iframe" id="pairs" width="800" height="570" style="background-color: rgb(255, 165, 0);"><p>Map</p></div>
+	<div class="folderE iframe" id="notepad" style="background-color: rgb(255, 165, 0);"><p>Map</p></div>
+	<div class="folderE iframe" id="paint" style="background-color: rgb(255, 165, 0);"><p>Map</p></div>
+	<div class="folderE iframe" height="270" id="keyboard" style="background-color: rgb(255, 165, 0);"><p>Map</p></div>
+	<div class="folderE iframe" id="welcome" style="background-color: rgb(255, 165, 0);"><p>Map</p></div>
+	<div class="folderE iframe" width="800" height="670" id="map" style="background-color: rgb(255, 165, 0);"><p>Map</p></div>
+	<div class="folderE iframe" id="decoder" style="background-color: rgb(255, 165, 0);"><p>Map</p></div>
+	</div>
+	
+	
+<script>
+
+	$( document ).ready( function () {
+		$('.app-explorer').on('click', function() {
+			
+			var width = $(this).attr("width") || 600;
+			var height = $(this).attr("height") || 400;
+			var app = this.id;
+			console.log(app);
+			$( '<div id="' + app + '-window"></div>' ).window({title: app,width:width,height:height});
+			$('#' + app + '-window').load('apps/' + app + '.html');
+		});
+		});
+		
+		</script>
+
+</div>

@@ -1,0 +1,32 @@
+
+<script src="../assets/libs/jquery/jquery.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    if (parent) {
+        var oHead = document.getElementsByTagName("head")[0];
+        var arrStyleSheets = parent.document.getElementsByTagName("style");
+        for (var i = 0; i < arrStyleSheets.length; i++)
+            oHead.appendChild(arrStyleSheets[i].cloneNode(true));
+    }
+}
+</script>
+
+		<div class="settings">
+		<h2>Settings</h2>
+		<br>
+		Fast Boot (no bootscreen):<br><br>
+		<button id="buttan" onclick='localStorage.setItem("bootscreen", "none");$("#bootscreen").css("display", "none");'>Enable</button>
+		<button id="buttan" onclick='localStorage.setItem("bootscreen", "block");$("#bootscreen").css("display", "block");location.reload();'>Disable</button>
+		<hr>
+		<b>Desktop Programming Language</b><br>
+		<br><br>
+		<button id="buttan" onclick='tegnioCoder.switchLanguage("java");localStorage.setItem("language", "java");'>Java</button>
+		<button id="buttan" onclick='tegnioCoder.switchLanguage("c");localStorage.setItem("language", "c");'>C</button>
+		<button id="buttan" onclick='tegnioCoder.switchLanguage("csharp");localStorage.setItem("language", "csharp");'>C#</button>
+		<button id="buttan" onclick='tegnioCoder.switchLanguage("perl");localStorage.setItem("language", "perl");'>Perl</button>
+		<button id="buttan" onclick='tegnioCoder.switchLanguage("python");localStorage.setItem("language", "python");'>Python</button>
+		<button id="buttan" onclick='tegnioCoder.switchLanguage("ruby");localStorage.setItem("language", "ruby");'>Ruby</button>
+		<button id="buttan" onclick='tegnioCoder.switchLanguage("asp");localStorage.setItem("language", "asp");'>ASP.net</button>
+
+		
+	</div>

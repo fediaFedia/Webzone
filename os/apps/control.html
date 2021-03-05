@@ -1,0 +1,65 @@
+
+<script src="../assets/libs/jquery/jquery.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    if (parent) {
+        var oHead = document.getElementsByTagName("head")[0];
+        var arrStyleSheets = parent.document.getElementsByTagName("style");
+        for (var i = 0; i < arrStyleSheets.length; i++)
+            oHead.appendChild(arrStyleSheets[i].cloneNode(true));
+    }
+}
+</script>
+
+	<div class="persistentWindowContent docksettings">
+	
+	<h2>Taskbar</h2>
+
+	You can drag the taskbar to the top, bottom, left or right sides of the screen.<br>
+	<br>
+			<div style="width:280px;height:50px;float:left;">
+<br><br>		<div class="square" style="background:#000000;" onclick='localStorage.setItem("taskbarcolor", "10,10,10");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+		<div class="square" style="background:#364559;" onclick='localStorage.setItem("taskbarcolor", "54,69,89");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+		<div class="square" style="background:#6a696b;" onclick='localStorage.setItem("taskbarcolor", "106,105,107");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+		<div class="square" style="background:#2e2e2e;" onclick='localStorage.setItem("taskbarcolor", "46,46,46");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+		<div class="square" style="background:#7b8da6;" onclick='localStorage.setItem("taskbarcolor", "123,141,166");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar").css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'></div>
+
+		<div class="square" style="text-align:center;padding:4px;width:72px;background:#888;" onclick='promptTaskbarColor()'>Custom</div>
+	    </div>
+
+		
+<div style="float:right;">
+		<br>
+
+		<button id="buttan" onclick='localStorage.setItem("taskbaralpha", "0.8");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar", parent.document).css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'>Transparent Taskbar</button>
+		<button id="buttan" onclick='localStorage.setItem("taskbaralpha", "1.0");getTaskbarColor = localStorage.getItem("taskbarcolor") || "20,20,20";getTaskbarAlpha = localStorage.getItem("taskbaralpha") || "1.0";$(".taskbar", parent.document).css({"background-color" : "rgba(" + getTaskbarColor + "," + getTaskbarAlpha + ")"});'>Solid Taskbar</button>
+	</div><br><br><br><br>
+		<hr>
+	<h2>Dock</h2>
+	
+	<div style="clear:both;">
+		<br>
+
+		<button id="buttan" onclick='localStorage.setItem("dock", "block");$(".maindock").css("display", "block");'>Enable Dock</button>
+		<button id="buttan" onclick='localStorage.setItem("dock", "none");$(".maindock").css("display", "none");'>Disable Dock</button>
+	</div>
+	
+	<br><br>
+
+		
+				<div class="square" style="background:#000000;" onclick='localStorage.setItem("dockcolor", "10,10,10");getDockColor = localStorage.getItem("dockcolor") || "20,20,20";getDockAlpha = localStorage.getItem("dockalpha") || "1.0";$(".dock ul").css({"background-color" : "rgba(" + getDockColor + "," + getDockAlpha + ")"});'></div>
+		<div class="square" style="background:#364559;" onclick='localStorage.setItem("dockcolor", "54,69,89");getDockColor = localStorage.getItem("dockcolor") || "20,20,20";getDockAlpha = localStorage.getItem("dockalpha") || "1.0";$(".dock ul").css({"background-color" : "rgba(" + getDockColor + "," + getDockAlpha + ")"});'></div>
+		<div class="square" style="background:#6a696b;" onclick='localStorage.setItem("dockcolor", "106,105,107");getDockColor = localStorage.getItem("dockcolor") || "20,20,20";getDockAlpha = localStorage.getItem("dockalpha") || "1.0";$(".dock ul").css({"background-color" : "rgba(" + getDockColor + "," + getDockAlpha + ")"});'></div>
+		<div class="square" style="background:#2e2e2e;" onclick='localStorage.setItem("dockcolor", "46,46,46");getDockColor = localStorage.getItem("dockcolor") || "20,20,20";getDockAlpha = localStorage.getItem("dockalpha") || "1.0";$(".dock ul").css({"background-color" : "rgba(" + getDockColor + "," + getDockAlpha + ")"});'></div>
+		<div class="square" style="background:#7b8da6;" onclick='localStorage.setItem("dockcolor", "123,141,166");getDockColor = localStorage.getItem("dockcolor") || "20,20,20";getDockAlpha = localStorage.getItem("dockalpha") || "1.0";$(".dock ul").css({"background-color" : "rgba(" + getDockColor + "," + getDockAlpha + ")"});'></div>
+
+		<div class="square" style="text-align:center;padding:4px;width:72px;background:#888;" onclick='promptDockColor()'>Custom</div>
+
+			<div style="float:right;">
+		<br>
+
+		<button id="buttan" onclick='localStorage.setItem("dockalpha", "0.6");getDockColor = localStorage.getItem("dockcolor") || "20,20,20";getDockAlpha = localStorage.getItem("dockalpha") || "1.0";$(".dock ul").css({"background-color" : "rgba(" + getDockColor + "," + getDockAlpha + ")"});'>Transparent Dock</button>
+		<button id="buttan" onclick='localStorage.setItem("dockalpha", "1.0");getDockColor = localStorage.getItem("dockcolor") || "20,20,20";getDockAlpha = localStorage.getItem("dockalpha") || "1.0";$(".dock ul").css({"background-color" : "rgba(" + getDockColor + "," + getDockAlpha + ")"});'>Solid Dock</button>
+	</div>
+		
+		</div>
